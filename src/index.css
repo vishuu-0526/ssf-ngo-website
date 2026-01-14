@@ -1,0 +1,197 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+.font-inria {
+  font-family: "Inria Sans", sans-serif;
+}
+
+/* ===============================
+   CRY.org BRAND SYSTEM
+   =============================== */
+:root {
+  --cry-yellow: #FDCF09;
+  --cry-yellow-hover: #e5bc08;
+  --cry-black: #000000;
+  --cry-grey: #333333;
+  --cry-light-grey: #f2f2f2;
+}
+
+body {
+  font-family: "Inria Sans", system-ui, sans-serif;
+  background-color: #ffffff;
+  color: var(--cry-black);
+  line-height: 1.5;
+}
+
+/* ===============================
+   COMPONENTS
+   =============================== */
+
+/* Buttons */
+.btn-cry-primary {
+  @apply px-6 py-2.5 font-bold text-black uppercase tracking-wide transition-all duration-300;
+  background-color: var(--cry-yellow);
+}
+
+.btn-cry-primary:hover {
+  background-color: var(--cry-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(253, 207, 9, 0.3);
+}
+
+.btn-cry-secondary {
+  @apply px-6 py-2.5 font-bold text-black uppercase tracking-wide border-2 border-black bg-transparent transition-all duration-300;
+}
+
+.btn-cry-secondary:hover {
+  @apply bg-black text-white;
+}
+
+/* Typography */
+.cry-title {
+  @apply text-4xl md:text-5xl font-bold text-black leading-tight mb-4;
+}
+
+.cry-subtitle {
+  @apply text-xl md:text-2xl font-bold text-gray-800 mb-2;
+}
+
+/* Sections */
+.section-cry {
+  @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+}
+
+.section-cry-alt {
+  @apply py-16 px-4 md:px-8 w-full bg-[#f8f8f8];
+}
+
+/* Cards */
+.cry-card {
+  @apply bg-white p-6 shadow-lg border-b-4 border-transparent hover:border-[#FDCF09] transition-all duration-300;
+}
+
+/* Infinite Scroll defaults (keeping existing) */
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scrollX {
+  animation: scrollX 25s linear infinite;
+}
+.animate-scrollX:hover {
+  animation-play-state: paused;
+}
+=======
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Core Brand Colors */
+  --primary: #002344;
+  /* deep heritage blue */
+  --primary-light: #004d99;
+  --secondary: #d90429;
+  /* vibrant compassion red */
+
+  /* Modern Accents */
+  --accent-gold: #fb8500;
+  /* warm amber for optimism */
+  --accent-green: #2d6a4f;
+  /* growth emerald for impact */
+
+  /* Neutral Palette */
+  --bg-soft: #f8f9fa;
+  --text-dark: #1a1c1e;
+  --text-muted: #64748b;
+  --white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* Premium Utilities */
+.glass-effect {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #001a33 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-premium {
+  background: linear-gradient(135deg, #001a33 0%, var(--primary) 100%);
+}
+
+/* Standard Buttons */
+.btn-primary {
+  @apply px-8 py-4 rounded-full font-bold transition-all duration-200 transform flex items-center justify-center gap-2 bg-[#002344] text-white hover:bg-[#003366] hover:-translate-y-0.5 shadow-lg hover:shadow-[#002344]/20;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 rounded-full font-bold transition-all duration-200 transform flex items-center justify-center gap-2 bg-white text-[#002344] border-2 border-[#002344] hover:bg-[#002344] hover:text-white hover:-translate-y-0.5;
+}
+
+.btn-cta {
+  @apply px-8 py-4 rounded-full font-bold transition-all duration-200 transform flex items-center justify-center gap-2 bg-[#d90429] text-white hover:bg-[#b00422] hover:-translate-y-0.5 shadow-lg hover:shadow-red-500/20;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollX {
+  animation: scrollX 20s linear infinite;
+}
+
+/* Card Styles */
+.premium-card {
+  @apply bg-white p-8 rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+}
+
+/* Custom Inria Support (keeping for existing files) */
+.font-inria {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+>>>>>>> e20eac0 (Updated Website UI and content)

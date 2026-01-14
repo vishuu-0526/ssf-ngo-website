@@ -1,0 +1,29 @@
+
+> ssf-revamp@0.0.0 build
+> vite build
+
+[36mvite v7.2.2 [32mbuilding client environment for production...[36m[39m
+transforming...
+
+/images/pattern.png referenced in /images/pattern.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+[32mΓ£ô[39m 2251 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                     [39m[1m[2m  0.48 kB[22m[1m[22m[2m Γöé gzip:   0.31 kB[22m
+[2mdist/[22m[32massets/migrants-NuREtV5R.jpg   [39m[1m[2m 19.43 kB[22m[1m[22m
+[2mdist/[22m[32massets/plasma-BX7npXJM.jpg     [39m[1m[2m 23.00 kB[22m[1m[22m
+[2mdist/[22m[32massets/masks-7Yzf2Q7x.jpg      [39m[1m[2m 53.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/QR-Dpo2aVt6.png         [39m[1m[2m 56.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/barcode-CoVPrR1I.jpg    [39m[1m[2m 69.82 kB[22m[1m[22m
+[2mdist/[22m[32massets/child-CwpI-78P.jpg      [39m[1m[2m 78.16 kB[22m[1m[22m
+[2mdist/[22m[32massets/school-B4C0ID5o.jpg     [39m[1m[2m118.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/education-CUwnWOdi.jpg  [39m[1m[2m125.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/image1-CaFopMJx.png     [39m[1m[2m711.29 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-BbdJNjbL.css      [39m[1m[2m 75.14 kB[22m[1m[22m[2m Γöé gzip:  12.34 kB[22m
+[2mdist/[22m[36massets/index-Cl-7ECsW.js       [39m[1m[33m638.60 kB[39m[22m[2m Γöé gzip: 190.49 kB[22m
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32mΓ£ô built in 13.68s[39m
