@@ -84,11 +84,7 @@ const Members = () => {
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSc3Wb-839SLDzv3A9QkbfpnJt_ORBQZbVByModSfDjQs-JuBQ/viewform"
             target="_blank"
-<<<<<<< HEAD
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#005EFF] text-white font-medium hover:opacity-90 transition"
-=======
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#003366] text-white font-medium hover:opacity-90 transition"
->>>>>>> e20eac0 (Updated Website UI and content)
           >
             Join as a Member <FaArrowRightLong />
           </a>

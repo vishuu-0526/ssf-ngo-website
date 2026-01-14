@@ -1,73 +1,4 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import { ChevronDown } from "lucide-react";
-
-export default function InstitutionalDNA() {
-  return (
-    <main className="pt-28 bg-black text-white">
-
-      {/* ================= INSTITUTIONAL DNA ================= */}
-      <section className="py-24 px-4 relative overflow-hidden">
-
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDCF09_1px,transparent_1px)] [background-size:22px_22px]"></div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-[#FDCF09] font-black uppercase tracking-widest text-sm mb-4">
-              Institutional DNA
-            </h2>
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              संस्था का मूल वैचारिक ढाँचा
-            </h1>
-            <p className="text-zinc-400 max-w-3xl mx-auto mt-6 text-lg">
-              यह वह आधार है जिस पर हमारी सोच, निर्णय, कार्यशैली और
-              सामाजिक उत्तरदायित्व निर्मित होता है।
-            </p>
-          </motion.div>
-
-          {/* DNA Pillars */}
-          <div className="space-y-6">
-            {[
-              {
-                title: "A. अस्तित्व और पहचान",
-                desc: "संस्था समाज के लिए है, समाज से है और समाज के साथ है।"
-              },
-              {
-                title: "B. दिशा और मार्गदर्शन",
-                desc: "हमारा हर कदम स्पष्ट दृष्टि, दीर्घकालिक सोच और नैतिक उद्देश्य से संचालित है।"
-              },
-              {
-                title: "C. नैतिकता और आचरण",
-                desc: "ईमानदारी, पारदर्शिता और जवाबदेही हमारी कार्यसंस्कृति की नींव है।"
-              },
-              {
-                title: "D. समाज और राष्ट्र",
-                desc: "हम राष्ट्र निर्माण में सामाजिक भागीदारी को अपना कर्तव्य मानते हैं।"
-              },
-              {
-                title: "E. कार्यशैली और कार्यसंस्कृति",
-                desc: "सहयोग, संवेदनशीलता और परिणाम-उन्मुख दृष्टिकोण।"
-              },
-              {
-                title: "F. लक्षित समाज वर्ग",
-                desc: "वंचित, उपेक्षित और अवसर से दूर समुदाय हमारे केंद्र में हैं।"
-              },
-              {
-                title: "G. प्रकृति और जीवन",
-                desc: "पर्यावरण, पशु और मानव जीवन—तीनों का संतुलन आवश्यक है।"
-              },
-              {
-                title: "H. कानूनी और संस्थागत स्थिरता",
-                desc: "संस्था सभी कानूनी एवं संस्थागत ढाँचों के अंतर्गत कार्य करती है।"
-=======
 import { Link } from "@tanstack/react-router";
 
 export default function InstitutionalDNA() {
@@ -177,62 +108,10 @@ export default function InstitutionalDNA() {
                 desc: "संस्था सभी कानूनी एवं संस्थागत ढाँचों के अंतर्गत कार्य करती है।",
                 pillar: "08",
                 color: "from-[#d90429] to-[#ef233c]"
->>>>>>> e20eac0 (Updated Website UI and content)
               }
             ].map((item, i) => (
               <motion.div
                 key={i}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group border border-white/10 rounded-xl p-6 hover:border-[#FDCF09] transition-all"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold">
-                    {item.title}
-                  </h3>
-                  <ChevronDown className="text-[#FDCF09] group-hover:rotate-180 transition-transform" />
-                </div>
-                <p className="text-zinc-400 mt-4 leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Vision & Mission */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12"
-          >
-            <div className="bg-white text-black p-8 rounded-2xl shadow-xl">
-              <h4 className="text-[#FDCF09] font-black uppercase tracking-widest text-sm mb-3">
-                Vision
-              </h4>
-              <p className="text-lg font-medium leading-relaxed">
-                एक ऐसा समावेशी समाज जहाँ प्रत्येक व्यक्ति को
-                शिक्षा, स्वास्थ्य, सम्मान और आत्मनिर्भरता का अवसर प्राप्त हो।
-              </p>
-            </div>
-
-            <div className="bg-white text-black p-8 rounded-2xl shadow-xl">
-              <h4 className="text-[#FDCF09] font-black uppercase tracking-widest text-sm mb-3">
-                Mission
-              </h4>
-              <ul className="space-y-3 text-lg font-medium">
-                <li>• गुणवत्तापूर्ण शिक्षा एवं कौशल विकास</li>
-                <li>• महिला एवं बाल सशक्तिकरण</li>
-                <li>• स्वास्थ्य, पोषण एवं जागरूकता</li>
-                <li>• पर्यावरण एवं पशु संरक्षण</li>
-              </ul>
-            </div>
-          </motion.div>
-
-=======
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -334,7 +213,6 @@ export default function InstitutionalDNA() {
               Explore More
             </Link>
           </div>
->>>>>>> e20eac0 (Updated Website UI and content)
         </div>
       </section>
     </main>

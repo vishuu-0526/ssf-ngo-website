@@ -18,11 +18,7 @@ export default function ContactPage() {
     e.preventDefault();
     // In a real app, this would send data to a backend
     const whatsappMessage = `Name: ${form.name}%0AEmail: ${form.email}%0APhone: ${form.phone}%0ASubject: ${form.subject}%0AMessage: ${form.message}`;
-<<<<<<< HEAD
-    window.open(`https://wa.me/919128260668?text=${whatsappMessage}`, "_blank");
-=======
     window.open(`https://wa.me/919424626518?text=${whatsappMessage}`, "_blank");
->>>>>>> e20eac0 (Updated Website UI and content)
     setForm({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
@@ -33,11 +29,7 @@ export default function ContactPage() {
       <section className="bg-zinc-900 text-white pt-40 pb-20 relative overflow-hidden text-center px-4">
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-            Contact <span className="text-[#FDCF09]">Us</span>
-=======
             Contact <span className="text-white">Us</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </h1>
           <p className="text-zinc-300 text-xl md:text-2xl leading-relaxed">
             Have a question or want to get involved? We'd love to hear from you.
@@ -49,27 +41,17 @@ export default function ContactPage() {
       <section className="py-20 px-4 -mt-16 relative z-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           {/* Phone & WhatsApp */}
-<<<<<<< HEAD
-          <div className="bg-white p-8 rounded-xl shadow-xl text-center border-b-4 border-[#FDCF09] hover:translate-y-[-5px] transition duration-300">
-            <div className="w-16 h-16 bg-[#FDCF09]/20 text-[#FDCF09] rounded-full mx-auto flex items-center justify-center text-3xl mb-4">
-=======
           <div className="bg-white p-8 rounded-xl shadow-xl text-center border-b-4 border-[#003366] hover:translate-y-[-5px] transition duration-300">
             <div className="w-16 h-16 bg-[#003366]/10 text-[#003366] rounded-full mx-auto flex items-center justify-center text-3xl mb-4">
->>>>>>> e20eac0 (Updated Website UI and content)
               <FaPhoneAlt />
             </div>
             <h3 className="text-xl font-bold mb-2">Call & WhatsApp</h3>
             <p className="text-zinc-600 mb-4">Mon-Sat from 10am to 6pm</p>
-<<<<<<< HEAD
-            <a href="tel:+919128260668" className="block text-xl font-black text-zinc-900 hover:text-[#FDCF09] transition">+91 91282 60668</a>
-            <a href="https://wa.me/919128260668" target="_blank" className="inline-flex items-center gap-2 text-green-600 font-bold mt-2 hover:underline">
-=======
             <div className="flex flex-col gap-2">
               <a href="tel:+919424626518" className="block text-xl font-black text-zinc-900 hover:text-[#003366] transition">+91 94246 26518</a>
               <a href="tel:+919718346691" className="block text-lg font-bold text-zinc-600 hover:text-[#003366] transition">+91 97183 46691</a>
             </div>
             <a href="https://wa.me/919424626518" target="_blank" className="inline-flex items-center gap-2 text-green-600 font-bold mt-2 hover:underline">
->>>>>>> e20eac0 (Updated Website UI and content)
               <FaWhatsapp /> Chat on WhatsApp
             </a>
           </div>
@@ -81,21 +63,6 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold mb-2">Email Us</h3>
             <p className="text-zinc-600 mb-4">We usually reply within 24 hours</p>
-<<<<<<< HEAD
-            <a href="mailto:swastiksrijanfoundation@gmail.com" className="block text-lg font-black text-zinc-900 hover:text-[#FDCF09] transition break-words">swastiksrijanfoundation@gmail.com</a>
-          </div>
-
-          {/* Location */}
-          <div className="bg-white p-8 rounded-xl shadow-xl text-center border-b-4 border-blue-600 hover:translate-y-[-5px] transition duration-300">
-            <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center text-3xl mb-4">
-              <FaMapMarkerAlt />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-            <p className="text-zinc-600 mb-4">Head Office</p>
-            <p className="text-lg font-bold text-zinc-900">
-              Rajendra Nagar,<br /> Patna, Bihar, India
-            </p>
-=======
             <a href="mailto:swastiksrijanfoundation@gmail.com" className="block text-lg font-black text-zinc-900 hover:text-[#003366] transition break-words">swastiksrijanfoundation@gmail.com</a>
           </div>
 
@@ -122,7 +89,6 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
->>>>>>> e20eac0 (Updated Website UI and content)
           </div>
         </div>
       </section>
@@ -147,11 +113,7 @@ export default function ContactPage() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-<<<<<<< HEAD
-                    className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#FDCF09] transition"
-=======
                     className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#003366] transition"
->>>>>>> e20eac0 (Updated Website UI and content)
                     placeholder="John Doe"
                     required
                   />
@@ -163,11 +125,7 @@ export default function ContactPage() {
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-<<<<<<< HEAD
-                    className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#FDCF09] transition"
-=======
                     className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#003366] transition"
->>>>>>> e20eac0 (Updated Website UI and content)
                     placeholder="+91 XXXXX XXXXX"
                   />
                 </div>
@@ -180,11 +138,7 @@ export default function ContactPage() {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#FDCF09] transition"
-=======
                   className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#003366] transition"
->>>>>>> e20eac0 (Updated Website UI and content)
                   placeholder="john@example.com"
                   required
                 />
@@ -196,11 +150,7 @@ export default function ContactPage() {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#FDCF09] transition"
-=======
                   className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#003366] transition"
->>>>>>> e20eac0 (Updated Website UI and content)
                 >
                   <option value="">Select a Topic</option>
                   <option value="Volunteering">Volunteering</option>
@@ -216,21 +166,13 @@ export default function ContactPage() {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#FDCF09] transition h-32"
-=======
                   className="w-full bg-white border border-zinc-300 p-3 rounded-lg focus:outline-none focus:border-[#003366] transition h-32"
->>>>>>> e20eac0 (Updated Website UI and content)
                   placeholder="How can we help you?"
                   required
                 ></textarea>
               </div>
 
-<<<<<<< HEAD
-              <button className="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-[#FDCF09] hover:text-black transition duration-300 shadow-lg">
-=======
               <button className="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-[#003366] hover:text-white transition duration-300 shadow-lg">
->>>>>>> e20eac0 (Updated Website UI and content)
                 SEND MESSAGE
               </button>
             </form>

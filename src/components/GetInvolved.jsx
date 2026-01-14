@@ -135,29 +135,17 @@ const GetInvolved = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col md:flex-row gap-8 items-center group hover:border-[#FDCF09] transition-all duration-300 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#FDCF09] opacity-10 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
-=======
             className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col md:flex-row gap-8 items-center group hover:border-[#003366] transition-all duration-300 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#003366] opacity-10 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
 
             <div className="w-full md:w-1/3">
               <img src="./images/volunteers.png" alt="Volunteer" className="w-full rounded-lg shadow-md transform group-hover:rotate-2 transition-transform duration-300" />
             </div>
             <div className="w-full md:w-2/3 space-y-4">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-[#FDCF09] transition-colors">Volunteer</h3>
-              <p className="text-zinc-600">Give your time and talent to support our groundwork.</p>
-              <Link to="/Volunteer" className="inline-flex items-center gap-2 font-bold text-black border-b-2 border-black pb-1 hover:text-[#FDCF09] hover:border-[#FDCF09] transition-colors">
-=======
               <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-[#003366] transition-colors">Volunteer</h3>
               <p className="text-zinc-600">Give your time and talent to support our groundwork.</p>
               <Link to="/Volunteer" className="inline-flex items-center gap-2 font-bold text-black border-b-2 border-black pb-1 hover:text-[#003366] hover:border-[#003366] transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                 Join the Team <FaArrowRight size={12} />
               </Link>
             </div>
@@ -169,11 +157,7 @@ const GetInvolved = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col md:flex-row gap-8 items-center group hover:border-[#FDCF09] transition-all duration-300 relative overflow-hidden"
-=======
             className="bg-white p-10 rounded-2xl shadow-sm border border-zinc-200 flex flex-col md:flex-row gap-8 items-center group hover:border-[#003366] transition-all duration-300 relative overflow-hidden"
->>>>>>> e20eac0 (Updated Website UI and content)
           >
             <div className="absolute top-0 right-0 w-24 h-24 bg-black opacity-5 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
 
@@ -181,15 +165,9 @@ const GetInvolved = () => {
               <img src="./images/members.png" alt="Members" className="w-full rounded-lg shadow-md transform group-hover:-rotate-2 transition-transform duration-300" />
             </div>
             <div className="w-full md:w-2/3 space-y-4">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-[#FDCF09] transition-colors">Become a Member</h3>
-              <p className="text-zinc-600">Support our long-term vision with monthly contributions.</p>
-              <Link to="/members" className="inline-flex items-center gap-2 font-bold text-black border-b-2 border-black pb-1 hover:text-[#FDCF09] hover:border-[#FDCF09] transition-colors">
-=======
               <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-[#003366] transition-colors">Become a Member</h3>
               <p className="text-zinc-600">Support our long-term vision with monthly contributions.</p>
               <Link to="/members" className="inline-flex items-center gap-2 font-bold text-black border-b-2 border-black pb-1 hover:text-[#003366] hover:border-[#003366] transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                 Learn More <FaArrowRight size={12} />
               </Link>
             </div>
@@ -213,11 +191,7 @@ const GetInvolved = () => {
               <a
                 href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
                 target="_blank"
-<<<<<<< HEAD
-                className="px-8 py-4 bg-[#FDCF09] text-black font-bold uppercase tracking-wide hover:bg-white transition-colors rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-=======
                 className="px-8 py-4 bg-[#003366] text-white font-bold uppercase tracking-wide hover:bg-white hover:text-[#003366] transition-colors rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
->>>>>>> e20eac0 (Updated Website UI and content)
               >
                 Donate Now
               </a>
@@ -232,11 +206,7 @@ const GetInvolved = () => {
 
           {/* Decorative circles */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-zinc-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -ml-20 -mt-20"></div>
-<<<<<<< HEAD
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#FDCF09] rounded-full mix-blend-multiply filter blur-3xl opacity-10 -mr-20 -mb-20"></div>
-=======
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#003366] rounded-full mix-blend-multiply filter blur-3xl opacity-10 -mr-20 -mb-20"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
         </motion.div>
 
       </div>

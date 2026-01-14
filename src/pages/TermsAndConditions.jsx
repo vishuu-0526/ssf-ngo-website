@@ -53,11 +53,7 @@ export default function TermsAndConditions() {
       title: "7. Privacy Policy",
       content: (
         <>
-<<<<<<< HEAD
-          By using this website, you agree to our <Link to="/privacy-policy" className="text-blue-600 hover:text-[#FDCF09] font-bold underline decoration-2 underline-offset-2 transition-colors">Privacy Policy</Link> regarding the collection and use of personal information.
-=======
           By using this website, you agree to our <Link to="/privacy-policy" className="text-[#003366] hover:text-[#002244] font-bold underline decoration-2 underline-offset-2 transition-colors">Privacy Policy</Link> regarding the collection and use of personal information.
->>>>>>> e20eac0 (Updated Website UI and content)
         </>
       )
     },
@@ -82,11 +78,7 @@ export default function TermsAndConditions() {
       <section className="bg-zinc-900 text-white pt-40 pb-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-            Terms & <span className="text-[#FDCF09]">Conditions</span>
-=======
             Terms & <span className="text-white">Conditions</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </h1>
           <p className="text-zinc-300 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
             Please read these terms carefully before using our website.
@@ -97,11 +89,7 @@ export default function TermsAndConditions() {
       <div className="max-w-5xl mx-auto py-16 px-4">
 
         {/* ================= INTRODUCTION CARD ================= */}
-<<<<<<< HEAD
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-l-8 border-[#FDCF09]">
-=======
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-l-8 border-[#003366]">
->>>>>>> e20eac0 (Updated Website UI and content)
           <h2 className="text-3xl font-bold mb-6 text-zinc-900">Welcome to Swastik Srijan Foundation</h2>
           <p className="text-lg text-zinc-600 leading-relaxed">
             These Terms and Conditions govern your use of our website and services. By accessing our platform, you acknowledge that you have read, understood, and agree to be bound by these terms. We are committed to transparency and ethical practices in all our operations.
@@ -110,34 +98,19 @@ export default function TermsAndConditions() {
 
         {/* ================= SECTIONS GRID ================= */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-<<<<<<< HEAD
-          {sections.map((section, index) => (
-            <div
-              key={section.id}
-              className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#FDCF09] group"
-=======
           {sections.map((section) => (
             <div
               key={section.id}
               className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#003366] group"
->>>>>>> e20eac0 (Updated Website UI and content)
               onMouseEnter={() => setActiveSection(section.id)}
               onMouseLeave={() => setActiveSection(null)}
             >
               <div className="flex items-start gap-4">
-<<<<<<< HEAD
-                <div className={`mt-1 p-3 rounded-full text-xl transition-colors duration-300 ${activeSection === section.id ? 'bg-[#FDCF09] text-black' : 'bg-zinc-100 text-zinc-500'}`}>
-                  {section.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3 text-zinc-900 group-hover:text-[#FDCF09] transition-colors">
-=======
                 <div className={`mt-1 p-3 rounded-full text-xl transition-colors duration-300 ${activeSection === section.id ? 'bg-[#003366] text-white' : 'bg-zinc-100 text-zinc-500'}`}>
                   {section.icon}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-zinc-900 group-hover:text-[#003366] transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                     {section.title}
                   </h3>
                   <p className="text-zinc-600 leading-relaxed">
@@ -151,17 +124,10 @@ export default function TermsAndConditions() {
 
         {/* ================= CONTACT SECTION ================= */}
         <div className="bg-zinc-900 rounded-2xl shadow-xl overflow-hidden relative">
-<<<<<<< HEAD
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#FDCF09] opacity-10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
-
-          <div className="p-10 md:p-16 text-center relative z-10">
-            <div className="w-16 h-16 bg-[#FDCF09] text-black rounded-full mx-auto flex items-center justify-center text-3xl mb-6">
-=======
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#003366] opacity-10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
 
           <div className="p-10 md:p-16 text-center relative z-10">
             <div className="w-16 h-16 bg-[#003366] text-white rounded-full mx-auto flex items-center justify-center text-3xl mb-6">
->>>>>>> e20eac0 (Updated Website UI and content)
               <FaEnvelope />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Questions about our Terms?</h2>
@@ -172,22 +138,14 @@ export default function TermsAndConditions() {
             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 w-full md:w-auto min-w-[250px]">
                 <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Email Us</p>
-<<<<<<< HEAD
-                <a href="mailto:swastiksrijanfoundation@gmail.com" className="text-white font-bold text-lg hover:text-[#FDCF09] transition-colors">
-=======
                 <a href="mailto:swastiksrijanfoundation@gmail.com" className="text-white font-bold text-lg hover:text-blue-200 transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                   swastiksrijanfoundation@gmail.com
                 </a>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 w-full md:w-auto min-w-[250px]">
                 <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Call Us</p>
-<<<<<<< HEAD
-                <a href="tel:+919718346691" className="text-white font-bold text-lg hover:text-[#FDCF09] transition-colors">
-=======
                 <a href="tel:+919718346691" className="text-white font-bold text-lg hover:text-blue-200 transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                   +91 97183 46691
                 </a>
               </div>

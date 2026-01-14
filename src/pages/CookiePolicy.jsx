@@ -34,11 +34,7 @@ export default function CookiePolicy() {
                     <section>
                         <h2 className="text-2xl font-bold mb-4">4. Contact Us</h2>
                         <p className="text-zinc-600 leading-relaxed">
-<<<<<<< HEAD
-                            If you have any questions about our Cookie Policy, please contact us at <a href="mailto:swastiksrijanfoundation@gmail.com" className="text-blue-600 font-bold hover:underline">swastiksrijanfoundation@gmail.com</a>.
-=======
                             If you have any questions about our Cookie Policy, please contact us at <a href="mailto:swastiksrijanfoundation@gmail.com" className="text-[#003366] font-bold hover:underline">swastiksrijanfoundation@gmail.com</a>.
->>>>>>> e20eac0 (Updated Website UI and content)
                         </p>
                     </section>
                 </div>

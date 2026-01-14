@@ -137,11 +137,7 @@ export default function PrivacyPolicy() {
       <section className="bg-zinc-900 text-white pt-40 pb-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-            Privacy <span className="text-[#FDCF09]">Policy</span>
-=======
             Privacy <span className="text-white">Policy</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </h1>
           <p className="text-zinc-300 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
             How Swastik Srijan Foundation protects and manages your information.
@@ -152,11 +148,7 @@ export default function PrivacyPolicy() {
       <div className="max-w-5xl mx-auto py-16 px-4">
 
         {/* ================= INTRO CARD ================= */}
-<<<<<<< HEAD
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-l-8 border-[#FDCF09]">
-=======
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-l-8 border-[#003366]">
->>>>>>> e20eac0 (Updated Website UI and content)
           <h2 className="text-3xl font-bold mb-6 text-zinc-900">
             Your Privacy Matters to Us
           </h2>
@@ -171,38 +163,22 @@ export default function PrivacyPolicy() {
           {sections.map((section) => (
             <div
               key={section.id}
-<<<<<<< HEAD
-              className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#FDCF09] group"
-=======
               className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#003366] group"
->>>>>>> e20eac0 (Updated Website UI and content)
               onMouseEnter={() => setActiveSection(section.id)}
               onMouseLeave={() => setActiveSection(null)}
             >
               <div className="flex items-start gap-4">
                 <div
-<<<<<<< HEAD
-                  className={`mt-1 p-3 rounded-full text-xl transition-colors duration-300 ${
-                    activeSection === section.id
-                      ? "bg-[#FDCF09] text-black"
-                      : "bg-zinc-100 text-zinc-500"
-                  }`}
-=======
                   className={`mt-1 p-3 rounded-full text-xl transition-colors duration-300 ${activeSection === section.id
                       ? "bg-[#003366] text-white"
                       : "bg-zinc-100 text-zinc-500"
                     }`}
->>>>>>> e20eac0 (Updated Website UI and content)
                 >
                   {section.icon}
                 </div>
 
                 <div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold mb-3 text-zinc-900 group-hover:text-[#FDCF09] transition-colors">
-=======
                   <h3 className="text-xl font-bold mb-3 text-zinc-900 group-hover:text-[#003366] transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
                     {section.title}
                   </h3>
                   <div className="text-zinc-600 leading-relaxed">
@@ -216,17 +192,10 @@ export default function PrivacyPolicy() {
 
         {/* ================= CONTACT SECTION ================= */}
         <div className="bg-zinc-900 rounded-2xl shadow-xl overflow-hidden relative">
-<<<<<<< HEAD
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#FDCF09] opacity-10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
-
-          <div className="p-10 md:p-16 text-center relative z-10">
-            <div className="w-16 h-16 bg-[#FDCF09] text-black rounded-full mx-auto flex items-center justify-center text-3xl mb-6">
-=======
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#003366] opacity-10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
 
           <div className="p-10 md:p-16 text-center relative z-10">
             <div className="w-16 h-16 bg-[#003366] text-white rounded-full mx-auto flex items-center justify-center text-3xl mb-6">
->>>>>>> e20eac0 (Updated Website UI and content)
               <FaEnvelope />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -242,11 +211,7 @@ export default function PrivacyPolicy() {
               </p>
               <a
                 href="mailto:swastiksrijanfoundation@gmail.com"
-<<<<<<< HEAD
-                className="text-white font-bold text-lg hover:text-[#FDCF09] transition-colors"
-=======
                 className="text-white font-bold text-lg hover:text-blue-200 transition-colors"
->>>>>>> e20eac0 (Updated Website UI and content)
               >
                 swastiksrijanfoundation@gmail.com
               </a>

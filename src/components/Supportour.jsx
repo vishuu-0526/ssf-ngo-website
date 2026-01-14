@@ -15,17 +15,10 @@ function Supportour() {
         <Toaster
           toastOptions={{
             className:
-<<<<<<< HEAD
-              " font-semibold text-lg px-4 py-2 text-white bg-[#005EFF] cursor-pointer transition-all duration-200 ease-in z-2 mt-20",
-            style: {
-              padding: "12px 20px",
-              background: "#005EFF",
-=======
               " font-semibold text-lg px-4 py-2 text-white bg-[#003366] cursor-pointer transition-all duration-200 ease-in z-2 mt-20",
             style: {
               padding: "12px 20px",
               background: "#003366",
->>>>>>> e20eac0 (Updated Website UI and content)
               color: "white",
               borderRadius: "0",
             },
@@ -57,18 +50,6 @@ function Supportour() {
           </span>
 
           {/* QR Box */}
-<<<<<<< HEAD
-          <div className="flex flex-col items-center justify-center bg-blue-100 p-6 rounded border border-dashed w-full max-w-[420px]">
-            <img src={Barcode} className="w-40 h-40" />
-
-            {/* UPI ID */}
-            <div className="flex items-center gap-2 bg-white px-4 py-2 mt-4  shadow-[4px_4px_0px_#2b80ff] w-fit">
-              <span>swastikstijanfoundation@ptyes</span>
-
-              <span
-                className="text-blue-600 cursor-pointer ml-6 flex items-center gap-1"
-                onClick={() => handleCopy("5375395739@oksbi")}
-=======
           <div className="flex flex-col items-center justify-center bg-[#003366]/10 p-6 rounded border border-dashed w-full max-w-[420px]">
             <img src={Barcode} className="w-40 h-40" />
 
@@ -79,7 +60,6 @@ function Supportour() {
               <span
                 className="text-[#003366] cursor-pointer ml-6 flex items-center gap-1"
                 onClick={() => handleCopy("swastiksrijanfoundation@ptyes")}
->>>>>>> e20eac0 (Updated Website UI and content)
               >
                 Copy <IoCopyOutline />
               </span>
@@ -100,11 +80,7 @@ function Supportour() {
                   Union Bank Of India
                 </span>
                 <span
-<<<<<<< HEAD
-                  className="text-blue-600 cursor-pointer"
-=======
                   className="text-[#003366] cursor-pointer"
->>>>>>> e20eac0 (Updated Website UI and content)
                   onClick={() => handleCopy("Union Bank Of India")}
                 >
                   <IoCopyOutline />
@@ -119,11 +95,7 @@ function Supportour() {
                   481401010036579
                 </span>
                 <span
-<<<<<<< HEAD
-                  className="text-blue-600 cursor-pointer"
-=======
                   className="text-[#003366] cursor-pointer"
->>>>>>> e20eac0 (Updated Website UI and content)
                   onClick={() => handleCopy("481401010036579")}
                 >
                   <IoCopyOutline />
@@ -136,11 +108,7 @@ function Supportour() {
               <div className="flex items-center gap-2">
                 <span className="text-zinc-600 font-medium">UBIN0548146</span>
                 <span
-<<<<<<< HEAD
-                  className="text-blue-600 cursor-pointer"
-=======
                   className="text-[#003366] cursor-pointer"
->>>>>>> e20eac0 (Updated Website UI and content)
                   onClick={() => handleCopy("UBIN0548146")}
                 >
                   <IoCopyOutline />
@@ -155,11 +123,7 @@ function Supportour() {
                   Transport Nagar, Rewa
                 </span>
                 <span
-<<<<<<< HEAD
-                  className="text-blue-600 cursor-pointer"
-=======
                   className="text-[#003366] cursor-pointer"
->>>>>>> e20eac0 (Updated Website UI and content)
                   onClick={() => handleCopy("Transport Nagar, Rewa")}
                 >
                   <IoCopyOutline />

@@ -1,8 +1,5 @@
 import { Link } from "@tanstack/react-router";
-<<<<<<< HEAD
-=======
 import { motion } from "framer-motion";
->>>>>>> e20eac0 (Updated Website UI and content)
 import { FaGraduationCap, FaChalkboardTeacher, FaLaptopCode, FaRocket, FaBookOpen, FaUserCheck, FaRupeeSign } from "react-icons/fa";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
@@ -11,24 +8,6 @@ export default function LearningHub() {
     <div className="w-full font-inria bg-white">
 
       {/* ================= HERO ================= */}
-<<<<<<< HEAD
-      <section className="bg-zinc-900 text-white pt-40 pb-20 relative overflow-hidden text-center px-4">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            SSF National Academy <span className="text-[#FDCF09]">& Learning Hub</span>
-          </h1>
-          <p className="text-zinc-300 text-xl md:text-2xl leading-relaxed">
-            A hybrid education ecosystem blending physical centers with a state-of-the-art online learning hub.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= 1. OBJECTIVE ================= */}
-      <section className="py-24 px-4">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="w-16 h-16 bg-[#FDCF09]/20 text-[#FDCF09] rounded-2xl flex items-center justify-center text-3xl mb-6">
-=======
       <section className="bg-zinc-900 text-white pt-40 pb-20 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left max-w-2xl mx-auto">
@@ -116,7 +95,6 @@ export default function LearningHub() {
           </div>
           <div className="order-1 md:order-2">
             <div className="w-16 h-16 bg-[#003366]/10 text-[#003366] rounded-2xl flex items-center justify-center text-3xl mb-6">
->>>>>>> e20eac0 (Updated Website UI and content)
               <FaGraduationCap />
             </div>
             <h2 className="text-4xl font-black text-black mb-6">Our Objective</h2>
@@ -130,25 +108,11 @@ export default function LearningHub() {
                 "Focus on holistic development"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-bold text-zinc-800">
-<<<<<<< HEAD
-                  <IoCheckmarkCircleSharp className="text-[#FDCF09] text-xl" /> {item}
-=======
                   <IoCheckmarkCircleSharp className="text-[#003366] text-xl" /> {item}
->>>>>>> e20eac0 (Updated Website UI and content)
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-          <div className="bg-zinc-100 rounded-2xl p-8 h-full min-h-[400px] flex items-center justify-center">
-            {/* Placeholder for Image/Graphic */}
-            <div className="text-center">
-              <h3 className="text-6xl font-black text-zinc-200 mb-2">GOAL</h3>
-              <p className="text-xl font-bold text-zinc-400">Educate. Empower. Elevate.</p>
-            </div>
-          </div>
-=======
->>>>>>> e20eac0 (Updated Website UI and content)
         </div>
       </section>
 
@@ -156,22 +120,14 @@ export default function LearningHub() {
       <section className="py-24 bg-zinc-50 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-[#FDCF09] font-bold tracking-widest uppercase text-sm mb-4">What We Teach</h2>
-=======
             <h2 className="text-[#003366] font-bold tracking-widest uppercase text-sm mb-4">What We Teach</h2>
->>>>>>> e20eac0 (Updated Website UI and content)
             <h3 className="text-4xl md:text-5xl font-black text-black">Our Courses</h3>
             <p className="text-zinc-600 max-w-2xl mx-auto mt-4">Comprehensive curriculum covering school subjects, competitive exams, and future-ready skills.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-<<<<<<< HEAD
-              <div className="text-blue-600 text-4xl mb-6"><FaBookOpen /></div>
-=======
               <div className="text-[#003366] text-4xl mb-6"><FaBookOpen /></div>
->>>>>>> e20eac0 (Updated Website UI and content)
               <h4 className="text-xl font-bold mb-3">Foundational Learning</h4>
               <p className="text-zinc-500 mb-4 text-sm">Classes 6 to 10</p>
               <ul className="space-y-2 text-zinc-700 text-sm">
@@ -181,11 +137,7 @@ export default function LearningHub() {
               </ul>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-<<<<<<< HEAD
-              <div className="text-[#FDCF09] text-4xl mb-6"><FaLaptopCode /></div>
-=======
               <div className="text-[#003366] text-4xl mb-6"><FaLaptopCode /></div>
->>>>>>> e20eac0 (Updated Website UI and content)
               <h4 className="text-xl font-bold mb-3">Skill Development</h4>
               <p className="text-zinc-500 mb-4 text-sm">Vocational & Digital</p>
               <ul className="space-y-2 text-zinc-700 text-sm">
@@ -231,11 +183,7 @@ export default function LearningHub() {
                 </div>
               </div>
               <div className="flex gap-4">
-<<<<<<< HEAD
-                <div className="w-12 h-12 bg-[#FDCF09] text-black rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
-=======
                 <div className="w-12 h-12 bg-[#003366] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
->>>>>>> e20eac0 (Updated Website UI and content)
                 <div>
                   <h4 className="text-xl font-bold mb-2">Start Learning</h4>
                   <p className="text-zinc-600">Get allocated to a batch, receive your ID card, and begin your journey!</p>
@@ -243,11 +191,7 @@ export default function LearningHub() {
               </div>
             </div>
             <div className="mt-8">
-<<<<<<< HEAD
-              <Link to="/Contact" className="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
-=======
               <Link to="/Contact" className="inline-block px-8 py-3 bg-[#003366] text-white font-bold rounded-lg hover:bg-zinc-800 transition">
->>>>>>> e20eac0 (Updated Website UI and content)
                 Register Now
               </Link>
             </div>
@@ -271,11 +215,7 @@ export default function LearningHub() {
                   Orphans, children of widows, and Antyodaya card holders receive education, materials, and support completely free of cost.
                 </p>
               </div>
-<<<<<<< HEAD
-              <div className="bg-white p-6 rounded-xl border-l-4 border-[#FDCF09] shadow-sm">
-=======
               <div className="bg-white p-6 rounded-xl border-l-4 border-[#003366] shadow-sm">
->>>>>>> e20eac0 (Updated Website UI and content)
                 <h4 className="text-xl font-bold text-black mb-1">Nominal Fee</h4>
                 <p className="text-zinc-500 text-sm mb-3">For Sustainability</p>
                 <p className="text-zinc-700 text-sm">
@@ -291,11 +231,7 @@ export default function LearningHub() {
       <section className="py-24 bg-zinc-900 text-white px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-[#FDCF09] font-bold tracking-widest uppercase text-sm mb-4">Delivery Modes</h2>
-=======
             <h2 className="text-white font-bold tracking-widest uppercase text-sm mb-4">Delivery Modes</h2>
->>>>>>> e20eac0 (Updated Website UI and content)
             <h3 className="text-4xl md:text-5xl font-black">How We Teach</h3>
           </div>
 
@@ -310,13 +246,8 @@ export default function LearningHub() {
             </div>
 
             {/* Online */}
-<<<<<<< HEAD
-            <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#FDCF09] hover:-translate-y-2 transition-transform duration-300">
-              <div className="text-4xl text-[#FDCF09] mb-6"><FaLaptopCode /></div>
-=======
             <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#003366] hover:-translate-y-2 transition-transform duration-300">
               <div className="text-4xl text-[#003366] mb-6"><FaLaptopCode /></div>
->>>>>>> e20eac0 (Updated Website UI and content)
               <h4 className="text-2xl font-bold mb-4">Online Hub</h4>
               <p className="text-zinc-600">
                 Access to recorded lectures, live webinars, and digital notes via our app/portal.
@@ -324,13 +255,8 @@ export default function LearningHub() {
             </div>
 
             {/* Hybrid */}
-<<<<<<< HEAD
-            <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-blue-600 hover:-translate-y-2 transition-transform duration-300">
-              <div className="text-4xl text-blue-600 mb-6"><FaRocket /></div>
-=======
             <div className="bg-white p-8 rounded-xl shadow-sm border-t-4 border-[#003366] hover:-translate-y-2 transition-transform duration-300">
               <div className="text-4xl text-[#003366] mb-6"><FaRocket /></div>
->>>>>>> e20eac0 (Updated Website UI and content)
               <h4 className="text-2xl font-bold mb-4">Hybrid Learning</h4>
               <p className="text-zinc-600">
                 Regular doubt-clearing sessions locally, supported by digital expert classes.
@@ -353,11 +279,7 @@ export default function LearningHub() {
             </div>
             {/* Item 2 */}
             <div className="relative md:w-[50vw] md:ml-[20px] md:text-left text-left pl-8 md:pl-12">
-<<<<<<< HEAD
-              <div className="absolute top-0 left-[-11px] md:left-[-11px] w-6 h-6 bg-[#FDCF09] rounded-full border-4 border-white"></div>
-=======
               <div className="absolute top-0 left-[-11px] md:left-[-11px] w-6 h-6 bg-[#003366] rounded-full border-4 border-white"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
               <h4 className="text-2xl font-bold">2027: Digital Integrated Grid</h4>
               <p className="text-zinc-600">Connecting all centers via a centralized digital learning grid.</p>
             </div>
@@ -372,20 +294,6 @@ export default function LearningHub() {
       </section>
 
       {/* ================= CTA ================= */}
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-600 text-white text-center px-4">
-        <h2 className="text-3xl font-black mb-4">
-          Help Build the Future
-        </h2>
-        <p className="mb-6">
-          Sponsor a child's education today.
-        </p>
-        <Link to="/DonateAndSupport">
-          <button className="bg-white text-blue-600 px-8 py-3 font-bold">
-            Donate to Academy
-          </button>
-        </Link>
-=======
       <section className="py-24 bg-[#003366] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:30px_30px]"></div>
         <div className="container mx-auto px-6 text-center relative z-10 space-y-6">
@@ -409,7 +317,6 @@ export default function LearningHub() {
             </Link>
           </div>
         </div>
->>>>>>> e20eac0 (Updated Website UI and content)
       </section>
 
     </div>

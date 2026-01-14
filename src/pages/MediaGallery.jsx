@@ -25,9 +25,6 @@ const generateImages = () => {
   return imgs;
 };
 
-<<<<<<< HEAD
-const ALL_IMAGES = generateImages();
-=======
 const ALL_IMAGES = [
   {
     id: "real1",
@@ -151,7 +148,6 @@ const ALL_IMAGES = [
   },
   ...generateImages()
 ];
->>>>>>> e20eac0 (Updated Website UI and content)
 const CATEGORIES = ["All", "Education", "Health", "Women Empowerment", "Events", "Distribution"];
 const YEARS = ["All", "2024", "2023", "2022"];
 
@@ -159,34 +155,18 @@ export default function MediaGallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeYear, setActiveYear] = useState("All");
   const [selectedImg, setSelectedImg] = useState(null);
-<<<<<<< HEAD
-  const [filteredImages, setFilteredImages] = useState(ALL_IMAGES);
-=======
->>>>>>> e20eac0 (Updated Website UI and content)
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-<<<<<<< HEAD
-  // Filter Logic
-  useEffect(() => {
-    const filtered = ALL_IMAGES.filter((img) => {
-      const catMatch = activeCategory === "All" || img.category === activeCategory;
-      const yearMatch = activeYear === "All" || img.year === activeYear;
-      return catMatch && yearMatch;
-    });
-    setFilteredImages(filtered);
-  }, [activeCategory, activeYear]);
-=======
   // Derived filtered images (no extra state needed)
   const filteredImages = ALL_IMAGES.filter((img) => {
     const catMatch = activeCategory === "All" || img.category === activeCategory;
     const yearMatch = activeYear === "All" || img.year === activeYear;
     return catMatch && yearMatch;
   });
->>>>>>> e20eac0 (Updated Website UI and content)
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -212,17 +192,6 @@ export default function MediaGallery() {
       {/* ================= HERO SECTION ================= */}
       <section className="bg-zinc-900 text-white pt-40 pb-24 px-4 relative overflow-hidden">
         {/* Background Decorative Elements */}
-<<<<<<< HEAD
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#FDCF09] opacity-5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 opacity-5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
-
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <div className="inline-block bg-[#FDCF09]/20 text-[#FDCF09] px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-            <FaCamera className="inline-block mr-2" /> Our Visual Journey
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-            Media <span className="text-[#FDCF09]">Gallery</span>
-=======
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#003366] opacity-5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 opacity-5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
 
@@ -232,7 +201,6 @@ export default function MediaGallery() {
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
             Media <span className="text-white">Gallery</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </h1>
           <p className="text-zinc-300 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-light">
             Glimpses of our impact, events, and the smiles we've spread across communities. Witness the change we are making together.
@@ -256,13 +224,8 @@ export default function MediaGallery() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-300 border
                     ${activeCategory === cat
-<<<<<<< HEAD
-                      ? "bg-[#FDCF09] text-black border-[#FDCF09] shadow-md transform scale-105"
-                      : "bg-white text-zinc-600 border-zinc-200 hover:border-[#FDCF09] hover:text-black"}`}
-=======
                       ? "bg-[#003366] text-white border-[#003366] shadow-md transform scale-105"
                       : "bg-white text-zinc-600 border-zinc-200 hover:border-[#003366] hover:text-black"}`}
->>>>>>> e20eac0 (Updated Website UI and content)
                 >
                   {cat}
                 </button>
@@ -320,11 +283,7 @@ export default function MediaGallery() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-<<<<<<< HEAD
-                    <span className="bg-[#FDCF09] text-black text-xs font-bold px-2 py-1 rounded mb-2 inline-block">
-=======
                     <span className="bg-[#003366] text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">
->>>>>>> e20eac0 (Updated Website UI and content)
                       {img.category}
                     </span>
                     <h3 className="text-white font-bold text-lg">{img.category} Drive</h3>
@@ -372,11 +331,7 @@ export default function MediaGallery() {
             {/* Sidebar Details (Visible on Desktop, stacked on Mobile) */}
             <div className="w-full md:w-80 bg-zinc-900 p-8 border-l border-zinc-800 flex flex-col justify-between">
               <div>
-<<<<<<< HEAD
-                <span className="text-[#FDCF09] font-bold tracking-wider text-sm uppercase mb-2 block">
-=======
                 <span className="text-[#003366] font-bold tracking-wider text-sm uppercase mb-2 block">
->>>>>>> e20eac0 (Updated Website UI and content)
                   {selectedImg.year}
                 </span>
                 <h3 className="text-2xl font-white font-bold text-white mb-4">
@@ -400,11 +355,7 @@ export default function MediaGallery() {
 
               <div className="pt-8">
                 <button
-<<<<<<< HEAD
-                  className="w-full bg-white text-black font-bold py-3 rounded hover:bg-[#FDCF09] transition-colors"
-=======
                   className="w-full bg-white text-black font-bold py-3 rounded hover:bg-[#003366] hover:text-white transition-colors"
->>>>>>> e20eac0 (Updated Website UI and content)
                   onClick={() => setSelectedImg(null)}
                 >
                   Close Gallery

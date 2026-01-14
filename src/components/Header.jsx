@@ -29,14 +29,6 @@ const Header = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
-<<<<<<< HEAD
-  /* 🔁 Close legal submenu when main dropdown closes */
-  useEffect(() => {
-    if (!dropdownOpen) setLegalOpen(false);
-  }, [dropdownOpen]);
-
-=======
->>>>>>> e20eac0 (Updated Website UI and content)
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-zinc-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -52,25 +44,6 @@ const Header = () => {
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex items-center gap-8 text-base font-bold text-zinc-800">
 
-<<<<<<< HEAD
-          <Link to="/" onClick={closeAll} className="hover:text-[#FDCF09] transition-colors">
-            Home
-          </Link>
-
-          <Link to="/#about" onClick={closeAll} className="hover:text-[#FDCF09] transition-colors">
-            About Us
-          </Link>
-
-          <Link to="/institutional-dna" onClick={closeAll} className="hover:text-[#FDCF09] transition-colors">
-            Institutional DNA
-          </Link>
-
-          <Link to="/Campaign" onClick={closeAll} className="hover:text-[#FDCF09] transition-colors">
-            Our Work
-          </Link>
-
-          <Link to="/#join-us" onClick={closeAll} className="hover:text-[#FDCF09] transition-colors">
-=======
           <Link to="/" onClick={closeAll} className="hover:text-[#002344] transition-colors">
             Home
           </Link>
@@ -88,23 +61,12 @@ const Header = () => {
           </Link>
 
           <Link to="/#join-us" onClick={closeAll} className="hover:text-[#002344] transition-colors">
->>>>>>> e20eac0 (Updated Website UI and content)
             Join Us
           </Link>
 
           {/* MORE DROPDOWN */}
           <div className="relative" ref={dropdownRef}>
             <button
-<<<<<<< HEAD
-              onClick={() => setDropdownOpen((prev) => !prev)}
-              className="flex items-center gap-1 hover:text-[#FDCF09] transition-colors"
-            >
-              More
-              <IoIosArrowDown
-                className={`transition-transform duration-300 ${
-                  dropdownOpen ? "rotate-180" : ""
-                }`}
-=======
               onClick={() =>
                 setDropdownOpen((prev) => {
                   const next = !prev;
@@ -118,7 +80,6 @@ const Header = () => {
               <IoIosArrowDown
                 className={`transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""
                   }`}
->>>>>>> e20eac0 (Updated Website UI and content)
               />
             </button>
 
@@ -126,46 +87,28 @@ const Header = () => {
               <div className="absolute top-12 right-0 w-64 bg-white border border-zinc-200 shadow-xl rounded-b-lg overflow-hidden">
                 <ul className="flex flex-col text-sm font-semibold">
 
-<<<<<<< HEAD
-                  <Link to="/DonateAndSupport" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
-                    Donate & Support
-=======
                   <Link to="/Impact" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b flex items-center justify-between group">
                     <span>Impact Stories</span>
                     <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Real Results</span>
->>>>>>> e20eac0 (Updated Website UI and content)
                   </Link>
 
                   <Link to="/UpcomingProjects" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
                     Upcoming Projects
                   </Link>
 
-<<<<<<< HEAD
-                  <Link to="/Impact" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
-                    Impact Stories
-                  </Link>
-
-                  <Link to="/Blog" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
-                    Blog
-=======
                   <Link to="/DonateAndSupport" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
                     Donate and Support
->>>>>>> e20eac0 (Updated Website UI and content)
                   </Link>
 
                   <Link to="/Media" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
                     Media Gallery
                   </Link>
 
-<<<<<<< HEAD
-                  <Link to="/PartnerWithUs" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
-=======
                   <Link to="/Blog" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
                     News & Blog
                   </Link>
 
                   <Link to="/PartnerWithUs" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b text-[#003366]">
->>>>>>> e20eac0 (Updated Website UI and content)
                     Partner With Us
                   </Link>
 
@@ -174,59 +117,6 @@ const Header = () => {
                   </Link>
 
                   {/* LEGAL & POLICIES */}
-<<<<<<< HEAD
-                  <li className="border-b">
-                    <button
-                      onClick={() => setLegalOpen(!legalOpen)}
-                      className="w-full flex items-center justify-between px-6 py-4 hover:bg-zinc-50"
-                    >
-                      Legal & Policies
-                      <IoIosArrowDown
-                        className={`transition-transform duration-300 ${
-                          legalOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    {legalOpen && (
-  <div className="bg-zinc-50">
-    <Link
-      to="/TermsAndConditions"
-      onClick={closeAll}
-      className="block px-10 py-3 hover:bg-zinc-100"
-    >
-      Terms & Conditions
-    </Link>
-
-    <Link
-      to="/RegistrationDetails"
-      onClick={closeAll}
-      className="block px-10 py-3 hover:bg-zinc-100"
-    >
-      Registration Details
-    </Link>
-
-    <Link
-      to="/PrivacyPolicy"
-      onClick={closeAll}
-      className="block px-10 py-3 hover:bg-zinc-100"
-    >
-      Privacy Policy
-    </Link>
-
-    <Link
-      to="/MemorandomAndRules"
-      onClick={closeAll}
-      className="block px-10 py-3 hover:bg-zinc-100"
-    >
-      Memorandum & Rules
-    </Link>
-
-  </div>
-)}
-
-
-=======
                   {/* LEGAL & POLICIES */}
                   <li className="border-b border-zinc-100">
                     <button
@@ -266,7 +156,6 @@ const Header = () => {
                         ))}
                       </div>
                     </div>
->>>>>>> e20eac0 (Updated Website UI and content)
                   </li>
 
                 </ul>
@@ -278,15 +167,9 @@ const Header = () => {
           <a
             href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
             target="_blank"
-<<<<<<< HEAD
-            rel="noreferrer"
-          >
-            <button className="btn-cry-primary">
-=======
             rel="noreferrer noopener"
           >
             <button className="px-8 py-3 bg-[#d90429] text-white font-bold rounded-full hover:bg-[#b00422] transition-all shadow-lg shadow-red-500/20 active:scale-95">
->>>>>>> e20eac0 (Updated Website UI and content)
               Donate Now
             </button>
           </a>
@@ -312,16 +195,6 @@ const Header = () => {
             </Link>
             <Link to="/Campaign" onClick={closeAll} className="py-4">Our Work</Link>
             <Link to="/#join-us" onClick={closeAll} className="py-4">Join Us</Link>
-<<<<<<< HEAD
-            <Link to="/DonateAndSupport" onClick={closeAll} className="py-4">Donate & Support</Link>
-            <Link to="/UpcomingProjects" onClick={closeAll} className="py-4">Upcoming Projects</Link>
-            <Link to="/Blog" onClick={closeAll} className="py-4">Blog</Link>
-            <Link to="/Media" onClick={closeAll} className="py-4">Media Gallery</Link>
-            <Link to="/Contact" onClick={closeAll} className="py-4">Contact Us</Link>
-            <Link to="/TermsAndConditions" onClick={closeAll} className="py-4">
-              Terms & Conditions
-            </Link>
-=======
 
             {/* More section items (mirror desktop dropdown) */}
             <Link to="/DonateAndSupport" onClick={closeAll} className="py-4">
@@ -362,7 +235,6 @@ const Header = () => {
             <Link to="/CookiePolicy" onClick={closeAll} className="py-4">
               Cookie Policy
             </Link>
->>>>>>> e20eac0 (Updated Website UI and content)
 
             <div className="pt-6">
               <a
@@ -370,11 +242,7 @@ const Header = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-<<<<<<< HEAD
-                <button className="w-full btn-cry-primary">
-=======
                 <button className="w-full py-4 bg-[#e63946] text-white font-bold rounded-xl hover:bg-red-700 transition-all shadow-lg">
->>>>>>> e20eac0 (Updated Website UI and content)
                   Donate Now
                 </button>
               </a>

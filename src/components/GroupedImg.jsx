@@ -25,11 +25,7 @@ export default function GroupedImg() {
           className="w-20 mb-4"
         />
         <h4 className="text-3xl md:text-4xl font-bold text-zinc-900">
-<<<<<<< HEAD
-          For The <span className="text-blue-600">Change</span>
-=======
           For The <span className="text-[#003366]">Change</span>
->>>>>>> e20eac0 (Updated Website UI and content)
         </h4>
       </div>
     </div>

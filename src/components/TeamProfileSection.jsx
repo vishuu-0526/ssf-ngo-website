@@ -76,11 +76,7 @@ import React from "react";
 
 const teamMembers = [
   { name: "Ramesh Pandey", position: "Founder & President", img: "./Teams_Images/image_2.jpg" },
-<<<<<<< HEAD
-  { name: "Ms. A. Gincy George", position: "Head – Counselling & Community Well-being (Pan India)", img: "./Teams_Images/image_1.jpg" },
-=======
   { name: "Ms. A. Gincy George", position: "Head - Counselling & Community Well-being (Pan India)", img: "./Teams_Images/image_1.jpg" },
->>>>>>> e20eac0 (Updated Website UI and content)
   { name: "Ms. Divya Sharma", position: "Chief Financial Officer (CFO)", img: "./Teams_Images/image_23.png" },
   { name: "CA Kapil Tiwari", position: "Compliance & Legal Advisor", img: "./Teams_Images/image_14.jpg" },
   { name: "Adv. Harish Kumar", position: "Legal Advisor", img: "./Teams_Images/image_12.jpg" },
@@ -88,13 +84,8 @@ const teamMembers = [
   { name: "Amit Kumar Pandey", position: "General Secretary", img: "./Teams_Images/image_15.jpg" },
   { name: "Amrita Sinha", position: "Advisory Board", img: "./Teams_Images/image_20.jpg" },
   { name: "Raji P Alex", position: "Advisory Board", img: "./Teams_Images/image_9.jpg" },
-<<<<<<< HEAD
-  { name: "Naresh Kumar", position: "President – Faridabad Wing", img: "./Teams_Images/image_3.jpg" },
-  { name: "Dhiraj Kumar", position: "President – Pune Wing", img: "./Teams_Images/image_4.png" },
-=======
   { name: "Naresh Kumar", position: "President - Faridabad Wing", img: "./Teams_Images/image_3.jpg" },
   { name: "Dhiraj Kumar", position: "President - Pune Wing", img: "./Teams_Images/image_4.png" },
->>>>>>> e20eac0 (Updated Website UI and content)
   { name: "Krishna Kumar", position: "Advisor", img: "./Teams_Images/image_8.jpg" },
   { name: "Ayushi Tyagi", position: "Volunteer", img: "./Teams_Images/image_6.jpg" },
   { name: "Ms. M D Pavanethra", position: "Volunteer", img: "./Teams_Images/image_5.jpg" },

@@ -280,21 +280,12 @@
 // export default AbtDetailed;
 
 
-<<<<<<< HEAD
-import ABFrame from "../assets/ABFrame1.png";
-import ABFrame1 from "../assets/ABFrame2.png";
-import ABFrame2 from "../assets/ABFrame3.png";
-import ABFrame3 from "../assets/ABFrame4.png";
-import ABFrame4 from "../assets/ABFrame5.png";
-import ABFrame5 from "../assets/ABFrame6.png";
-=======
 const ABFrame = "/images/real/academy_banner_wide.jpg";
 const ABFrame1 = "/images/real/nutrition_program.jpg";
 const ABFrame2 = "/images/real/women_community_meeting.jpg";
 const ABFrame3 = "/images/real/scholarship_distribution.jpg";
 const ABFrame4 = "/images/real/nutrition_program.jpg";
 const ABFrame5 = "/images/real/ssf_event_members.jpg";
->>>>>>> e20eac0 (Updated Website UI and content)
 
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
@@ -306,11 +297,7 @@ function AbtDetailed() {
         {/* ========== EDUCATION ========== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Education
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">
@@ -340,11 +327,7 @@ function AbtDetailed() {
           <img src={ABFrame1} alt="Health programs" className="w-full hidden md:block" />
 
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Nutrition & Health
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">
@@ -372,11 +355,7 @@ function AbtDetailed() {
         {/* ========== DEVELOPMENT ========== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Development
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">
@@ -398,14 +377,10 @@ function AbtDetailed() {
             </ul>
           </div>
 
-<<<<<<< HEAD
-          <img src={ABFrame2} alt="Rural development" className="w-full" />
-=======
           <div className="grid grid-cols-2 gap-4">
             <img src={ABFrame2} alt="Rural development" className="w-full h-full object-cover rounded-xl" />
             <img src="/images/real/tree_planting_2.jpg" alt="Environmental initiative" className="w-full h-full object-cover rounded-xl" />
           </div>
->>>>>>> e20eac0 (Updated Website UI and content)
         </div>
 
         {/* ========== YOUTH EMPOWERMENT ========== */}
@@ -413,11 +388,7 @@ function AbtDetailed() {
           <img src={ABFrame3} alt="Youth empowerment" className="w-full hidden md:block" />
 
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Youth Empowerment
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">
@@ -445,11 +416,7 @@ function AbtDetailed() {
         {/* ========== HEALTH AWARENESS ========== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Health Awareness
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">
@@ -479,11 +446,7 @@ function AbtDetailed() {
           <img src={ABFrame5} alt="Homeless support" className="w-full hidden md:block" />
 
           <div className="space-y-4">
-<<<<<<< HEAD
-            <span className="inline-block text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded">
-=======
             <span className="inline-block text-sm text-[#003366] bg-[#003366]/5 px-3 py-1 rounded">
->>>>>>> e20eac0 (Updated Website UI and content)
               Homeless Support
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900">

@@ -7,25 +7,15 @@ export default function MasonryCards() {
     {
       title: "Education",
       desc: "Empowering children with the gift of education to build a brighter future.",
-<<<<<<< HEAD
-      img: "/images/students.png",
-      span: "md:col-span-8",
-      color: "border-l-4 border-[#FDCF09]",
-=======
       img: "/images/real/academy_banner_wide.jpg",
       span: "md:col-span-8",
       color: "border-l-4 border-[#003366]",
->>>>>>> e20eac0 (Updated Website UI and content)
       link: "/LearningHub"
     },
     {
       title: "Protection",
       desc: "Ensuring safety and dignity for every child, shielding them from abuse and neglect.",
-<<<<<<< HEAD
-      img: "/images/girls.png",
-=======
       img: "/images/real/scholarship_distribution.jpg",
->>>>>>> e20eac0 (Updated Website UI and content)
       span: "md:col-span-4",
       color: "border-l-4 border-black",
       link: "/Campaign#legal"
@@ -33,25 +23,15 @@ export default function MasonryCards() {
     {
       title: "Health",
       desc: "Providing essential healthcare and nutrition to combat malnutrition and disease.",
-<<<<<<< HEAD
-      img: "/images/health.png",
-      span: "md:col-span-4",
-      color: "border-l-4 border-[#FDCF09]",
-=======
       img: "/images/real/nutrition_program.jpg",
       span: "md:col-span-4",
       color: "border-l-4 border-[#003366]",
->>>>>>> e20eac0 (Updated Website UI and content)
       link: "/Campaign#health"
     },
     {
       title: "Livelihood",
       desc: "Creating sustainable opportunities for families to break the cycle of poverty.",
-<<<<<<< HEAD
-      img: "/images/agriculture.png",
-=======
       img: "/images/real/women_community_meeting.jpg",
->>>>>>> e20eac0 (Updated Website UI and content)
       span: "md:col-span-4",
       color: "border-l-4 border-black",
       link: "/Campaign#skills"
@@ -59,11 +39,7 @@ export default function MasonryCards() {
     {
       title: "Participation",
       desc: "Giving children a voice in the decisions that affect their lives.",
-<<<<<<< HEAD
-      img: null,
-=======
       img: "/images/real/ssf_event_members.jpg",
->>>>>>> e20eac0 (Updated Website UI and content)
       span: "md:col-span-4",
       color: "border-l-4 border-zinc-400",
       link: "/Volunteer"
@@ -83,11 +59,7 @@ export default function MasonryCards() {
         >
           <Link to={card.link} className="flex flex-col justify-between h-full p-8 relative z-10 block">
             <div>
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold text-zinc-900 mb-3 group-hover:text-[#FDCF09] transition-colors">{card.title}</h3>
-=======
               <h3 className="text-2xl font-bold text-zinc-900 mb-3 group-hover:text-[#003366] transition-colors">{card.title}</h3>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-zinc-600 leading-relaxed mb-6 font-medium">
                 {card.desc}
               </p>
@@ -101,11 +73,7 @@ export default function MasonryCards() {
                 </div>
               )}
               <div className="inline-flex items-center gap-2 font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
-<<<<<<< HEAD
-                Learn More <FaArrowRight size={12} className="text-[#FDCF09]" />
-=======
                 Learn More <FaArrowRight size={12} className="text-[#003366]" />
->>>>>>> e20eac0 (Updated Website UI and content)
               </div>
             </div>
           </Link>

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from "react";
-=======
->>>>>>> e20eac0 (Updated Website UI and content)
 import { motion } from "framer-motion";
 
 const ProgressTimeline = () => {
@@ -22,22 +18,14 @@ const ProgressTimeline = () => {
 
         {/* HEADER */}
         <div className="text-center mb-20 space-y-4">
-<<<<<<< HEAD
-          <h2 className="text-[#FDCF09] font-bold tracking-widest uppercase text-sm">Milestones</h2>
-=======
           <h2 className="text-[#003366] font-bold tracking-widest uppercase text-sm">Milestones</h2>
->>>>>>> e20eac0 (Updated Website UI and content)
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="cry-title"
           >
-<<<<<<< HEAD
-            Our <span className="text-[#FDCF09]">Journey</span>
-=======
             Our <span className="text-[#003366]">Journey</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -69,11 +57,7 @@ const ProgressTimeline = () => {
 
                 {/* Content Side */}
                 <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-16 text-left md:text-right" : "md:pl-16 text-left"}`}>
-<<<<<<< HEAD
-                  <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#FDCF09] hover:shadow-md transition-shadow">
-=======
                   <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#003366] hover:shadow-md transition-shadow">
->>>>>>> e20eac0 (Updated Website UI and content)
                     <span className="block text-4xl font-black text-zinc-200 mb-2">{item.year}</span>
                     <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
                     <p className="text-zinc-600 leading-relaxed">{item.description}</p>
@@ -81,11 +65,7 @@ const ProgressTimeline = () => {
                 </div>
 
                 {/* Marker */}
-<<<<<<< HEAD
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[#FDCF09] rounded-full border-4 border-white shadow-md transform -translate-x-1/2 z-10"></div>
-=======
                 <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[#003366] rounded-full border-4 border-white shadow-md transform -translate-x-1/2 z-10"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
 
                 {/* Empty Side (for balancing flex) */}
                 <div className="hidden md:block w-1/2"></div>

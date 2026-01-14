@@ -7,25 +7,15 @@ export default function Volunteer() {
       title: "Teaching Volunteer",
       icon: <FaChalkboardTeacher />,
       desc: "Teach subjects like Math, Science, or English at our centers. 2-3 hours/week commitment.",
-<<<<<<< HEAD
-      color: "text-blue-600",
-      bg: "bg-blue-100"
-=======
       color: "text-[#003366]",
       bg: "bg-[#003366]/10"
->>>>>>> e20eac0 (Updated Website UI and content)
     },
     {
       title: "Skill Mentor",
       icon: <FaLaptopCode />,
       desc: "Train youth in computer skills, coding, or vocational crafts. Weekend batches available.",
-<<<<<<< HEAD
-      color: "text-[#FDCF09]",
-      bg: "bg-[#FDCF09]/20"
-=======
       color: "text-[#003366]",
       bg: "bg-[#003366]/10"
->>>>>>> e20eac0 (Updated Website UI and content)
     },
     {
       title: "Field Volunteer",
@@ -49,13 +39,8 @@ export default function Volunteer() {
       {/* ================= HERO ================= */}
       <section className="bg-zinc-900 text-white pt-40 pb-20 relative overflow-hidden text-center px-4">
         <div className="max-w-4xl mx-auto relative z-10">
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Volunteer <span className="text-[#FDCF09]">With Us</span>
-=======
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
             Volunteer <span className="text-[#004d99]">With Us</span>
->>>>>>> e20eac0 (Updated Website UI and content)
           </h1>
           <p className="text-zinc-300 text-xl md:text-2xl leading-relaxed">
             Join a community of changemakers. Your time can rewrite a child's destiny.
@@ -67,11 +52,7 @@ export default function Volunteer() {
       <section className="py-24 px-4 bg-zinc-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-[#FDCF09] font-bold tracking-widest uppercase text-sm mb-4">Opportunities</h2>
-=======
             <h2 className="text-[#003366] font-bold tracking-widest uppercase text-sm mb-4">Opportunities</h2>
->>>>>>> e20eac0 (Updated Website UI and content)
             <h3 className="text-4xl md:text-5xl font-black text-black">Available Roles</h3>
           </div>
 
@@ -107,28 +88,17 @@ export default function Volunteer() {
                 "Homemakers (Teaching & Coordination)"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4 bg-zinc-50 p-4 rounded-lg border border-zinc-100">
-<<<<<<< HEAD
-                  <IoCheckmarkCircleSharp className="text-[#FDCF09] text-2xl flex-shrink-0" />
-=======
                   <IoCheckmarkCircleSharp className="text-[#003366] text-2xl flex-shrink-0" />
->>>>>>> e20eac0 (Updated Website UI and content)
                   <span className="font-bold text-zinc-800">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-<<<<<<< HEAD
-          <div className="bg-blue-600 rounded-2xl p-10 text-white flex flex-col justify-center h-full min-h-[400px]">
-            <FaUserCheck className="text-6xl mb-6 text-[#FDCF09]" />
-            <h3 className="text-3xl font-black mb-4">Values We Look For</h3>
-            <div className="space-y-4 text-blue-100">
-=======
           <div className="bg-[#003366] rounded-2xl p-10 text-white flex flex-col justify-center h-full min-h-[400px]">
             <FaUserCheck className="text-6xl mb-6 text-white" />
             <h3 className="text-3xl font-black mb-4">Values We Look For</h3>
             <div className="space-y-4 text-zinc-300">
->>>>>>> e20eac0 (Updated Website UI and content)
               <p>• <span className="text-white font-bold">Commitment:</span> Consistency matters more than hours.</p>
               <p>• <span className="text-white font-bold">Empathy:</span> Treating every beneficiary with dignity.</p>
               <p>• <span className="text-white font-bold">Teamwork:</span> Working together for a common goal.</p>
@@ -142,11 +112,7 @@ export default function Volunteer() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-black mb-8">Ready to Start?</h2>
           <div className="bg-zinc-800 p-8 rounded-2xl border border-zinc-700">
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-[#FDCF09]">Application Process</h3>
-=======
             <h3 className="text-2xl font-bold mb-4 text-white">Application Process</h3>
->>>>>>> e20eac0 (Updated Website UI and content)
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8 text-zinc-300">
               <div className="flex items-center gap-2">
                 <span className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center font-bold">1</span>
@@ -169,11 +135,7 @@ export default function Volunteer() {
               target="_blank"
               rel="noreferrer"
             >
-<<<<<<< HEAD
-              <button className="bg-[#FDCF09] text-black px-12 py-4 font-black rounded-full text-lg hover:bg-white hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(253,207,9,0.3)]">
-=======
               <button className="btn-cta px-12 py-4 text-lg bg-white text-[#003366] hover:bg-zinc-200 hover:text-[#003366]">
->>>>>>> e20eac0 (Updated Website UI and content)
                 APPLY TO VOLUNTEER
               </button>
             </a>
@@ -182,8 +144,6 @@ export default function Volunteer() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Official Foundation Banner */}
       <div className="max-w-4xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-5 duration-700">
         <div className="bg-white p-4 rounded-3xl shadow-xl overflow-hidden border-2 border-zinc-100">
@@ -195,7 +155,6 @@ export default function Volunteer() {
         </div>
       </div>
 
->>>>>>> e20eac0 (Updated Website UI and content)
     </div>
   );
 }

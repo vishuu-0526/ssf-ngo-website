@@ -21,8 +21,6 @@ export default function JourneyPage() {
         </p>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* ================= HUMANITY FIRST MURAL ================= */}
       <section className="pb-10 px-4">
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-100">
@@ -34,7 +32,6 @@ export default function JourneyPage() {
         </div>
       </section>
 
->>>>>>> e20eac0 (Updated Website UI and content)
       {/* ================= IMPACT NUMBERS ================= */}
       <section className="py-24 bg-white px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-center">
@@ -45,11 +42,7 @@ export default function JourneyPage() {
             ["10+ Years", "Of Service"],
           ].map(([value, label], i) => (
             <div key={i} className="border rounded-xl p-8">
-<<<<<<< HEAD
-              <p className="text-4xl font-black text-blue-600 mb-2">{value}</p>
-=======
               <p className="text-4xl font-black text-[#003366] mb-2">{value}</p>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-zinc-600 font-medium">{label}</p>
             </div>
           ))}
@@ -72,11 +65,7 @@ export default function JourneyPage() {
               ["2023", "Reached 50,000+ lives across multiple regions in India."],
             ].map(([year, text], i) => (
               <div key={i} className="flex gap-6">
-<<<<<<< HEAD
-                <div className="text-blue-600 font-black text-xl w-20">
-=======
                 <div className="text-[#003366] font-black text-xl w-20">
->>>>>>> e20eac0 (Updated Website UI and content)
                   {year}
                 </div>
                 <div className="text-zinc-600 leading-relaxed">
@@ -103,23 +92,6 @@ export default function JourneyPage() {
       </section>
 
       {/* ================= CTA ================= */}
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-600 text-white text-center px-4">
-        <h2 className="text-3xl font-black mb-4">
-          Be a Part of Our Journey
-        </h2>
-        <p className="mb-6">
-          Your support helps us continue creating meaningful impact.
-        </p>
-        <a
-          href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
-          target="_blank"
-        >
-          <button className="bg-white text-blue-600 px-8 py-3 font-bold">
-            Support Our Mission
-          </button>
-        </a>
-=======
       <section className="py-24 bg-[#003366] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:30px_30px]"></div>
         <div className="container mx-auto px-6 text-center relative z-10 space-y-6">
@@ -139,7 +111,6 @@ export default function JourneyPage() {
             </button>
           </a>
         </div>
->>>>>>> e20eac0 (Updated Website UI and content)
       </section>
 
     </div>

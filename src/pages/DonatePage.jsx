@@ -50,33 +50,21 @@ export default function DonatePage() {
 
           <div className="grid md:grid-cols-3 gap-10">
             <div className="bg-white p-8 rounded-xl border">
-<<<<<<< HEAD
-              <p className="text-2xl font-black text-blue-600 mb-2">₹1,000</p>
-=======
               <p className="text-2xl font-black text-[#003366] mb-2">₹1,000</p>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-zinc-600">
                 Supports educational materials for a child
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl border">
-<<<<<<< HEAD
-              <p className="text-2xl font-black text-blue-600 mb-2">₹2,500</p>
-=======
               <p className="text-2xl font-black text-[#003366] mb-2">₹2,500</p>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-zinc-600">
                 Helps organize a health awareness session
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-xl border">
-<<<<<<< HEAD
-              <p className="text-2xl font-black text-blue-600 mb-2">₹5,000</p>
-=======
               <p className="text-2xl font-black text-[#003366] mb-2">₹5,000</p>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-zinc-600">
                 Contributes to skill development programs
               </p>
@@ -85,15 +73,6 @@ export default function DonatePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* ================= DONATE CTA ================= */}
-      <section className="py-24 bg-blue-600 text-white text-center px-4">
-        <h2 className="text-3xl font-black mb-4">
-          Make a Difference Today
-        </h2>
-        <p className="mb-8 max-w-xl mx-auto">
-          Your generosity empowers lives and strengthens communities.
-=======
       {/* ================= BANK DETAILS ================= */}
       <section className="py-24 bg-white px-4">
         <div className="max-w-4xl mx-auto text-center border-2 border-dashed border-[#003366]/30 rounded-2xl p-10 bg-[#003366]/5">
@@ -146,29 +125,19 @@ export default function DonatePage() {
         </h2>
         <p className="mb-8 max-w-xl mx-auto">
           Secure, quick, and easy way to support our cause.
->>>>>>> e20eac0 (Updated Website UI and content)
         </p>
 
         <a
           href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
           target="_blank"
         >
-<<<<<<< HEAD
-          <button className="bg-white text-blue-600 px-10 py-4 font-bold text-lg hover:scale-[1.03] transition">
-            Donate Now
-=======
           <button className="bg-white text-[#003366] px-10 py-4 font-bold text-lg hover:scale-[1.03] transition">
             Donate via Razorpay
->>>>>>> e20eac0 (Updated Website UI and content)
           </button>
         </a>
 
         <p className="mt-6 text-sm opacity-90">
-<<<<<<< HEAD
-          Secure payment powered by Razorpay
-=======
           Secure payment gateway for Cards, UPI, Netbanking
->>>>>>> e20eac0 (Updated Website UI and content)
         </p>
       </section>
 

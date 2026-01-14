@@ -2,11 +2,7 @@
 import { FaHandHoldingHeart, FaChartPie, FaFileContract, FaUniversity, FaCheckCircle, FaRupeeSign, FaQrcode, FaShieldAlt, FaQuestionCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-<<<<<<< HEAD
-import qrCode from "../assets/QR.png"; // Ensure this path is correct based on your project structure
-=======
 import qrCode from "../assets/barcode.jpg"; // Updated to the correct QR code image
->>>>>>> e20eac0 (Updated Website UI and content)
 
 export default function DonateAndSupport() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -35,11 +31,7 @@ export default function DonateAndSupport() {
   ];
 
   const impactTiers = [
-<<<<<<< HEAD
-    { amount: 1000, desc: "Educational supplies for 2 children", color: "bg-blue-50 border-blue-200 text-blue-800" },
-=======
     { amount: 1000, desc: "Educational supplies for 2 children", color: "bg-[#003366]/5 border-[#003366]/20 text-[#003366]" },
->>>>>>> e20eac0 (Updated Website UI and content)
     { amount: 2500, desc: "Health checkup camp for 20 villagers", color: "bg-green-50 border-green-200 text-green-800" },
     { amount: 5000, desc: "Vocational training for 1 woman", color: "bg-purple-50 border-purple-200 text-purple-800" },
     { amount: 10000, desc: "Digital classroom setup support", color: "bg-orange-50 border-orange-200 text-orange-800" },
@@ -50,11 +42,7 @@ export default function DonateAndSupport() {
 
       {/* ================= HERO ================= */}
       <section className="bg-zinc-900 text-white min-h-[60vh] flex items-center justify-center relative overflow-hidden px-4 pt-20">
-<<<<<<< HEAD
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#FDCF09_1px,transparent_1px)] [background-size:20px_20px]"></div>
-=======
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
 
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
           <motion.div
@@ -62,19 +50,11 @@ export default function DonateAndSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <div className="inline-block mb-4 px-4 py-1 rounded-full bg-[#FDCF09]/20 border border-[#FDCF09]/40 text-[#FDCF09] font-bold text-sm tracking-widest uppercase">
-              Join the Movement
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Invest in <br /><span className="text-[#FDCF09]">Hope & Dignity</span>
-=======
             <div className="inline-block mb-4 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white font-bold text-sm tracking-widest uppercase">
               Join the Movement
             </div>
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
               Invest in <br /><span className="text-white">Hope & Dignity</span>
->>>>>>> e20eac0 (Updated Website UI and content)
             </h1>
             <p className="text-zinc-300 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
               Your contribution isn't just charity. It's an investment in a child's education, a woman's independence, and a village's future.
@@ -118,11 +98,7 @@ export default function DonateAndSupport() {
             <div className="space-y-8">
 
               {/* Online Donation Card */}
-<<<<<<< HEAD
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden group">
-=======
               <div className="bg-gradient-to-br from-[#003366] to-black text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden group">
->>>>>>> e20eac0 (Updated Website UI and content)
                 <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-1/4 -translate-y-1/4">
                   <FaHandHoldingHeart size={200} />
                 </div>
@@ -130,30 +106,18 @@ export default function DonateAndSupport() {
                 <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
                   <FaHandHoldingHeart /> Donate Online
                 </h3>
-<<<<<<< HEAD
-                <p className="text-blue-100 mb-8 text-lg">
-=======
                 <p className="text-zinc-200 mb-8 text-lg">
->>>>>>> e20eac0 (Updated Website UI and content)
                   Secure, instant, and hassle-free. Supports Credit Cards, Debit Cards, Netbanking, and UPI.
                 </p>
 
                 <a
                   href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
                   target="_blank"
-<<<<<<< HEAD
-                  className="inline-block w-full bg-[#FDCF09] text-black font-black text-xl py-4 rounded-xl text-center hover:bg-white transition-colors shadow-lg"
-                >
-                  DONATE NOW
-                </a>
-                <p className="text-center text-xs text-blue-200 mt-4 flex items-center justify-center gap-1">
-=======
                   className="inline-block w-full bg-white text-[#003366] font-black text-xl py-4 rounded-xl text-center hover:bg-zinc-200 transition-colors shadow-lg"
                 >
                   DONATE NOW
                 </a>
                 <p className="text-center text-xs text-zinc-300 mt-4 flex items-center justify-center gap-1">
->>>>>>> e20eac0 (Updated Website UI and content)
                   <FaShieldAlt /> 256-bit Secure SSL Payment
                 </p>
               </div>
@@ -165,21 +129,13 @@ export default function DonateAndSupport() {
                 </div>
                 <div className="text-center md:text-left">
                   <h4 className="text-2xl font-bold text-zinc-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-<<<<<<< HEAD
-                    <FaQrcode className="text-[#FDCF09]" /> Scan to Donate
-=======
                     <FaQrcode className="text-[#003366]" /> Scan to Donate
->>>>>>> e20eac0 (Updated Website UI and content)
                   </h4>
                   <p className="text-zinc-600 mb-4">
                     Use any UPI app (Google Pay, PhonePe, Paytm, BHIM) to scan and donate instantly.
                   </p>
                   <div className="inline-block px-4 py-2 bg-zinc-100 rounded-lg text-sm font-mono text-zinc-500">
-<<<<<<< HEAD
-                    upi@swastiksrijan
-=======
                     swastiksrijanfoundation@ptyes
->>>>>>> e20eac0 (Updated Website UI and content)
                   </div>
                 </div>
               </div>
@@ -191,11 +147,7 @@ export default function DonateAndSupport() {
               <div className="bg-zinc-900 text-white p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden h-full">
                 {/* Decorative Elements for "Premium Card" look */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -mr-16 -mt-16"></div>
-<<<<<<< HEAD
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FDCF09] opacity-10 rounded-full blur-3xl -ml-10 -mb-10"></div>
-=======
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#003366] opacity-10 rounded-full blur-3xl -ml-10 -mb-10"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
 
                 <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
                   <FaUniversity /> Bank Transfer
@@ -209,25 +161,6 @@ export default function DonateAndSupport() {
                   <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10 space-y-4">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-3">
                       <span className="text-zinc-400 text-sm">Account Name</span>
-<<<<<<< HEAD
-                      <span className="font-bold text-lg text-[#FDCF09] text-right">Swastik Srijan Foundation</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-3">
-                      <span className="text-zinc-400 text-sm">Account Number</span>
-                      <span className="font-mono text-xl tracking-wider text-right">39662057398</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-3">
-                      <span className="text-zinc-400 text-sm">IFSC Code</span>
-                      <span className="font-mono text-lg text-right">SBIN0002996</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-3">
-                      <span className="text-zinc-400 text-sm">Bank Name</span>
-                      <span className="font-bold text-right">State Bank of India</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center pt-1">
-                      <span className="text-zinc-400 text-sm">Branch</span>
-                      <span className="font-medium text-right text-sm">Rajendra Nagar, Patna</span>
-=======
                       <span className="font-bold text-lg text-white text-right">Swastik Srijan Foundation Samiti</span>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/10 pb-3">
@@ -245,7 +178,6 @@ export default function DonateAndSupport() {
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center pt-1">
                       <span className="text-zinc-400 text-sm">Branch</span>
                       <span className="font-medium text-right text-sm">Transport Nagar, Rewa, MP</span>
->>>>>>> e20eac0 (Updated Website UI and content)
                     </div>
                   </div>
 
@@ -266,22 +198,14 @@ export default function DonateAndSupport() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-black text-black">Complete Financial <br /><span className="text-blue-600">Transparency</span></h2>
-=======
               <h2 className="text-3xl md:text-4xl font-black text-black">Complete Financial <br /><span className="text-[#003366]">Transparency</span></h2>
->>>>>>> e20eac0 (Updated Website UI and content)
               <p className="text-lg text-zinc-600 leading-relaxed">
                 We believe you deserve to know exactly where your money goes. For every ₹100 you donate, ₹85 goes directly to the field.
               </p>
 
               <div className="space-y-4 pt-4">
                 <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
-<<<<<<< HEAD
-                  <div className="w-3 h-3 rounded-full bg-[#FDCF09]"></div>
-=======
                   <div className="w-3 h-3 rounded-full bg-[#003366]"></div>
->>>>>>> e20eac0 (Updated Website UI and content)
                   <div className="flex-1 font-bold">Program Implementation</div>
                   <div className="font-mono font-bold text-xl">85%</div>
                 </div>
@@ -302,11 +226,7 @@ export default function DonateAndSupport() {
               <div className="relative w-80 h-80">
                 <FaChartPie className="w-full h-full text-zinc-200 drop-shadow-xl" />
                 <div className="absolute inset-0 flex items-center justify-center flex-col">
-<<<<<<< HEAD
-                  <span className="text-6xl font-black text-[#FDCF09] drop-shadow-sm">85%</span>
-=======
                   <span className="text-6xl font-black text-[#003366] drop-shadow-sm">85%</span>
->>>>>>> e20eac0 (Updated Website UI and content)
                   <span className="text-sm font-bold tracking-widest text-zinc-400 uppercase mt-2">To Programs</span>
                 </div>
               </div>
@@ -320,31 +240,19 @@ export default function DonateAndSupport() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-zinc-900 flex items-center justify-center gap-3">
-<<<<<<< HEAD
-              <FaQuestionCircle className="text-[#FDCF09]" /> Frequently Asked Questions
-=======
               <FaQuestionCircle className="text-[#003366]" /> Frequently Asked Questions
->>>>>>> e20eac0 (Updated Website UI and content)
             </h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-<<<<<<< HEAD
-              <div key={i} className="border border-zinc-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#FDCF09]">
-=======
               <div key={i} className="border border-zinc-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#003366]">
->>>>>>> e20eac0 (Updated Website UI and content)
                 <button
                   onClick={() => toggleFaq(i)}
                   className="w-full flex items-center justify-between p-6 bg-zinc-50 hover:bg-white transition-colors text-left"
                 >
                   <span className="font-bold text-lg text-zinc-800">{faq.question}</span>
-<<<<<<< HEAD
-                  {openFaq === i ? <FaChevronUp className="text-[#FDCF09]" /> : <FaChevronDown className="text-zinc-400" />}
-=======
                   {openFaq === i ? <FaChevronUp className="text-[#003366]" /> : <FaChevronDown className="text-zinc-400" />}
->>>>>>> e20eac0 (Updated Website UI and content)
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (
@@ -362,10 +270,6 @@ export default function DonateAndSupport() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> e20eac0 (Updated Website UI and content)
         </div>
       </section>
 
