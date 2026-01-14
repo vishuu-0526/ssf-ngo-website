@@ -20,10 +20,7 @@ import { Route as PartnerWithUsRouteImport } from './routes/PartnerWithUs'
 import { Route as MemorandumAndRulesRouteImport } from './routes/MemorandumAndRules'
 import { Route as MembersRouteImport } from './routes/Members'
 import { Route as MediaRouteImport } from './routes/Media'
-<<<<<<< HEAD
-=======
 import { Route as LegalPoliciesRouteImport } from './routes/LegalPolicies'
->>>>>>> e20eac0 (Updated Website UI and content)
 import { Route as LearningHubRouteImport } from './routes/LearningHub'
 import { Route as JourneyRouteImport } from './routes/Journey'
 import { Route as ImpactRouteImport } from './routes/Impact'
@@ -91,14 +88,13 @@ const MediaRoute = MediaRouteImport.update({
   path: '/Media',
   getParentRoute: () => rootRouteImport,
 } as any)
-<<<<<<< HEAD
-=======
+
 const LegalPoliciesRoute = LegalPoliciesRouteImport.update({
   id: '/LegalPolicies',
   path: '/LegalPolicies',
   getParentRoute: () => rootRouteImport,
 } as any)
->>>>>>> e20eac0 (Updated Website UI and content)
+
 const LearningHubRoute = LearningHubRouteImport.update({
   id: '/LearningHub',
   path: '/LearningHub',
@@ -167,10 +163,7 @@ export interface FileRoutesByFullPath {
   '/Impact': typeof ImpactRoute
   '/Journey': typeof JourneyRoute
   '/LearningHub': typeof LearningHubRoute
-<<<<<<< HEAD
-=======
   '/LegalPolicies': typeof LegalPoliciesRoute
->>>>>>> e20eac0 (Updated Website UI and content)
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
@@ -195,10 +188,8 @@ export interface FileRoutesByTo {
   '/Impact': typeof ImpactRoute
   '/Journey': typeof JourneyRoute
   '/LearningHub': typeof LearningHubRoute
-<<<<<<< HEAD
-=======
   '/LegalPolicies': typeof LegalPoliciesRoute
->>>>>>> e20eac0 (Updated Website UI and content)
+
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
@@ -224,10 +215,9 @@ export interface FileRoutesById {
   '/Impact': typeof ImpactRoute
   '/Journey': typeof JourneyRoute
   '/LearningHub': typeof LearningHubRoute
-<<<<<<< HEAD
-=======
+
   '/LegalPolicies': typeof LegalPoliciesRoute
->>>>>>> e20eac0 (Updated Website UI and content)
+
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
@@ -254,10 +244,9 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-<<<<<<< HEAD
-=======
+
     | '/LegalPolicies'
->>>>>>> e20eac0 (Updated Website UI and content)
+
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
@@ -282,10 +271,9 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-<<<<<<< HEAD
-=======
+
     | '/LegalPolicies'
->>>>>>> e20eac0 (Updated Website UI and content)
+
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
@@ -310,10 +298,9 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-<<<<<<< HEAD
-=======
+
     | '/LegalPolicies'
->>>>>>> e20eac0 (Updated Website UI and content)
+
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
@@ -339,10 +326,9 @@ export interface RootRouteChildren {
   ImpactRoute: typeof ImpactRoute
   JourneyRoute: typeof JourneyRoute
   LearningHubRoute: typeof LearningHubRoute
-<<<<<<< HEAD
-=======
+
   LegalPoliciesRoute: typeof LegalPoliciesRoute
->>>>>>> e20eac0 (Updated Website UI and content)
+
   MediaRoute: typeof MediaRoute
   MembersRoute: typeof MembersRoute
   MemorandumAndRulesRoute: typeof MemorandumAndRulesRoute
@@ -435,8 +421,7 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MediaRouteImport
       parentRoute: typeof rootRouteImport
     }
-<<<<<<< HEAD
-=======
+
     '/LegalPolicies': {
       id: '/LegalPolicies'
       path: '/LegalPolicies'
@@ -444,7 +429,7 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalPoliciesRouteImport
       parentRoute: typeof rootRouteImport
     }
->>>>>>> e20eac0 (Updated Website UI and content)
+
     '/LearningHub': {
       id: '/LearningHub'
       path: '/LearningHub'
@@ -537,10 +522,9 @@ const rootRouteChildren: RootRouteChildren = {
   ImpactRoute: ImpactRoute,
   JourneyRoute: JourneyRoute,
   LearningHubRoute: LearningHubRoute,
-<<<<<<< HEAD
-=======
+
   LegalPoliciesRoute: LegalPoliciesRoute,
->>>>>>> e20eac0 (Updated Website UI and content)
+
   MediaRoute: MediaRoute,
   MembersRoute: MembersRoute,
   MemorandumAndRulesRoute: MemorandumAndRulesRoute,
