@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 const Header = () => {
-  const location = useLocation();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [legalOpen, setLegalOpen] = useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
         {/* LOGO */}
         <Link to="/" onClick={closeAll} className="flex items-center gap-2">
           <img
-            src={location.pathname === "/" ? "/images/home-logo.png" : "/images/uploads/logo-full.jpg"}
+            src="/images/home-logo.png"
             alt="SSF Logo"
             className="w-12 rounded-full"
           />
