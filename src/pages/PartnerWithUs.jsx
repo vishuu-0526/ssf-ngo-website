@@ -103,21 +103,24 @@ export default function PartnerWithUs() {
                                 title: "Institutions",
                                 color: "border-[#fb8500]",
                                 desc: "Schools, colleges, and training institutes can partner for student exchange, internships, and research projects.",
-                                points: ["Campus Chapters", "Resource Sharing"]
+                                points: ["Campus Chapters", "Resource Sharing"],
+                                stat: "50+ Schools Partnered"
                             },
                             {
                                 icon: <FaChalkboardTeacher />,
                                 title: "Expert Mentors",
                                 color: "border-[#d90429]",
                                 desc: "Subject matter experts can join as guest faculty or curriculum advisors for our National Academy projects.",
-                                points: ["Guest Lectures", "Curriculum Design"]
+                                points: ["Guest Lectures", "Curriculum Design"],
+                                stat: "100+ Mentors Onboard"
                             },
                             {
                                 icon: <FaGlobeAsia />,
                                 title: "NGO Partners",
                                 color: "border-[#2d6a4f]",
                                 desc: "Grassroot organizations can collaborate to implement our models in new geographies. Let's scale together.",
-                                points: ["Joint Implementation", "Scaling Impact"]
+                                points: ["Joint Implementation", "Scaling Impact"],
+                                stat: "15+ NGO Partners"
                             }
                         ].map((item, i) => (
                             <motion.div
@@ -126,14 +129,15 @@ export default function PartnerWithUs() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className={`bg-white/5 backdrop-blur-sm p-10 rounded-[3rem] border border-white/10 hover:border-white/20 transition-all group`}
+                                whileHover={{ y: -10 }}
+                                className={`bg-white/5 backdrop-blur-sm p-10 rounded-[3rem] border border-white/10 hover:border-white/20 transition-all group relative overflow-hidden`}
                             >
                                 <div className={`w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl mb-8 group-hover:bg-[#fb8500] group-hover:text-white transition-all`}>
                                     {item.icon}
                                 </div>
                                 <h4 className="text-2xl font-serif font-bold mb-4">{item.title}</h4>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-8">{item.desc}</p>
-                                <ul className="space-y-3">
+                                <ul className="space-y-3 mb-8">
                                     {item.points.map((p, idx) => (
                                         <li key={idx} className="flex items-center gap-3 text-sm font-bold opacity-80">
                                             <IoCheckmarkCircleSharp className="text-[#fb8500]" />
@@ -141,6 +145,9 @@ export default function PartnerWithUs() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="pt-6 border-t border-white/10">
+                                    <p className="text-[#fb8500] font-bold text-sm uppercase tracking-widest">{item.stat}</p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

@@ -1,4 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import CertificateGenerator from "../components/CertificateGenerator";
 
 const Members = () => {
   return (
@@ -88,6 +89,12 @@ const Members = () => {
           >
             Join as a Member <FaArrowRightLong />
           </a>
+        </div>
+
+
+        {/* ================= CERTIFICATE ================= */}
+        <div className="pt-10">
+          <CertificateGenerator role="Member" />
         </div>
 
       </div>

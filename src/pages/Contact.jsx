@@ -109,7 +109,7 @@ export default function Contact() {
       )}
 
       {/* ================= HERO ================= */}
-      <section className="bg-[#001529] text-white pt-48 pb-24 px-6 relative overflow-hidden">
+      <section className="bg-[#001529] text-white pt-32 md:pt-48 pb-24 px-6 relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:40px_40px]"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#fb8500] opacity-[0.05] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
@@ -179,7 +179,7 @@ export default function Contact() {
             className="bg-white p-10 md:p-16 rounded-[3rem] shadow-[0_30px_100px_-20px_rgba(0,0,0,0.1)] border border-zinc-100"
           >
             <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-zinc-400 uppercase tracking-widest ml-4">First Name</label>
                   <input

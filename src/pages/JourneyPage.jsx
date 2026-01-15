@@ -50,29 +50,126 @@ export default function JourneyPage() {
       </section>
 
       {/* ================= TIMELINE ================= */}
-      <section className="py-24 bg-zinc-50 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-black text-center mb-16">
-            Our Growth Over the Years
-          </h2>
+      <section className="py-32 bg-zinc-50 px-6 relative overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#fb8500] opacity-5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#003366] opacity-5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"></div>
 
-          <div className="space-y-12">
-            {[
-              ["2013", "Foundation established with a focus on education and community service."],
-              ["2015", "Expanded programs into healthcare and nutrition awareness."],
-              ["2017", "Women empowerment and skill development initiatives launched."],
-              ["2020", "Emergency relief and community support during crisis periods."],
-              ["2023", "Reached 50,000+ lives across multiple regions in India."],
-            ].map(([year, text], i) => (
-              <div key={i} className="flex gap-6">
-                <div className="text-[#003366] font-black text-xl w-20">
-                  {year}
-                </div>
-                <div className="text-zinc-600 leading-relaxed">
-                  {text}
-                </div>
-              </div>
-            ))}
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-24 space-y-4">
+            <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Our Roadmap</span>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#002344]">
+              Our Growth Over <br /> <span className="text-[#fb8500]">the Years</span>
+            </h2>
+          </div>
+
+          <div className="relative">
+            {/* Center Line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#fb8500] via-[#003366] to-[#d90429] md:-translate-x-1/2 rounded-full"></div>
+
+            <div className="space-y-20">
+              {[
+                {
+                  year: "2014",
+                  title: "Nurturing Community Well-being",
+                  desc: "Promoting mental health with community support, strengthening community support systems.",
+                  color: "#fb8500"
+                },
+                {
+                  year: "2015",
+                  title: "Nurturing Community Well-being",
+                  desc: "Expanded early initiatives, strengthened nutrition and preventive support services for vulnerable populations.",
+                  color: "#d90429"
+                },
+                {
+                  year: "2016",
+                  title: "A Year of Rural Empowerment",
+                  desc: "Introduced technology-driven solutions, hosting workshops, and community-led rural development initiatives.",
+                  color: "#003366"
+                },
+                {
+                  year: "2017",
+                  title: "Empowering Through Education",
+                  desc: "Started education-focused interventions, fostering learning access to quality resources for underprivileged children.",
+                  color: "#fb8500"
+                },
+                {
+                  year: "2018",
+                  title: "Promoting Health and Hygiene",
+                  desc: "Conducted large-scale health camps, hygiene awareness drives, and sanitation programs.",
+                  color: "#d90429"
+                },
+                {
+                  year: "2019",
+                  title: "Women's Empowerment in Focus",
+                  desc: "Rolled out women-centered initiatives, including skill training, self-help groups and livelihood programs.",
+                  color: "#003366"
+                },
+                {
+                  year: "2020",
+                  title: "Navigating Challenges with Resilience",
+                  desc: "Provided support amid global crisis, distributed essentials, offering support during pandemic-driven hardships.",
+                  color: "#fb8500"
+                },
+                {
+                  year: "2021",
+                  title: "Sustaining Momentum and Adapting to New Realities",
+                  desc: "Strengthened digital learning, digital platforms and changing conditions.",
+                  color: "#d90429"
+                },
+                {
+                  year: "2022",
+                  title: "Strengthening Communities in the Face of Adversity",
+                  desc: "Reinforced efforts with disaster relief, implemented long-term resilience-building initiatives recovering from challenges.",
+                  color: "#003366"
+                },
+                {
+                  year: "2023",
+                  title: "SEP Learning Hub - Transforming Lives Through Education",
+                  desc: "Established the SEP Learning Hub, offering structured learning, mentorship, and career guidance.",
+                  color: "#fb8500"
+                },
+                {
+                  year: "2024",
+                  title: "Integrating Learning, Environment & Nutrition for Sustainable Living",
+                  desc: "Launched holistic programs combining environmental education, sustainability practices, and nutrition awareness.",
+                  color: "#d90429"
+                },
+                {
+                  year: "2025",
+                  title: "Expanding Grassroots Impact Through Technology",
+                  desc: "Scaling community projects across regions with innovative tech solutions, empowering local leaders.",
+                  color: "#003366"
+                }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className={`relative flex items-center gap-12 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                >
+                  {/* Dot */}
+                  <div className="absolute left-4 md:left-1/2 w-6 h-6 bg-white border-4 md:-translate-x-1/2 rounded-full z-10 shadow-lg" style={{ borderColor: item.color }}></div>
+
+                  {/* Content Card */}
+                  <div className="md:w-1/2 pl-12 md:pl-0 md:px-16">
+                    <div className="bg-white p-8 rounded-[2.5rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-zinc-100 hover:border-[#fb8500] transition-colors group">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-3xl font-serif font-black" style={{ color: item.color }}>{item.year}</span>
+                        <div className="w-12 h-1 bg-zinc-100 group-hover:bg-[#fb8500] transition-colors"></div>
+                      </div>
+                      <h4 className="text-xl font-serif font-bold text-[#002344] mb-3 leading-tight">{item.title}</h4>
+                      <p className="text-zinc-600 font-medium leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+
+                  {/* Empty space for md */}
+                  <div className="md:w-1/2"></div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

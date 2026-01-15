@@ -1,3 +1,5 @@
+import CertificateGenerator from "../components/CertificateGenerator";
+
 export default function DonatePage() {
   return (
     <div className="w-full bg-zinc-50">
@@ -139,6 +141,12 @@ export default function DonatePage() {
         <p className="mt-6 text-sm opacity-90">
           Secure payment gateway for Cards, UPI, Netbanking
         </p>
+      </section>
+
+
+      {/* ================= CERTIFICATE ================= */}
+      <section className="py-20 bg-zinc-50 px-4">
+        <CertificateGenerator role="Donor" />
       </section>
 
     </div>

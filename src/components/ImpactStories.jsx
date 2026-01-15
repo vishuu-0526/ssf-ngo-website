@@ -1,111 +1,195 @@
-import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaArrowRight, FaTimes, FaGlobe } from "react-icons/fa";
+import { Languages } from "lucide-react";
+import { stories } from "../data/stories";
 
-function Impactstories() {
-  const stories = [
-    {
-      img: "/images/real/ssf_event_members.jpg",
-      category: "DISASTER RELIEF",
-      title: "Hope in Crisis",
-      desc: "When floods devastated the village, your support helped us deliver 500+ food kits within 24 hours.",
-      link: "/DonateAndSupport"
-    },
-    {
-      img: "/images/real/scholarship_distribution.jpg",
-      category: "EDUCATION",
-      title: "Dreams Taking Flight",
-      desc: "Riya, once out of school, now tops her class thanks to the SSF Learning Hub's scholarship program.",
-      link: "/LearningHub"
-    },
-    {
-      img: "/images/real/tree_planting_2.jpg",
-      category: "ENVIRONMENT",
-      title: "Green Warriors",
-      desc: "Over 1,000 students joined hands to plant 5,000 saplings, transforming their city's lungs.",
-      link: "/Campaign"
-    }
-  ];
-
-  return (
-    <div className="w-full bg-white py-24 px-4">
-      <div className="max-w-7xl mx-auto space-y-16">
-
-        <div className="text-center space-y-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="cry-title"
-          >
-            Stories of <span className="text-[#003366]">Change</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-zinc-600 font-medium max-w-2xl mx-auto"
-          >
-            See how your contribution is rewriting destinies across India.
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {stories.map((story, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2, duration: 0.6 }}
-              className="group cursor-pointer"
-            >
-              <Link to={story.link} className="block h-full">
-                {/* Image Container */}
-                <div className="relative h-72 overflow-hidden rounded-2xl mb-6">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors z-10"></div>
-                  <img
+const CardContent = ({ story, lang }) => (
+    <>
+        {/* Image Container */}
+        <div className="relative h-72 overflow-hidden rounded-2xl m-2 mb-0">
+            {story.img ? (
+                <img
                     src={story.img}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                    alt={story.title}
-                  />
-                  <div className="absolute top-4 left-4 z-20">
-                    <span className="bg-[#003366] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">
-                      {story.category}
-                    </span>
-                  </div>
+                    alt={story.title[lang] || story.title.en}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+            ) : (
+                <div className="w-full h-full bg-zinc-200 flex items-center justify-center text-zinc-400">
+                    <span className="text-sm font-bold uppercase tracking-widest">Image Coming Soon</span>
                 </div>
-
-                {/* Content */}
-                <div className="space-y-3 px-2">
-                  <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-[#003366] transition-colors leading-tight">
-                    {story.title}
-                  </h3>
-                  <p className="text-zinc-600 leading-relaxed text-sm line-clamp-3">
-                    {story.desc}
-                  </p>
-                  <div className="pt-2 flex items-center text-sm font-bold text-black uppercase tracking-wide group-hover:gap-2 transition-all">
-                    Read Full Story <FaArrowRight className="ml-2 text-[#003366]" />
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+            )}
+            <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md text-[#002344] text-[10px] font-bold rounded-full uppercase tracking-wider shadow-sm">
+                {story.category}
+            </div>
         </div>
 
-        {/* VIEW ALL BUTTON */}
-        <div className="mt-12 text-center">
-          <Link to="/Impact">
-            <button className="px-8 py-3 border-2 border-zinc-300 text-zinc-800 font-bold hover:border-[#003366] hover:bg-[#003366] hover:text-white transition uppercase tracking-widest text-sm">
-              View All Stories
-            </button>
-          </Link>
-        </div>
+        {/* Content */}
+        <div className="p-8 space-y-4 flex-1 flex flex-col">
+            <h3 className="text-xl font-bold text-[#002344] leading-tight group-hover:text-[#fb8500] transition-colors">
+                {story.title[lang] || story.title.en}
+            </h3>
+            <p className="text-zinc-500 text-sm leading-relaxed font-medium line-clamp-3 mb-4 flex-1">
+                {story.desc[lang] || story.desc.en}
+            </p>
 
-      </div>
-    </div>
-  );
+            <div className="pt-4 border-t border-zinc-50 flex items-center justify-between">
+                <div className="text-xs font-bold text-[#fb8500] flex items-center gap-2 uppercase tracking-wide group-hover:gap-3 transition-all">
+                    {/* Always say "Read Full Story" now since all are modals */}
+                    {lang === 'en' ? 'Read Full Story' : 'पूरी कहानी पढ़ें'}
+                    <FaArrowRight />
+                </div>
+            </div>
+        </div>
+    </>
+);
+
+export default function ImpactStories({ limit = null }) {
+    const [selectedStory, setSelectedStory] = useState(null);
+    const [lang, setLang] = useState('en'); // 'en' or 'hi'
+
+    const toggleLang = () => {
+        setLang(prev => prev === 'en' ? 'hi' : 'en');
+    };
+
+    // Filter stories if limit is provided
+    const displayedStories = limit ? stories.slice(0, limit) : stories;
+
+    return (
+        <section className="py-20 px-6 bg-white relative overflow-hidden">
+            {/* Background Decorations */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div className="space-y-4 max-w-2xl">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#fb8500] text-xs font-bold uppercase tracking-widest">
+                            <span className="w-2 h-2 rounded-full bg-[#fb8500]"></span>
+                            Stories of Change
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#002344] leading-tight">
+                            Real People, <span className="text-[#fb8500] relative">
+                                Real Impact
+                                <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#fb8500]/20" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+                                </svg>
+                            </span>
+                        </h2>
+                        <p className="text-xl text-zinc-500 font-medium">
+                            Every number has a name, every name has a story. diverse stories of transformation from the ground.
+                        </p>
+                    </div>
+
+                    {/* Show "View All" button ONLY if we are limiting stories (i.e. on Home page) */}
+                    {limit && (
+                        <Link to="/Impact">
+                            <button className="group flex items-center gap-2 px-6 py-3 bg-[#002344] text-white rounded-full font-bold hover:bg-[#fb8500] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                                View All Stories
+                                <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </Link>
+                    )}
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {displayedStories.map((story, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            onClick={() => setSelectedStory(story)}
+                            className="group bg-white rounded-[2rem] overflow-hidden border border-zinc-100 hover:border-[#fb8500]/20 shadow-sm hover:shadow-2xl hover:shadow-[#fb8500]/10 transition-all duration-500 cursor-pointer flex flex-col h-full"
+                        >
+                            <CardContent story={story} lang={lang} />
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Story Modal */}
+            <AnimatePresence>
+                {selectedStory && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+                        onClick={() => setSelectedStory(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            className="bg-white rounded-[2rem] w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative"
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <button
+                                onClick={() => setSelectedStory(null)}
+                                className="absolute top-6 right-6 z-10 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-zinc-500 hover:bg-[#fb8500] hover:text-white transition-colors border border-zinc-100 shadow-lg"
+                            >
+                                <FaTimes />
+                            </button>
+
+                            {/* Language Toggle in Modal */}
+                            <button
+                                onClick={toggleLang}
+                                className="absolute top-6 right-20 z-10 px-4 h-10 bg-white/80 backdrop-blur rounded-full flex items-center gap-2 text-[#002344] font-bold text-sm hover:bg-blue-50 transition-colors border border-zinc-100 shadow-lg"
+                            >
+                                <Languages size={16} />
+                                {lang === 'en' ? 'हिन्दी में पढ़ें' : 'Read in English'}
+                            </button>
+
+                            <div className="grid md:grid-cols-2">
+                                <div className="relative h-64 md:h-auto">
+                                    <img
+                                        src={selectedStory.img || "/images/placeholder.jpg"}
+                                        alt={selectedStory.title[lang] || selectedStory.title.en}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <span className="absolute bottom-6 left-6 px-4 py-1.5 bg-[#fb8500] text-white text-xs font-bold rounded-full uppercase tracking-wider">
+                                        {selectedStory.category}
+                                    </span>
+                                </div>
+                                <div className="p-10 space-y-6 bg-white">
+                                    <h3 className="text-3xl font-serif font-bold text-[#002344] leading-tight">
+                                        {selectedStory.title[lang] || selectedStory.title.en}
+                                    </h3>
+
+                                    <div className="space-y-4 text-zinc-600 leading-relaxed whitespace-pre-line">
+                                        {/* Use English content as fallback if Hindi is missing */}
+                                        {(selectedStory.content?.[lang] || selectedStory.content?.en || "")
+                                            .split('\n\n')
+                                            .map((paragraph, idx) => (
+                                                <p key={idx}>{paragraph}</p>
+                                            ))}
+                                    </div>
+
+                                    <div className="pt-8 border-t border-zinc-100 flex gap-4">
+                                        <button
+                                            onClick={() => setSelectedStory(null)}
+                                            className="px-8 py-3 rounded-full border-2 border-zinc-100 font-bold text-zinc-500 hover:border-[#002344] hover:text-[#002344] transition-colors"
+                                        >
+                                            {lang === 'en' ? 'Close Story' : 'बंद करें'}
+                                        </button>
+                                        <Link to="/DonateAndSupport" className="flex-1">
+                                            <button className="w-full px-8 py-3 rounded-full bg-[#002344] text-white font-bold hover:bg-[#fb8500] transition-colors shadow-lg shadow-blue-900/20">
+                                                {lang === 'en' ? 'Support This Cause' : 'सहयोग करें'}
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </section>
+    );
 }
-export default Impactstories;
+
 

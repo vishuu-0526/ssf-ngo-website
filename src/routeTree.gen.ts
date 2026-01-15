@@ -11,12 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as InstitutionalDnaRouteImport } from './routes/institutional-dna'
 import { Route as VolunteerRouteImport } from './routes/Volunteer'
+import { Route as VisionRouteImport } from './routes/Vision'
 import { Route as UpcomingProjectsRouteImport } from './routes/UpcomingProjects'
 import { Route as TermsAndConditionsRouteImport } from './routes/TermsAndConditions'
+import { Route as TeamRouteImport } from './routes/Team'
 import { Route as SkillProgramsRouteImport } from './routes/SkillPrograms'
 import { Route as RegistrationDetailsRouteImport } from './routes/RegistrationDetails'
 import { Route as PrivacyPolicyRouteImport } from './routes/PrivacyPolicy'
 import { Route as PartnerWithUsRouteImport } from './routes/PartnerWithUs'
+import { Route as ObjectivesRouteImport } from './routes/Objectives'
+import { Route as MissionRouteImport } from './routes/Mission'
 import { Route as MemorandumAndRulesRouteImport } from './routes/MemorandumAndRules'
 import { Route as MembersRouteImport } from './routes/Members'
 import { Route as MediaRouteImport } from './routes/Media'
@@ -29,6 +33,7 @@ import { Route as DonateRouteImport } from './routes/Donate'
 import { Route as CookiePolicyRouteImport } from './routes/CookiePolicy'
 import { Route as ContactRouteImport } from './routes/Contact'
 import { Route as CampaignRouteImport } from './routes/Campaign'
+import { Route as CSRPartnershipRouteImport } from './routes/CSRPartnership'
 import { Route as BlogRouteImport } from './routes/Blog'
 import { Route as AboutRouteImport } from './routes/About'
 import { Route as IndexRouteImport } from './routes/index'
@@ -43,6 +48,11 @@ const VolunteerRoute = VolunteerRouteImport.update({
   path: '/Volunteer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VisionRoute = VisionRouteImport.update({
+  id: '/Vision',
+  path: '/Vision',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UpcomingProjectsRoute = UpcomingProjectsRouteImport.update({
   id: '/UpcomingProjects',
   path: '/UpcomingProjects',
@@ -51,6 +61,11 @@ const UpcomingProjectsRoute = UpcomingProjectsRouteImport.update({
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   id: '/TermsAndConditions',
   path: '/TermsAndConditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/Team',
+  path: '/Team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SkillProgramsRoute = SkillProgramsRouteImport.update({
@@ -73,6 +88,16 @@ const PartnerWithUsRoute = PartnerWithUsRouteImport.update({
   path: '/PartnerWithUs',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObjectivesRoute = ObjectivesRouteImport.update({
+  id: '/Objectives',
+  path: '/Objectives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissionRoute = MissionRouteImport.update({
+  id: '/Mission',
+  path: '/Mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MemorandumAndRulesRoute = MemorandumAndRulesRouteImport.update({
   id: '/MemorandumAndRules',
   path: '/MemorandumAndRules',
@@ -88,13 +113,11 @@ const MediaRoute = MediaRouteImport.update({
   path: '/Media',
   getParentRoute: () => rootRouteImport,
 } as any)
-
 const LegalPoliciesRoute = LegalPoliciesRouteImport.update({
   id: '/LegalPolicies',
   path: '/LegalPolicies',
   getParentRoute: () => rootRouteImport,
 } as any)
-
 const LearningHubRoute = LearningHubRouteImport.update({
   id: '/LearningHub',
   path: '/LearningHub',
@@ -135,6 +158,11 @@ const CampaignRoute = CampaignRouteImport.update({
   path: '/Campaign',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CSRPartnershipRoute = CSRPartnershipRouteImport.update({
+  id: '/CSRPartnership',
+  path: '/CSRPartnership',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogRoute = BlogRouteImport.update({
   id: '/Blog',
   path: '/Blog',
@@ -155,6 +183,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/About': typeof AboutRoute
   '/Blog': typeof BlogRoute
+  '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
@@ -167,12 +196,16 @@ export interface FileRoutesByFullPath {
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
+  '/Mission': typeof MissionRoute
+  '/Objectives': typeof ObjectivesRoute
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
   '/SkillPrograms': typeof SkillProgramsRoute
+  '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
+  '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
   '/institutional-dna': typeof InstitutionalDnaRoute
 }
@@ -180,6 +213,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/About': typeof AboutRoute
   '/Blog': typeof BlogRoute
+  '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
@@ -189,16 +223,19 @@ export interface FileRoutesByTo {
   '/Journey': typeof JourneyRoute
   '/LearningHub': typeof LearningHubRoute
   '/LegalPolicies': typeof LegalPoliciesRoute
-
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
+  '/Mission': typeof MissionRoute
+  '/Objectives': typeof ObjectivesRoute
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
   '/SkillPrograms': typeof SkillProgramsRoute
+  '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
+  '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
   '/institutional-dna': typeof InstitutionalDnaRoute
 }
@@ -207,6 +244,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/About': typeof AboutRoute
   '/Blog': typeof BlogRoute
+  '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
@@ -215,18 +253,20 @@ export interface FileRoutesById {
   '/Impact': typeof ImpactRoute
   '/Journey': typeof JourneyRoute
   '/LearningHub': typeof LearningHubRoute
-
   '/LegalPolicies': typeof LegalPoliciesRoute
-
   '/Media': typeof MediaRoute
   '/Members': typeof MembersRoute
   '/MemorandumAndRules': typeof MemorandumAndRulesRoute
+  '/Mission': typeof MissionRoute
+  '/Objectives': typeof ObjectivesRoute
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
   '/SkillPrograms': typeof SkillProgramsRoute
+  '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
+  '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
   '/institutional-dna': typeof InstitutionalDnaRoute
 }
@@ -236,6 +276,7 @@ export interface FileRouteTypes {
     | '/'
     | '/About'
     | '/Blog'
+    | '/CSRPartnership'
     | '/Campaign'
     | '/Contact'
     | '/CookiePolicy'
@@ -244,18 +285,20 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-
     | '/LegalPolicies'
-
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
+    | '/Mission'
+    | '/Objectives'
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
     | '/SkillPrograms'
+    | '/Team'
     | '/TermsAndConditions'
     | '/UpcomingProjects'
+    | '/Vision'
     | '/Volunteer'
     | '/institutional-dna'
   fileRoutesByTo: FileRoutesByTo
@@ -263,6 +306,7 @@ export interface FileRouteTypes {
     | '/'
     | '/About'
     | '/Blog'
+    | '/CSRPartnership'
     | '/Campaign'
     | '/Contact'
     | '/CookiePolicy'
@@ -271,18 +315,20 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-
     | '/LegalPolicies'
-
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
+    | '/Mission'
+    | '/Objectives'
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
     | '/SkillPrograms'
+    | '/Team'
     | '/TermsAndConditions'
     | '/UpcomingProjects'
+    | '/Vision'
     | '/Volunteer'
     | '/institutional-dna'
   id:
@@ -290,6 +336,7 @@ export interface FileRouteTypes {
     | '/'
     | '/About'
     | '/Blog'
+    | '/CSRPartnership'
     | '/Campaign'
     | '/Contact'
     | '/CookiePolicy'
@@ -298,18 +345,20 @@ export interface FileRouteTypes {
     | '/Impact'
     | '/Journey'
     | '/LearningHub'
-
     | '/LegalPolicies'
-
     | '/Media'
     | '/Members'
     | '/MemorandumAndRules'
+    | '/Mission'
+    | '/Objectives'
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
     | '/SkillPrograms'
+    | '/Team'
     | '/TermsAndConditions'
     | '/UpcomingProjects'
+    | '/Vision'
     | '/Volunteer'
     | '/institutional-dna'
   fileRoutesById: FileRoutesById
@@ -318,6 +367,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
+  CSRPartnershipRoute: typeof CSRPartnershipRoute
   CampaignRoute: typeof CampaignRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
@@ -326,18 +376,20 @@ export interface RootRouteChildren {
   ImpactRoute: typeof ImpactRoute
   JourneyRoute: typeof JourneyRoute
   LearningHubRoute: typeof LearningHubRoute
-
   LegalPoliciesRoute: typeof LegalPoliciesRoute
-
   MediaRoute: typeof MediaRoute
   MembersRoute: typeof MembersRoute
   MemorandumAndRulesRoute: typeof MemorandumAndRulesRoute
+  MissionRoute: typeof MissionRoute
+  ObjectivesRoute: typeof ObjectivesRoute
   PartnerWithUsRoute: typeof PartnerWithUsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistrationDetailsRoute: typeof RegistrationDetailsRoute
   SkillProgramsRoute: typeof SkillProgramsRoute
+  TeamRoute: typeof TeamRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   UpcomingProjectsRoute: typeof UpcomingProjectsRoute
+  VisionRoute: typeof VisionRoute
   VolunteerRoute: typeof VolunteerRoute
   InstitutionalDnaRoute: typeof InstitutionalDnaRoute
 }
@@ -358,6 +410,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VolunteerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Vision': {
+      id: '/Vision'
+      path: '/Vision'
+      fullPath: '/Vision'
+      preLoaderRoute: typeof VisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/UpcomingProjects': {
       id: '/UpcomingProjects'
       path: '/UpcomingProjects'
@@ -370,6 +429,13 @@ declare module '@tanstack/react-router' {
       path: '/TermsAndConditions'
       fullPath: '/TermsAndConditions'
       preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Team': {
+      id: '/Team'
+      path: '/Team'
+      fullPath: '/Team'
+      preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/SkillPrograms': {
@@ -400,6 +466,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnerWithUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Objectives': {
+      id: '/Objectives'
+      path: '/Objectives'
+      fullPath: '/Objectives'
+      preLoaderRoute: typeof ObjectivesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Mission': {
+      id: '/Mission'
+      path: '/Mission'
+      fullPath: '/Mission'
+      preLoaderRoute: typeof MissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/MemorandumAndRules': {
       id: '/MemorandumAndRules'
       path: '/MemorandumAndRules'
@@ -421,7 +501,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MediaRouteImport
       parentRoute: typeof rootRouteImport
     }
-
     '/LegalPolicies': {
       id: '/LegalPolicies'
       path: '/LegalPolicies'
@@ -429,7 +508,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalPoliciesRouteImport
       parentRoute: typeof rootRouteImport
     }
-
     '/LearningHub': {
       id: '/LearningHub'
       path: '/LearningHub'
@@ -486,6 +564,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CampaignRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/CSRPartnership': {
+      id: '/CSRPartnership'
+      path: '/CSRPartnership'
+      fullPath: '/CSRPartnership'
+      preLoaderRoute: typeof CSRPartnershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Blog': {
       id: '/Blog'
       path: '/Blog'
@@ -514,6 +599,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
+  CSRPartnershipRoute: CSRPartnershipRoute,
   CampaignRoute: CampaignRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
@@ -522,18 +608,20 @@ const rootRouteChildren: RootRouteChildren = {
   ImpactRoute: ImpactRoute,
   JourneyRoute: JourneyRoute,
   LearningHubRoute: LearningHubRoute,
-
   LegalPoliciesRoute: LegalPoliciesRoute,
-
   MediaRoute: MediaRoute,
   MembersRoute: MembersRoute,
   MemorandumAndRulesRoute: MemorandumAndRulesRoute,
+  MissionRoute: MissionRoute,
+  ObjectivesRoute: ObjectivesRoute,
   PartnerWithUsRoute: PartnerWithUsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistrationDetailsRoute: RegistrationDetailsRoute,
   SkillProgramsRoute: SkillProgramsRoute,
+  TeamRoute: TeamRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   UpcomingProjectsRoute: UpcomingProjectsRoute,
+  VisionRoute: VisionRoute,
   VolunteerRoute: VolunteerRoute,
   InstitutionalDnaRoute: InstitutionalDnaRoute,
 }

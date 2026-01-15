@@ -54,7 +54,7 @@ export default function FooterSection() {
                 <li><Link to="/#about" className="hover:text-white transition-colors">Our Mission</Link></li>
                 <li><Link to="/Journey" className="hover:text-white transition-colors">Our Story</Link></li>
                 <li><Link to="/institutional-dna" className="hover:text-white transition-colors">Institutional DNA</Link></li>
-                <li><Link to="/Members" className="hover:text-white transition-colors">Strategic Team</Link></li>
+                <li><Link to="/Team" className="hover:text-white transition-colors">Strategic Team</Link></li>
               </ul>
             </div>
 

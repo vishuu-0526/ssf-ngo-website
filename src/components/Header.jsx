@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 const Header = () => {
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [legalOpen, setLegalOpen] = useState(false);
@@ -35,7 +36,11 @@ const Header = () => {
 
         {/* LOGO */}
         <Link to="/" onClick={closeAll} className="flex items-center gap-2">
-          <img src="/logo.svg" alt="SSF Logo" className="w-12" />
+          <img
+            src={location.pathname === "/" ? "/images/home-logo.png" : "/images/uploads/logo-full.jpg"}
+            alt="SSF Logo"
+            className="w-12 rounded-full"
+          />
           <span className="font-bold text-xl tracking-tight text-black hidden sm:block">
             Swastik Srijan Foundation
           </span>
@@ -62,6 +67,10 @@ const Header = () => {
 
           <Link to="/#join-us" onClick={closeAll} className="hover:text-[#002344] transition-colors">
             Join Us
+          </Link>
+
+          <Link to="/Team" onClick={closeAll} className="hover:text-[#002344] transition-colors">
+            Our Team
           </Link>
 
           {/* MORE DROPDOWN */}
@@ -106,6 +115,11 @@ const Header = () => {
 
                   <Link to="/Blog" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
                     News & Blog
+                  </Link>
+
+
+                  <Link to="/CSRPartnership" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b">
+                    CSR Partnership
                   </Link>
 
                   <Link to="/PartnerWithUs" onClick={closeAll} className="px-6 py-4 hover:bg-zinc-50 border-b text-[#003366]">
@@ -186,7 +200,7 @@ const Header = () => {
 
       {/* MOBILE MENU */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-white z-40 overflow-y-auto pb-20">
+        <div className="md:hidden fixed inset-0 top-20 bg-white z-40 overflow-y-auto pb-20 animate-in slide-in-from-right duration-300">
           <nav className="flex flex-col p-6 text-lg font-bold text-zinc-800 divide-y divide-zinc-100">
             <Link to="/" onClick={closeAll} className="py-4">Home</Link>
             <Link to="/#about" onClick={closeAll} className="py-4">About Us</Link>
@@ -196,7 +210,7 @@ const Header = () => {
             <Link to="/Campaign" onClick={closeAll} className="py-4">Our Work</Link>
             <Link to="/#join-us" onClick={closeAll} className="py-4">Join Us</Link>
 
-            {/* More section items (mirror desktop dropdown) */}
+            {/* More section items */}
             <Link to="/DonateAndSupport" onClick={closeAll} className="py-4">
               Donate and Support
             </Link>
@@ -212,29 +226,50 @@ const Header = () => {
             <Link to="/Media" onClick={closeAll} className="py-4">
               Media Gallery
             </Link>
+
+            <Link to="/CSRPartnership" onClick={closeAll} className="py-4">
+              CSR Partnership
+            </Link>
             <Link to="/PartnerWithUs" onClick={closeAll} className="py-4">
               Partner With Us
             </Link>
             <Link to="/Contact" onClick={closeAll} className="py-4">
               Contact Us
             </Link>
+            <Link to="/Team" onClick={closeAll} className="py-4">
+              Our Team
+            </Link>
 
-            {/* Legal & Policies items */}
-            <Link to="/TermsAndConditions" onClick={closeAll} className="py-4">
-              Terms & Conditions
-            </Link>
-            <Link to="/RegistrationDetails" onClick={closeAll} className="py-4">
-              Registration Details
-            </Link>
-            <Link to="/PrivacyPolicy" onClick={closeAll} className="py-4">
-              Privacy Policy
-            </Link>
-            <Link to="/MemorandumAndRules" onClick={closeAll} className="py-4">
-              Memorandum & Rules
-            </Link>
-            <Link to="/CookiePolicy" onClick={closeAll} className="py-4">
-              Cookie Policy
-            </Link>
+            {/* Legal & Policies Collapsible */}
+            <div className="py-4">
+              <button
+                onClick={() => setLegalOpen(!legalOpen)}
+                className="w-full flex items-center justify-between text-left font-bold"
+              >
+                <span>Legal & Policies</span>
+                <IoIosArrowDown className={`transition-transform duration-300 ${legalOpen ? "rotate-180 text-[#003366]" : "text-zinc-400"}`} />
+              </button>
+
+              <div className={`overflow-hidden transition-all duration-300 ${legalOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"}`}>
+                <div className="bg-zinc-50 rounded-xl p-4 space-y-3 border border-zinc-100">
+                  <Link to="/TermsAndConditions" onClick={closeAll} className="block text-base text-zinc-600 hover:text-[#003366]">
+                    Terms & Conditions
+                  </Link>
+                  <Link to="/RegistrationDetails" onClick={closeAll} className="block text-base text-zinc-600 hover:text-[#003366]">
+                    Registration Details
+                  </Link>
+                  <Link to="/PrivacyPolicy" onClick={closeAll} className="block text-base text-zinc-600 hover:text-[#003366]">
+                    Privacy Policy
+                  </Link>
+                  <Link to="/MemorandumAndRules" onClick={closeAll} className="block text-base text-zinc-600 hover:text-[#003366]">
+                    Memorandum & Rules
+                  </Link>
+                  <Link to="/CookiePolicy" onClick={closeAll} className="block text-base text-zinc-600 hover:text-[#003366]">
+                    Cookie Policy
+                  </Link>
+                </div>
+              </div>
+            </div>
 
             <div className="pt-6">
               <a

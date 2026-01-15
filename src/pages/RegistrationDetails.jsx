@@ -161,6 +161,37 @@ export default function RegistrationDetails() {
           ))}
         </div>
 
+        {/* ================= OFFICIAL DOCUMENTS ================= */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif font-bold text-[#002344] mb-4">Official Recognize & Certificates</h2>
+            <p className="text-lg text-zinc-500 max-w-2xl mx-auto mb-10">
+              We are committed to maintaining the highest standards of transparency and integrity.
+            </p>
+            <div className="max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white mb-16 group">
+              <img
+                src="/images/real/academy-board-compliance.jpg"
+                alt="SSF National Academy Official Board - Registration & Compliance"
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-4 rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl transition-all">
+              <img src="/images/uploads/pm-cares-cert.jpg" alt="PM CARES Certificate" className="w-full h-auto rounded-2xl" />
+              <p className="text-center font-bold text-[#002344] mt-4">PM CARES Fund Contribution</p>
+            </div>
+            <div className="bg-white p-4 rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl transition-all">
+              <img src="/images/uploads/integrity-pledge.jpg" alt="Integrity Pledge" className="w-full h-auto rounded-2xl" />
+              <p className="text-center font-bold text-[#002344] mt-4">Integrity Pledge Certificate</p>
+            </div>
+            <div className="bg-white p-4 rounded-3xl shadow-sm border border-zinc-100 hover:shadow-xl transition-all">
+              <img src="/images/uploads/ngo-darpan.jpg" alt="NITI Aayog DARPAN" className="w-full h-auto rounded-2xl" />
+              <p className="text-center font-bold text-[#002344] mt-4">NITI Aayog DARPAN Registration</p>
+            </div>
+          </div>
+        </section>
+
         {/* ================= CONTACT SECTION ================= */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

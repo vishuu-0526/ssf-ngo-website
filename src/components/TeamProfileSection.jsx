@@ -75,20 +75,27 @@
 import React from "react";
 
 const teamMembers = [
-  { name: "Ramesh Pandey", position: "Founder & President", img: "./Teams_Images/image_2.jpg" },
+  { name: "Ramesh Pandey", position: "Founder & National President", img: "./Teams_Images/ramesh_pandey.jpg" },
   { name: "Ms. A. Gincy George", position: "Head - Counselling & Community Well-being (Pan India)", img: "./Teams_Images/image_1.jpg" },
-  { name: "Ms. Divya Sharma", position: "Chief Financial Officer (CFO)", img: "./Teams_Images/image_23.png" },
-  { name: "CA Kapil Tiwari", position: "Compliance & Legal Advisor", img: "./Teams_Images/image_14.jpg" },
-  { name: "Adv. Harish Kumar", position: "Legal Advisor", img: "./Teams_Images/image_12.jpg" },
+  { name: "Ms. Divya Sharma", position: "Chief Financial Officer (CFO)", img: "./Teams_Images/divya_sharma.jpg" },
+  { name: "Kapil Tiwari", position: "Legal Advisor - Compliance", img: "./Teams_Images/kapil_tiwari.jpg" },
+  { name: "Adv. Harish Kumar", position: "Legal Advisor (Pan India)", img: "./Teams_Images/harish_kumar.jpg" },
   { name: "Preeti Shukla", position: "Vice President", img: "./Teams_Images/image_19.jpg" },
   { name: "Amit Kumar Pandey", position: "General Secretary", img: "./Teams_Images/image_15.jpg" },
   { name: "Amrita Sinha", position: "Advisory Board", img: "./Teams_Images/image_20.jpg" },
-  { name: "Raji P Alex", position: "Advisory Board", img: "./Teams_Images/image_9.jpg" },
-  { name: "Naresh Kumar", position: "President - Faridabad Wing", img: "./Teams_Images/image_3.jpg" },
+  { name: "Raji P Alex", position: "Advisory Board", img: "./Teams_Images/raji_p_alex.jpg" },
+  { name: "Naresh Kumar", position: "President - Faridabad Wing", img: "./Teams_Images/naresh_kumar.jpg" },
   { name: "Dhiraj Kumar", position: "President - Pune Wing", img: "./Teams_Images/image_4.png" },
-  { name: "Krishna Kumar", position: "Advisor", img: "./Teams_Images/image_8.jpg" },
-  { name: "Ayushi Tyagi", position: "Volunteer", img: "./Teams_Images/image_6.jpg" },
+  { name: "Krishna Kumar", position: "Volunteer", img: "./Teams_Images/krishna_kumar.jpg" },
+  { name: "Aayushi Tyagi", position: "Volunteer (GZB)", img: "./Teams_Images/aayushi_tyagi.jpg" },
   { name: "Ms. M D Pavanethra", position: "Volunteer", img: "./Teams_Images/image_5.jpg" },
+  { name: "Mr. Rajeev Pandey", position: "Volunteer (M.P.)", img: "./Teams_Images/rajeev_pandey.jpg" },
+  { name: "Prameesh Singh", position: "Board member", img: "./Teams_Images/prameesh_singh.jpg" },
+  { name: "Rishi Pandey", position: "Board member", img: "./Teams_Images/rishi_pandey.jpg" },
+  { name: "Mr. Ghanshyam Sharma", position: "Honorable Member & Advisory Board (G.B. Nagar)", img: "./Teams_Images/ghanshyam_sharma.jpg" },
+  { name: "Priya Shukla", position: "Core Member & Volunteer", img: "./Teams_Images/priya_shukla.jpg" },
+  { name: "Ritesh Tiwari", position: "Board member", img: "./Teams_Images/ritesh_tiwari.jpg" },
+  { name: "Sandeep Tripathi", position: "Board member", img: "./Teams_Images/sandeep_tripathi.jpg" },
 ];
 
 export default function TeamProfileSection() {

@@ -2,33 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { FaQuoteLeft, FaHandHoldingHeart, FaStar, FaUserGraduate } from "react-icons/fa";
 
+import ImpactStories from "../components/ImpactStories";
+
 export default function ImpactPage() {
-    const studentStories = [
-        {
-            name: "Raju Kumar",
-            role: "Class 10 Student",
-            img: "/images/real/education_girls.jpg",
-            title: "From Child Labor to Class Topper",
-            desc: "Raju was working in a tea shop to support his family. Identifyed during our 2023 survey, he was enrolled in our bridge course. Today, he ranks 1st in his school and dreams of becoming an engineer.",
-            tags: ["Education", "Transformation"]
-        },
-        {
-            name: "Sita Kumari",
-            role: "Skill Trainee",
-            img: "/images/girls.png",
-            title: "Breaking Barriers with Code",
-            desc: "Coming from a village where girls rarely study past 8th grade, Sita joined our Digital Literacy program. She now works as a data entry operator, supporting her entire family.",
-            tags: ["Skills", "Empowerment"]
-        },
-        {
-            name: "Rahul & Friends",
-            role: "Coaching Center Students",
-            img: "/images/real/coaching_center_1.jpg",
-            title: "Community Learning Centers",
-            desc: "This coaching center in G.B. Nagar (U.P) provides a safe space for children to learn after school. Many of these students are the first in their families to receive formal academic support.",
-            tags: ["Coaching", "Community"]
-        }
-    ];
 
     const volunteerStories = [
         {
@@ -120,49 +96,8 @@ export default function ImpactPage() {
                 </div>
             </section>
 
-            {/* ================= 1. STUDENT STORIES ================= */}
-            <section className="py-32 px-6 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center space-y-4 mb-20">
-                        <p className="text-[#fb8500] font-bold text-xs uppercase tracking-[0.2em]">Our Beneficiaries</p>
-                        <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#002344]">Student Success Stories</h2>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-10">
-                        {studentStories.map((story, index) => (
-                            <div key={index} className="bg-white rounded-[2rem] overflow-hidden shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] border border-zinc-50 group transition-all duration-500 hover:-translate-y-2">
-                                <div className="h-72 relative overflow-hidden">
-                                    <img
-                                        src={story.img}
-                                        alt={story.name}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#002344]/60 to-transparent"></div>
-                                    <div className="absolute bottom-6 left-6 flex gap-2">
-                                        {story.tags.map((tag, i) => (
-                                            <span key={i} className="px-3 py-1 bg-[#fb8500] text-white text-[10px] font-bold rounded-full uppercase tracking-wider">{tag}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="p-8 space-y-4">
-                                    <h3 className="text-xl font-bold text-[#002344] leading-tight group-hover:text-[#fb8500] transition-colors">{story.title}</h3>
-                                    <p className="text-zinc-500 text-sm leading-relaxed font-medium">
-                                        "{story.desc}"
-                                    </p>
-                                    <div className="flex items-center gap-4 pt-6 mt-4 border-t border-zinc-50">
-                                        <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center font-bold text-[#002344]">
-                                            {story.name.charAt(0)}
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-[#002344] text-sm">{story.name}</h4>
-                                            <p className="text-xs text-zinc-400 font-bold uppercase tracking-wider">{story.role}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* ================= STORIES OF CHANGE ================= */}
+            <ImpactStories />
 
             {/* ================= 2. VOLUNTEER IMPACT ================= */}
             <section className="py-32 bg-[#001529] text-white px-6 relative overflow-hidden">

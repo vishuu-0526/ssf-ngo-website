@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Who We Are</span>
               <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#002344] leading-tight">
-                A Decade of <br /> <span className="text-[#d90429]">Unwavering</span> Commitment.
+                A Decade of <br /> <span className="text-[#d90429]">Pan India</span> Initiative.
               </h2>
             </div>
 
@@ -97,52 +97,69 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= VISION & MISSION ================= */}
-      <section className="py-32 bg-[#f8f9fa] px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+      <section className="py-24 bg-[#f8f9fa] px-6">
+        <div className="max-w-7xl mx-auto space-y-20">
+          {/* Vision */}
           <motion.div
-            whileHover={{ y: -10 }}
-            className="bg-white p-16 rounded-[3rem] shadow-xl border-t-8 border-[#fb8500] group transition-all"
+            id="vision"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-12 items-center"
           >
-            <div className="w-20 h-20 bg-[#fb8500]/10 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-[#fb8500] transition-colors">
-              <FaGlobeAmericas className="text-3xl text-[#fb8500] group-hover:text-white" />
+            <div className="md:w-1/3">
+              <span className="block text-[#fb8500] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Vision</span>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">A Future of <br /> Dignity.</h3>
+              <div className="w-20 h-1 bg-[#fb8500] mt-6"></div>
             </div>
-            <h3 className="text-4xl font-serif font-bold text-[#002344] mb-6">Our Vision</h3>
-            <p className="text-xl text-zinc-500 font-medium leading-relaxed italic">
-              "A society where every individual, regardless of their background, has access to education, healthcare, dignity, and equal opportunities to reach their full potential."
-            </p>
+            <div className="md:w-2/3">
+              <p className="text-2xl md:text-3xl font-serif text-zinc-600 leading-relaxed italic">
+                "A compassionate and responsible society where every individual can thrive with <span className="text-[#fb8500] bg-[#fb8500]/10 px-2">dignity</span>."
+              </p>
+            </div>
           </motion.div>
 
+          {/* Divider */}
+          <div className="w-full h-px bg-zinc-200"></div>
+
+          {/* Mission */}
           <motion.div
-            whileHover={{ y: -10 }}
-            className="bg-[#002344] p-16 rounded-[3rem] shadow-xl border-t-8 border-[#d90429] group transition-all"
+            id="mission"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-12 items-center"
           >
-            <div className="w-20 h-20 bg-white/10 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-[#d90429] transition-colors">
-              <FaHandshake className="text-3xl text-white pointer-events-none" />
+            <div className="md:w-1/3 md:order-2">
+              <span className="block text-[#d90429] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Mission</span>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">Empowerment <br /> in Action.</h3>
+              <div className="w-20 h-1 bg-[#d90429] mt-6"></div>
             </div>
-            <h3 className="text-4xl font-serif font-bold text-white mb-6">Our Mission</h3>
-            <p className="text-xl text-[#b0c4de] font-medium leading-relaxed">
-              To empower underprivileged communities through sustainable, integrated programs in education, health, women empowerment, and skill development, fostering self-reliance and ownership.
-            </p>
+            <div className="md:w-2/3 md:order-1 text-right">
+              <p className="text-xl md:text-2xl text-zinc-600 font-medium leading-relaxed">
+                To empower communities through education, health, skill development, and sustainable practices, driven by <span className="text-[#002344] font-bold">ethical responsibility</span> and volunteerism.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ================= CORE VALUES ================= */}
-      <section className="py-32 bg-[#001529] text-white px-6 relative overflow-hidden">
+      {/* ================= INSTITUTIONAL DNA ================= */}
+      <section id="values" className="py-32 bg-[#001529] text-white px-6 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#fb8500]/5 to-transparent"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 space-y-4">
-            <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">What Drives Us</span>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold">Our Core <span className="text-[#fb8500]">Values</span></h2>
+            <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Our Foundation</span>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold">Institutional <span className="text-[#fb8500]">DNA</span></h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <FaBalanceScale />, title: "Integrity", desc: "We are transparent, honest, and accountable in every action we take.", color: "text-[#fb8500]" },
-              { icon: <FaHeart />, title: "Compassion", desc: "Empathy is at the heart of our work. We serve with kindness and respect.", color: "text-[#d90429]" },
-              { icon: <FaUsers />, title: "Inclusion", desc: "We ensure no one is left behind, regardless of caste, creed, or gender.", color: "text-[#2d6a4f]" },
-              { icon: <FaCheckCircle />, title: "Ownership", desc: "We don't just give aid; we empower communities to own their development.", color: "text-[#4361ee]" },
+              { icon: <FaBalanceScale />, title: "Integrity & Ethics", desc: "Every action guided by moral responsibility and honesty.", color: "text-[#fb8500]" },
+              { icon: <FaUsers />, title: "Community Participation", desc: "Active involvement of local communities in planning & execution.", color: "text-[#d90429]" },
+              { icon: <FaHeart />, title: "Inclusion & Diversity", desc: "Supporting marginalized, differently-abled, and underrepresented groups.", color: "text-[#2d6a4f]" },
+              { icon: <FaGlobeAmericas />, title: "Long-term Sustainability", desc: "Programs designed for lasting impact and environmental care.", color: "text-[#4361ee]" },
+              { icon: <FaHandshake />, title: "Volunteer-driven", desc: "Initiatives powered by committed individuals, not just funding.", color: "text-[#fb8500]" },
             ].map((val, i) => (
               <motion.div
                 key={i}

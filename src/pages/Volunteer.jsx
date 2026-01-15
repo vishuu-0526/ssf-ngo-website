@@ -1,5 +1,6 @@
 import { FaChalkboardTeacher, FaLaptopCode, FaHandHoldingHeart, FaBullhorn, FaUserCheck } from "react-icons/fa";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
+import CertificateGenerator from "../components/CertificateGenerator";
 
 export default function Volunteer() {
   const roles = [
@@ -95,13 +96,20 @@ export default function Volunteer() {
             </ul>
           </div>
 
-          <div className="bg-[#003366] rounded-2xl p-10 text-white flex flex-col justify-center h-full min-h-[400px]">
-            <FaUserCheck className="text-6xl mb-6 text-white" />
-            <h3 className="text-3xl font-black mb-4">Values We Look For</h3>
-            <div className="space-y-4 text-zinc-300">
-              <p>• <span className="text-white font-bold">Commitment:</span> Consistency matters more than hours.</p>
-              <p>• <span className="text-white font-bold">Empathy:</span> Treating every beneficiary with dignity.</p>
-              <p>• <span className="text-white font-bold">Teamwork:</span> Working together for a common goal.</p>
+          <div className="relative rounded-2xl overflow-hidden h-full min-h-[500px] group shadow-2xl">
+            <img
+              src="/images/real/park-activity-session.jpg"
+              alt="Volunteers engaging children in park activities"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-[#003366]/90 opacity-95 group-hover:opacity-90 transition-opacity p-10 flex flex-col justify-center text-white">
+              <FaUserCheck className="text-6xl mb-6 text-white" />
+              <h3 className="text-3xl font-black mb-4">Values We Look For</h3>
+              <div className="space-y-4 text-zinc-300">
+                <p>• <span className="text-white font-bold">Commitment:</span> Consistency matters more than hours.</p>
+                <p>• <span className="text-white font-bold">Empathy:</span> Treating every beneficiary with dignity.</p>
+                <p>• <span className="text-white font-bold">Teamwork:</span> Working together for a common goal.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -142,6 +150,11 @@ export default function Volunteer() {
             <p className="mt-4 text-zinc-500 text-sm">Takes only 2 minutes</p>
           </div>
         </div>
+      </section>
+
+      {/* ================= CERTIFICATE ================= */}
+      <section className="py-20 bg-zinc-50 px-4">
+        <CertificateGenerator role="Volunteer" />
       </section>
 
       {/* Official Foundation Banner */}

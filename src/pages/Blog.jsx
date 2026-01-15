@@ -145,9 +145,8 @@ Essential supplies, hygiene kits, and educational materials were distributed. Vo
 
 आवश्यक आपूर्ति, स्वच्छता किट और शैक्षिक सामग्री वितरित की गई। स्वयंसेवकों ने परिवारों के साथ मिलकर काम किया, बेहतर भविष्य के लिए विश्वास और आशा को बढ़ावा दिया।`
     }
-  },
+  }
 ];
-
 
 export default function Blogs() {
   const [activePost, setActivePost] = useState(null);

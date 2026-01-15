@@ -1,31 +1,154 @@
 import { useState, useEffect } from "react";
 import { FaEye, FaTimes, FaFilter, FaCamera } from "react-icons/fa";
 
-// Auto-generate image list based on files 1-51
-const generateImages = () => {
-  const imgs = [];
-  const categories = ["Education", "Health", "Women Empowerment", "Events", "Distribution"];
-  const years = ["2024", "2023", "2022"];
+// Image generation logic removed to prevent duplicates
 
-  for (let i = 1; i <= 51; i++) {
-    // Deterministic pseudo-random assignment for demo purposes so it looks varied but stable
-    const catIndex = (i * 7) % categories.length;
-    const yearIndex = (i * 3) % years.length;
-
-    imgs.push({
-      id: i,
-      src: `/Gallery_Images/image${i}.jpg`,
-      category: categories[catIndex],
-      year: years[yearIndex],
-      alt: `Swastik Srijan Activity - ${categories[catIndex]}`,
-      // Random aspect ratio simulation for masonry effect using filtered classes in rendering
-      aspect: i % 3 === 0 ? "vertical" : i % 4 === 0 ? "square" : "horizontal"
-    });
-  }
-  return imgs;
-};
 
 const ALL_IMAGES = [
+  {
+    id: "new_upload_20",
+    src: "/images/real/children-mat-session.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "Grassroots Outdoor Study Session on Mat",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_21",
+    src: "/images/real/academy-board-compliance.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "SSF National Academy Official Board and Compliance",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_12",
+    src: "/images/real/awareness-poster-viewing.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Community Awareness Poster Campaign",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_13",
+    src: "/images/real/girls-study-group-mat.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "Girls Study Group Session on Mat",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_14",
+    src: "/images/real/girls-group-learning-close.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "Girls Group Learning Activity",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_15",
+    src: "/images/real/village-community-center.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Village Community Center Gathering",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_16",
+    src: "/images/real/student-leadership-recitation.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "Student Leadership and Recitation Program",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_8",
+    src: "/images/real/children-playing-park.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Children Playing in Community Park",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_9",
+    src: "/images/real/classroom-floor-seating.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "Rural Classroom Session",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_10",
+    src: "/images/real/midday-meal-gathering.jpg",
+    category: "Health",
+    year: "2024",
+    alt: "Midday Meal Gathering",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_11",
+    src: "/images/real/community-rally-children.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Community Awareness Rally",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_3",
+    src: "/images/uploads/ngo-darpan.jpg",
+    category: "Events",
+    year: "2025",
+    alt: "NITI Aayog DARPAN Registration",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_4",
+    src: "/images/uploads/railway-initiative.jpg",
+    category: "Events",
+    year: "2025",
+    alt: "Institutional Initiative for Railway Reforms",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_5",
+    src: "/images/uploads/learning-hub-1.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "SSF Learning Hub - Classroom Session",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_6",
+    src: "/images/uploads/learning-hub-2.jpg",
+    category: "Education",
+    year: "2024",
+    alt: "SSF Learning Hub - Study Group",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_7",
+    src: "/images/uploads/community-banner.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Community Awareness Drive",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_1",
+    src: "/images/uploads/community-gathering.jpg",
+    category: "Events",
+    year: "2024",
+    alt: "Community Gathering and Cultural Event",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_2",
+    src: "/images/uploads/tree-planting.jpg",
+    category: "Distribution",
+    year: "2024",
+    alt: "Tree Plantation Drive for Environmental Sustainability",
+    aspect: "vertical"
+  },
   {
     id: "real1",
     src: "/images/real/ngo_event_1.jpg",
@@ -146,7 +269,7 @@ const ALL_IMAGES = [
     alt: "SSF Foundation Members Group Photo",
     aspect: "horizontal"
   },
-  ...generateImages()
+  // ...generateImages() - REMOVED to avoid duplicates
 ];
 const CATEGORIES = ["All", "Education", "Health", "Women Empowerment", "Events", "Distribution"];
 const YEARS = ["All", "2024", "2023", "2022"];
@@ -266,7 +389,7 @@ export default function MediaGallery() {
           </div>
         ) : (
           /* Masonry-like CSS Columns */
-          <div className="columns-2 md:columns-3 xl:columns-4 gap-6 space-y-6">
+          <div className="columns-1 sm:columns-2 md:columns-3 xl:columns-4 gap-6 space-y-6">
             {filteredImages.map((img) => (
               <div
                 key={img.id}
@@ -299,6 +422,53 @@ export default function MediaGallery() {
           </div>
         )}
 
+      </section>
+
+      {/* ================= VIDEO GALLERY ================= */}
+      <section className="max-w-[1600px] mx-auto py-12 px-4 border-t border-zinc-200">
+        <div className="text-center mb-12">
+          <div className="inline-block bg-[#fb8500]/20 text-[#fb8500] px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-4">
+            <FaEye className="inline-block mr-2" /> Watch Our Impact
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black text-[#002344]">Video <span className="text-[#fb8500]">Highlights</span></h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Facebook Video Card */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-zinc-100 hover:shadow-2xl transition-all duration-300 group">
+            <div className="relative h-[500px] bg-black">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1089068852856795&show_text=false&t=0"
+                className="w-full h-full border-none overflow-hidden"
+                scrolling="no"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Swastik Srijan Foundation Video"
+              ></iframe>
+            </div>
+            <div className="p-6">
+              <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2 block">Featured Story</span>
+              <h3 className="text-xl font-bold text-[#002344] mb-3 group-hover:text-[#fb8500] transition-colors">
+                Empowering Voices, Transforming Lives
+              </h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                Witness the moments of change and the stories that define our mission.
+              </p>
+            </div>
+          </div>
+
+          {/* Placeholder for future videos (Optional, but looks better in grid) */}
+          <div className="bg-zinc-50 rounded-2xl overflow-hidden border border-zinc-100 flex items-center justify-center min-h-[300px] text-center p-8">
+            <div className="space-y-4">
+              <div className="w-16 h-16 bg-zinc-200 rounded-full flex items-center justify-center mx-auto text-zinc-400">
+                <FaCamera size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-zinc-400">More Stories Coming Soon</h3>
+              <p className="text-zinc-400 text-sm">Stay tuned for more updates from the field.</p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* ================= LIGHTBOX MODAL ================= */}
