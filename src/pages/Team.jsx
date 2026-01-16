@@ -57,11 +57,13 @@ export default function Team() {
               Dedicated Leadership
             </span>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-white">
-              Meet Our <span className="text-[#fb8500]">Team</span>
+              Meet Our <span className="text-[#fb8500]">Team</span> <br />
+              <span className="text-2xl md:text-4xl font-sans font-normal opacity-80 underline decoration-[#fb8500]/30">हमारी टीम से मिलें</span>
             </h1>
             <p className="text-zinc-400 mt-6 text-xl font-medium max-w-2xl mx-auto">
               A collective of visionary leaders, expert advisors, and dedicated volunteers driving sustainable change.
             </p>
+            <p className="text-zinc-500 mt-2 text-md italic font-hindi">सतत परिवर्तन लाने वाले दूरदर्शी नेताओं, विशेषज्ञ सलाहकारों और समर्पित स्वयंसेवकों का एक समूह।</p>
           </motion.div>
         </div>
       </section>
@@ -71,7 +73,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#002344]">
-              Governance & Compliance – Official Governing Body
+              Governance & Compliance – Official Governing Body | आधिकारिक शासी निकाय
             </h2>
             <div className="w-24 h-1 bg-[#fb8500] mx-auto rounded-full"></div>
           </div>
@@ -115,7 +117,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#002344]">
-              Management & Operations
+              Management & Operations | प्रबंधन और संचालन
             </h2>
             <div className="w-24 h-1 bg-[#d90429] mx-auto rounded-full"></div>
           </div>
@@ -152,7 +154,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#002344]">
-              Regional Leadership
+              Regional Leadership | क्षेत्रीय नेतृत्व
             </h2>
             <div className="w-24 h-1 bg-[#fb8500] mx-auto rounded-full"></div>
           </div>
@@ -193,7 +195,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#002344]">
-              Our Key Advisors & Volunteers
+              Our Key Advisors & Volunteers | हमारे प्रमुख सलाहकार और स्वयंसेवक
             </h2>
             <div className="w-24 h-1 bg-[#2d6a4f] mx-auto rounded-full"></div>
           </div>

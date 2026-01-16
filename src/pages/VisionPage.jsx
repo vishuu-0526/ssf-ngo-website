@@ -30,7 +30,7 @@ export default function VisionPage() {
                             Our <span className="text-[#fb8500]">Vision</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-zinc-300 font-medium max-w-3xl mx-auto leading-relaxed">
-                            🌍 दृष्टि कथन | Vision Statement
+                            Vision Statement
                         </p>
                     </motion.div>
                 </div>
@@ -104,7 +104,7 @@ export default function VisionPage() {
                             className="bg-zinc-50 rounded-[2.5rem] p-12 border border-zinc-200"
                         >
                             <h3 className="text-3xl font-serif font-bold text-[#002344] mb-6 text-center">
-                                Our Path Forward | हमारा आगे का मार्ग
+                                Our Path Forward
                             </h3>
                             <p className="text-xl text-zinc-600 leading-relaxed text-center font-medium mb-8">
                                 Our Vision is realized through our Mission and guided by our Core Values.
@@ -137,7 +137,7 @@ export default function VisionPage() {
                             Let's Build a Better World Together
                         </h2>
                         <p className="text-xl text-zinc-400 font-medium">
-                            यदि आपके विचार, सिद्धांत या उद्देश्य हमारी संस्था से कहीं भी मेल खाते हैं, तो हमसे जुड़ने में कोई संकोच न करें।
+                            If your ideas, principles, or goals align with our organization, feel free to join us in building a better world.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
                             <Link to="/Volunteer" className="btn-cta px-12 py-5 text-lg">

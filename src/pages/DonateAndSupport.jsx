@@ -1,8 +1,8 @@
-
 import { FaHandHoldingHeart, FaChartPie, FaFileContract, FaUniversity, FaCheckCircle, FaRupeeSign, FaQrcode, FaShieldAlt, FaQuestionCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import qrCode from "../assets/barcode.jpg"; // Updated to the correct QR code image
+import heroInvestImage from "/images/real/scholarship_distribution.jpg";
 
 export default function DonateAndSupport() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -31,10 +31,10 @@ export default function DonateAndSupport() {
   ];
 
   const impactTiers = [
-    { amount: 1000, desc: "Educational supplies for 2 children", color: "bg-[#003366]/5 border-[#003366]/20 text-[#003366]" },
-    { amount: 2500, desc: "Health checkup camp for 20 villagers", color: "bg-green-50 border-green-200 text-green-800" },
-    { amount: 5000, desc: "Vocational training for 1 woman", color: "bg-purple-50 border-purple-200 text-purple-800" },
-    { amount: 10000, desc: "Digital classroom setup support", color: "bg-orange-50 border-orange-200 text-orange-800" },
+    { amount: 1000, desc: "Educational supplies for 2 children", descHi: "2 बच्चों के लिए शैक्षिक सामग्री", color: "bg-[#003366]/5 border-[#003366]/20 text-[#003366]" },
+    { amount: 2500, desc: "Health checkup camp for 20 villagers", descHi: "20 ग्रामीणों के लिए स्वास्थ्य जांच शिविर", color: "bg-green-50 border-green-200 text-green-800" },
+    { amount: 5000, desc: "Vocational training for 1 woman", descHi: "1 महिला के लिए व्यावसायिक प्रशिक्षण", color: "bg-purple-50 border-purple-200 text-purple-800" },
+    { amount: 10000, desc: "Digital classroom setup support", descHi: "डिजिटल क्लासरूम सेटअप सहायता", color: "bg-orange-50 border-orange-200 text-orange-800" },
   ];
 
   return (
@@ -51,14 +51,22 @@ export default function DonateAndSupport() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block mb-4 px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white font-bold text-sm tracking-widest uppercase">
-              Join the Movement
+              Join the Movement • आंदोलन में शामिल हों
             </div>
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
               Invest in <br /><span className="text-white">Hope & Dignity</span>
             </h1>
+            <h2 className="text-3xl font-hindi text-[#fb8500] mb-6">आशा और गरिमा में निवेश करें</h2>
             <p className="text-zinc-300 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
               Your contribution isn't just charity. It's an investment in a child's education, a woman's independence, and a village's future.
             </p>
+            <div className="pt-6 flex justify-center">
+              <img
+                src={heroInvestImage}
+                alt="Investing in Future"
+                className="w-full max-w-lg h-60 md:h-80 object-cover rounded-2xl shadow-2xl opacity-80 hover:opacity-100 transition-opacity border-4 border-white/10"
+              />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -79,6 +87,7 @@ export default function DonateAndSupport() {
                 <FaRupeeSign className="text-xl" /> {tier.amount.toLocaleString()}
               </div>
               <p className="font-semibold opacity-80">{tier.desc}</p>
+              <p className="text-xs font-hindi mt-1 opacity-60">{tier.descHi}</p>
             </motion.div>
           ))}
         </div>
@@ -89,7 +98,8 @@ export default function DonateAndSupport() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-zinc-900 mb-4">Ways to Contribute</h2>
-            <p className="text-xl text-zinc-500">Choose the method that suits you best.</p>
+            <h3 className="text-2xl font-hindi text-[#003366]">योगदान के तरीके</h3>
+            <p className="text-xl text-zinc-500 mt-4">Choose the method that suits you best.</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -104,7 +114,7 @@ export default function DonateAndSupport() {
                 </div>
 
                 <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
-                  <FaHandHoldingHeart /> Donate Online
+                  <FaHandHoldingHeart /> Donate Online | ऑनलाइन दान करें
                 </h3>
                 <p className="text-zinc-200 mb-8 text-lg">
                   Secure, instant, and hassle-free. Supports Credit Cards, Debit Cards, Netbanking, and UPI.
@@ -129,7 +139,7 @@ export default function DonateAndSupport() {
                 </div>
                 <div className="text-center md:text-left">
                   <h4 className="text-2xl font-bold text-zinc-900 mb-2 flex items-center justify-center md:justify-start gap-2">
-                    <FaQrcode className="text-[#003366]" /> Scan to Donate
+                    <FaQrcode className="text-[#003366]" /> Scan to Donate | स्कैन करें
                   </h4>
                   <p className="text-zinc-600 mb-4">
                     Use any UPI app (Google Pay, PhonePe, Paytm, BHIM) to scan and donate instantly.
@@ -150,7 +160,7 @@ export default function DonateAndSupport() {
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#003366] opacity-10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 
                 <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
-                  <FaUniversity /> Bank Transfer
+                  <FaUniversity /> Bank Transfer • बैंक ट्रांसफर
                 </h3>
 
                 <div className="space-y-6 relative z-10">
@@ -199,8 +209,12 @@ export default function DonateAndSupport() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-black text-black">Complete Financial <br /><span className="text-[#003366]">Transparency</span></h2>
+              <h3 className="text-2xl font-hindi text-zinc-500">पूर्ण वित्तीय पारदर्शिता</h3>
               <p className="text-lg text-zinc-600 leading-relaxed">
                 We believe you deserve to know exactly where your money goes. For every ₹100 you donate, ₹85 goes directly to the field.
+              </p>
+              <p className="text-zinc-400 mt-2 text-md">
+                हमारा मानना है कि आपको यह जानने का पूरा अधिकार है कि आपका पैसा कहाँ जा रहा है। आपके द्वारा दान किए गए प्रत्येक ₹100 में से ₹85 सीधे क्षेत्र (फील्ड) में सेवा के लिए जाते हैं।
               </p>
 
               <div className="space-y-4 pt-4">

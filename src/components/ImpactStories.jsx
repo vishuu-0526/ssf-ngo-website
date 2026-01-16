@@ -129,7 +129,7 @@ export default function ImpactStories({ limit = null }) {
                         >
                             <button
                                 onClick={() => setSelectedStory(null)}
-                                className="absolute top-6 right-6 z-10 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-zinc-500 hover:bg-[#fb8500] hover:text-white transition-colors border border-zinc-100 shadow-lg"
+                                className="absolute top-4 right-4 md:top-6 md:right-6 z-20 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-zinc-500 hover:bg-[#fb8500] hover:text-white transition-colors border border-zinc-100 shadow-lg"
                             >
                                 <FaTimes />
                             </button>
@@ -137,10 +137,10 @@ export default function ImpactStories({ limit = null }) {
                             {/* Language Toggle in Modal */}
                             <button
                                 onClick={toggleLang}
-                                className="absolute top-6 right-20 z-10 px-4 h-10 bg-white/80 backdrop-blur rounded-full flex items-center gap-2 text-[#002344] font-bold text-sm hover:bg-blue-50 transition-colors border border-zinc-100 shadow-lg"
+                                className="absolute top-4 left-4 md:top-6 md:right-20 z-20 px-4 h-10 bg-white/90 backdrop-blur rounded-full flex items-center gap-2 text-[#002344] font-bold text-sm hover:bg-blue-50 transition-colors border border-zinc-100 shadow-lg"
                             >
                                 <Languages size={16} />
-                                {lang === 'en' ? 'हिन्दी में पढ़ें' : 'Read in English'}
+                                {lang === 'en' ? 'हिन्दी' : 'English'}
                             </button>
 
                             <div className="grid md:grid-cols-2">

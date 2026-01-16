@@ -19,8 +19,6 @@ export const Route = createFileRoute("/")({
       <div className="section-cry">
         <KeyFocus />
       </div>
-      <Impactstories />
-      <Aboutus />
       <ProgressSection />
       <Collabrations />
       <Getinvolved />

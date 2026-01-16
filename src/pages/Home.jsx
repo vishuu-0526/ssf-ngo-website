@@ -2,14 +2,18 @@
 
 import { motion, useMotionValue, animate } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaHeart, FaHandHoldingHeart, FaChild, FaCheckCircle, FaQuoteLeft, FaArrowRight, FaShieldAlt, FaGlobeAmericas } from "react-icons/fa";
+import { FaHeart, FaHandHoldingHeart, FaChild, FaCheckCircle, FaQuoteLeft, FaArrowRight, FaShieldAlt, FaGlobeAmericas, FaHandshake } from "react-icons/fa";
 import { Link } from "@tanstack/react-router";
 import OptimizedImage from "../components/OptimizedImage";
 import ImpactStories from "../components/ImpactStories";
+import FloatingTicker from "../components/FloatingTicker";
+import OfficialOverview from "../components/OfficialOverview";
+import CorePhilosophy from "../components/CorePhilosophy";
+import ImpactTimeline from "../components/ImpactTimeline";
 
 // Import images from public
-const heroImage = "/images/real/community-rally-children.jpg";
-const educationRealImage = "/images/real/girls-group-learning-close.jpg";
+const heroImage = "/images/hero_children.png";
+const educationRealImage = "/images/classroom-session.png";
 
 export default function Home() {
   function AnimatedCounter({ value, suffix = "+" }) {
@@ -31,7 +35,7 @@ export default function Home() {
     <div className="w-full bg-white overflow-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-[#001529]">
+      <section className="relative min-h-[90vh] flex items-center pt-24 pb-32 overflow-hidden bg-[#001529]">
         <div className="absolute inset-0 z-0">
           <OptimizedImage
             src={heroImage}
@@ -50,15 +54,18 @@ export default function Home() {
             >
               <div className="flex flex-col gap-4 mb-6">
                 <span className="w-fit px-4 py-1.5 bg-[#d90429] text-white text-xs font-bold rounded-full tracking-[0.2em] uppercase">
-                  Empowering Dreams
+                  Empowering Dreams | सपनों को उड़ान
                 </span>
                 <span className="text-[#fb8500] font-bold uppercase tracking-[0.3em] text-[10px]">
-                  A non-profit, volunteer-driven initiative
+                  A non-profit, volunteer-driven initiative | एक गैर-लाभकारी, स्वयंसेवक संचालित पहल
                 </span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white leading-[1.1] drop-shadow-xl">
                 Don't Just Give, <br />
                 <span className="text-[#fb8500]">Change a Destiny.</span>
+                <div className="text-2xl lg:text-3xl mt-4 font-sans font-normal opacity-80">
+                  केवल दान न करें, <span className="text-[#fb8500]">भाग्य बदलें।</span>
+                </div>
               </h1>
             </motion.div>
 
@@ -69,6 +76,9 @@ export default function Home() {
               className="text-xl text-zinc-300 font-medium leading-relaxed max-w-xl"
             >
               Every child deserves more than just a chance. Swastik Srijan Foundation empowers underprivileged communities through education, healthcare, and sustainable livelihood.
+              <p className="mt-2 text-lg text-zinc-400">
+                हर बच्चा सिर्फ एक मौके से ज्यादा का हकदार है। स्वास्तिक सृजन फाउंडेशन शिक्षा, स्वास्थ्य और सतत आजीविका के माध्यम से वंचित समुदायों को सशक्त बनाता है।
+              </p>
             </motion.p>
 
             <motion.div
@@ -84,11 +94,11 @@ export default function Home() {
                 className="sm:w-auto"
               >
                 <button className="btn-cta w-full group py-5 px-10">
-                  Donate Now <FaHeart className="group-hover:scale-125 transition-transform" />
+                  Donate Now | अब दान करें <FaHeart className="group-hover:scale-125 transition-transform" />
                 </button>
               </a>
               <Link to="/Impact" className="sm:w-auto btn-secondary bg-transparent text-white border-white hover:bg-white hover:text-[#002344] py-5 px-10">
-                Our Impact <FaArrowRight />
+                Our Impact | हमारा प्रभाव <FaArrowRight />
               </Link>
             </motion.div>
 
@@ -117,14 +127,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ================= FLOATING TICKER ================= */}
+      <FloatingTicker />
+
       {/* ================= IMPACT NUMBERS ================= */}
-      <section className="relative z-20 -mt-20 container mx-auto px-6">
+      <section className="relative z-20 mt-12 container mx-auto px-6">
         <div className="bg-white rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-10 lg:p-14 grid grid-cols-2 lg:grid-cols-4 gap-12 border border-zinc-50">
           {[
-            { value: 15000, label: "Children Educated", icon: <FaChild className="text-[#002344]" />, color: "bg-blue-50" },
-            { value: 50, label: "Villages Adopted", icon: <FaHandHoldingHeart className="text-[#2d6a4f]" />, color: "bg-emerald-50" },
-            { value: 85, label: "Success Rate", icon: <FaCheckCircle className="text-[#fb8500]" />, color: "bg-amber-50", suffix: "%" },
-            { value: 10, label: "Years of Impact", icon: <FaHeart className="text-[#d90429]" />, color: "bg-red-50", suffix: "+" },
+            { value: 20000, label: "Children Educated", labelHi: "शिक्षित बच्चे", icon: <FaChild className="text-[#002344]" />, color: "bg-blue-50" },
+            { value: 100, label: "Villages Adopted", labelHi: "अपनाए गए गांव", icon: <FaHandHoldingHeart className="text-[#2d6a4f]" />, color: "bg-emerald-50" },
+            { value: 92, label: "Impact Rate", labelHi: "प्रभाव दर", icon: <FaCheckCircle className="text-[#fb8500]" />, color: "bg-amber-50", suffix: "%" },
+            { value: 12, label: "Years of Impact", labelHi: "प्रभाव के वर्ष", icon: <FaHeart className="text-[#d90429]" />, color: "bg-red-50", suffix: "+" },
           ].map((stat, i) => (
             <div key={i} className="text-center space-y-3 group">
               <div className={`w-16 h-16 ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl transition-transform group-hover:scale-110 duration-300`}>
@@ -134,50 +147,89 @@ export default function Home() {
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
               <p className="text-zinc-500 font-bold text-xs uppercase tracking-[0.15em]">{stat.label}</p>
+              <p className="text-zinc-400 font-medium text-[10px] uppercase tracking-[0.1em] -mt-2">{stat.labelHi}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ================= PAN-INDIA PROGRESS TEASER ================= */}
-      <section className="py-24 container mx-auto px-6">
-        <div className="bg-gradient-to-br from-[#002344] to-[#001529] rounded-[4rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#fb8500] opacity-[0.05] rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+      {/* ================= OFFICIAL OVERVIEW ================= */}
+      <OfficialOverview />
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Our Progress</span>
-                <h2 className="text-4xl md:text-6xl font-serif font-bold leading-tight">
-                  A Decade of <br /> <span className="text-[#fb8500]">Pan India</span> Initiative.
-                </h2>
-              </div>
-              <p className="text-xl text-zinc-300 font-medium leading-relaxed">
-                From 2014 to 2025, we have consistently expanded our reach, starting from mental health awareness to building a nationwide ecosystem of education, nutrition, and technology-driven development.
-              </p>
-              <div className="pt-4">
-                <Link to="/Journey" className="btn-cta bg-white text-[#002344] hover:bg-zinc-100">
-                  Explore Our Roadmap (2014 - 2025) <FaArrowRight />
-                </Link>
-              </div>
+      {/* ================= WHO WE ARE ================= */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-[#fb8500] opacity-[0.03] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#d90429] opacity-[0.03] rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
+            <div className="space-y-4">
+              <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">About Us | हमारे बारे में</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">Who We Are | हम कौन हैं</h2>
             </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { year: "2014", label: "Kickoff", color: "border-[#fb8500]" },
-                { year: "2017", label: "Education Focus", color: "border-[#d90429]" },
-                { year: "2020", label: "Resilience", color: "border-[#fb8500]" },
-                { year: "2025", label: "Tech Scaling", color: "border-[#d90429]" },
-              ].map((item, i) => (
-                <div key={i} className={`p-8 rounded-3xl border-2 ${item.color} bg-white/5 backdrop-blur-sm text-center`}>
-                  <p className="text-3xl font-serif font-bold text-[#fb8500] mb-2">{item.year}</p>
-                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">{item.label}</p>
-                </div>
-              ))}
+            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed font-medium text-center max-w-3xl mx-auto">
+              We are a registered non-profit bridging the gap between privilege and poverty through education, healthcare, and sustainable livelihoods to build a stronger, inclusive Bharat.
+            </p>
+            <div className="pt-4 flex justify-center">
+              <Link to="/About" className="btn-secondary inline-flex border-[#002344] text-[#002344] hover:bg-[#002344] hover:text-white px-10">
+                Know More About Us | हमारे बारे में और जानें <FaArrowRight />
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ================= FOUNDER'S MESSAGE ================= */}
+      <section className="py-12 bg-gradient-to-br from-zinc-50 to-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="relative bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,35,68,0.1)] p-8 lg:p-10 border border-zinc-100 overflow-hidden">
+              {/* Decorative Accent */}
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#002344] via-[#003366] to-[#fb8500] rounded-l-[2rem]"></div>
+
+              {/* Quote Icon */}
+              <div className="absolute top-4 right-6 opacity-5">
+                <FaQuoteLeft className="text-7xl text-[#002344]" />
+              </div>
+
+              <div className="relative z-10 pl-6 flex flex-col lg:flex-row lg:items-center lg:gap-10">
+                <div className="flex-1">
+                  <h3 className="text-xl lg:text-2xl font-serif font-bold text-[#002344] mb-3">
+                    Founder's Message
+                  </h3>
+
+                  <p className="text-base lg:text-lg text-zinc-600 leading-relaxed font-medium">
+                    At Swastik Srijan Foundation, we believe unity, education, and compassion are the pillars of a better society. Together, we create opportunities, inspire hope, and bring lasting change to lives across India.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4 pt-4 lg:pt-0 lg:border-l lg:border-t-0 border-t border-zinc-100 lg:pl-10 mt-4 lg:mt-0 shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#002344] to-[#003366] flex items-center justify-center">
+                    <FaHeart className="text-white text-lg" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#002344] text-sm lg:text-base">Swastik Srijan Foundation</p>
+                    <p className="text-xs lg:text-sm text-zinc-500">Building a Stronger Bharat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ================= CORE PHILOSOPHY (VISION, MISSION, VALUES) ================= */}
+      <CorePhilosophy />
+
+      {/* ================= IMPACT JOURNEY / TIMELINE ================= */}
+      <ImpactTimeline />
+
       <section id="about" className="py-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
@@ -188,14 +240,14 @@ export default function Home() {
               className="rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-8 border-white"
             >
               <OptimizedImage
-                src={educationRealImage}
-                alt="Student supported by Swastik Srijan Foundation"
+                src="/images/real/student-leadership-recitation.jpg"
+                alt="Student success story - Swastik Srijan Foundation"
                 className="w-full h-auto"
               />
               <div className="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-[#002344]/90 via-[#002344]/40 to-transparent text-white">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] mb-3 text-[#fb8500]">Direct Impact</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] mb-3 text-[#fb8500]">Long-Term Impact</p>
                 <h3 className="text-2xl font-serif font-bold italic">"I found a path I never knew existed."</h3>
-                <p className="text-zinc-300 mt-2 text-sm">Raju, Class Topper (Batch 2023)</p>
+                <p className="text-zinc-300 mt-2 text-sm">Raju, One of our first success stories (Batch 2014-15)</p>
               </div>
             </motion.div>
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#002344] opacity-[0.03] rounded-full blur-3xl"></div>
@@ -211,18 +263,16 @@ export default function Home() {
             </div>
             <div className="space-y-6 text-lg text-zinc-600 leading-relaxed font-medium">
               <p>
-                Raju was identified during our 2023 survey while working at a village tea stall. His family couldn't afford
-                a pencil, let alone a school fee.
+                Raju was identified during our grassroots survey in 2014-15 while working at a village tea stall. Like hundreds of other children we encounter, his family couldn't afford a pencil, let alone a school fee.
               </p>
               <p>
-                With the support of donors like you, we enrolled him in our <span className="text-[#002344] font-bold">"Shiksha Suraksha"</span> program. Today, he ranks
-                first in his school and dreams of becoming an aerospace engineer.
+                With the support of donors, we enrolled him in our <span className="text-[#002344] font-bold">"Shiksha Suraksha"</span> program. Today, Raju represents thousands of children who have replaced tools with textbooks and are now dreaming of becoming engineers and leaders.
               </p>
             </div>
 
             <div className="pt-4">
               <Link to="/DonateAndSupport" className="btn-primary shadow-[#002344]/20">
-                Sponsor a Child Like Raju
+                Sponsor a Needy Child
               </Link>
             </div>
           </div>
@@ -284,112 +334,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SSF NATIONAL ACADEMY HIGHLIGHT ================= */}
-      <section className="py-24 bg-[#f8f9fa] border-y border-zinc-100">
+
+      {/* ================= CSR PARTNERSHIP TEASER ================= */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#fb8500] opacity-[0.03] rounded-full blur-3xl -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#002344] opacity-[0.03] rounded-full blur-3xl"></div>
+
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                <OptimizedImage
-                  src="/images/academy/academy-banner.jpg"
-                  alt="SSF National Academy"
-                  className="w-full h-auto"
-                />
+          <div className="bg-gradient-to-br from-zinc-50 to-white rounded-[3rem] p-10 lg:p-16 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-zinc-100 flex flex-col lg:flex-row gap-16 items-center">
+
+            <div className="lg:w-1/2 space-y-8">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#002344]/5 border border-[#002344]/10">
+                <FaHandshake className="text-[#fb8500]" />
+                <span className="text-[#002344] font-bold text-xs uppercase tracking-widest">CSR Partnership</span>
               </div>
-            </div>
 
-            <div className="space-y-8 order-1 lg:order-2">
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 rounded-3xl bg-white shadow-xl flex items-center justify-center shrink-0 border border-zinc-50">
-                  <OptimizedImage src="/images/academy/academy-seal.jpg" alt="Academy Seal" className="w-14 h-14 rounded-full" objectFit="contain" />
-                </div>
-                <div>
-                  <h2 className="text-[#2d6a4f] font-bold text-xs uppercase tracking-[0.2em] mb-2">Our Flagship Initiative</h2>
-                  <h3 className="text-4xl lg:text-5xl font-serif font-bold text-[#002344] leading-tight">
-                    SSF National <span className="text-[#2d6a4f]">Academy</span>
-                  </h3>
-                </div>
+              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#002344] leading-tight">
+                Corporate Social <br /> <span className="text-[#fb8500]">Responsibility.</span>
+              </h2>
+
+              <div className="space-y-4 text-lg text-zinc-600 font-medium">
+                <p>
+                  Partner with us to create sustainable impact. Your CSR initiatives can transform lives through education, health, and skill development.
+                </p>
+                <p className="text-zinc-500 font-medium">
+                  Join us in building an empowered and self-reliant India through meaningful Corporate Social Responsibility initiatives.
+                </p>
               </div>
-              <p className="text-xl text-zinc-600 leading-relaxed font-medium">
-                Empowering every child for a stronger India. Our academy provides high-quality education, digital literacy, and character building to students in rural and underserved areas.
-              </p>
 
-              <ul className="space-y-5">
-                {[
-                  "Start of classes 9th to 12th in a phased manner",
-                  "Establishment of Skill Development Hubs",
-                  "Digital Academy for remote learning",
-                  "Accessible education in both rural and urban areas"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-4">
-                    <div className="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center shrink-0">
-                      <FaCheckCircle className="text-[#2d6a4f] text-sm" />
-                    </div>
-                    <span className="text-zinc-700 font-semibold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-6">
-                <Link to="/UpcomingProjects" className="btn-secondary border-[#2d6a4f] text-[#2d6a4f] hover:bg-[#2d6a4f] hover:text-white">
-                  View Roadmap <FaArrowRight />
+              <div className="pt-4 flex flex-wrap gap-4">
+                <Link to="/CSRPartnership" className="btn-primary flex items-center gap-3">
+                  Explore Opportunities <FaArrowRight />
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ================= MISSION & VISION TEASER ================= */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-6 text-center max-w-6xl space-y-16">
-          <div className="space-y-4">
-            <h2 className="text-[#fb8500] font-bold text-xs uppercase tracking-[0.2em]">Purpose & Direction</h2>
-            <h3 className="text-4xl lg:text-5xl font-serif font-bold text-[#002344]">Our Campaign</h3>
-            <p className="text-xl text-zinc-500 max-w-2xl mx-auto">Foundational pillars of our movement for social change.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            {/* Mission Card */}
-            <div className="group p-10 rounded-[2.5rem] bg-white border border-zinc-100 hover:border-[#002344] hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#002344]/5 rounded-2xl flex items-center justify-center mb-6 text-3xl text-[#002344]">
-                <FaHandHoldingHeart />
+            <div className="lg:w-1/2 relative">
+              <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
+                <OptimizedImage
+                  src="/images/csr-hero.png"
+                  alt="CSR Partners collaborating for social impact"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h4 className="text-2xl font-serif font-bold text-[#002344] mb-4">Our Mission</h4>
-              <p className="text-zinc-600 mb-8 leading-relaxed">
-                Our mission embodies our commitment to tangible social impact. Through education, health, and sustainable development, we aim to uplift communities and empower individuals to realize their full potential.
-              </p>
-              <Link to="/Mission" className="text-[#002344] font-bold uppercase text-sm tracking-wider flex items-center gap-2 group-hover:gap-4 transition-all">
-                Read Full Mission <FaArrowRight />
-              </Link>
-            </div>
-
-            {/* Vision Card */}
-            <div className="group p-10 rounded-[2.5rem] bg-white border border-zinc-100 hover:border-[#fb8500] hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#fb8500]/10 rounded-2xl flex items-center justify-center mb-6 text-3xl text-[#fb8500]">
-                <FaGlobeAmericas />
-              </div>
-              <h4 className="text-2xl font-serif font-bold text-[#002344] mb-4">Our Vision</h4>
-              <p className="text-zinc-600 mb-8 leading-relaxed">
-                To build an inclusive, ethical, and empowered society where every individual has access to education, health, and dignity.
-              </p>
-              <Link to="/Vision" className="text-[#fb8500] font-bold uppercase text-sm tracking-wider flex items-center gap-2 group-hover:gap-4 transition-all">
-                See Full Vision <FaArrowRight />
-              </Link>
-            </div>
-
-            {/* Objectives Card */}
-            <div className="group p-10 rounded-[2.5rem] bg-white border border-zinc-100 hover:border-[#d90429] hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#d90429]/5 rounded-2xl flex items-center justify-center mb-6 text-3xl text-[#d90429]">
-                <FaCheckCircle />
-              </div>
-              <h4 className="text-2xl font-serif font-bold text-[#002344] mb-4">Our Objectives</h4>
-              <p className="text-zinc-600 mb-8 leading-relaxed">
-                To promote holistic development of all sections of society through education, health, and empowerment.
-              </p>
-              <Link to="/Objectives" className="text-[#d90429] font-bold uppercase text-sm tracking-wider flex items-center gap-2 group-hover:gap-4 transition-all">
-                View Objectives <FaArrowRight />
-              </Link>
+              <div className="absolute -bottom-6 -right-6 w-full h-full rounded-[2rem] border-2 border-[#fb8500]/20 -z-10 bg-[#f8f9fa]"></div>
             </div>
           </div>
         </div>
@@ -409,6 +398,13 @@ export default function Home() {
           <p className="text-zinc-400 text-xl max-w-2xl mx-auto font-medium">
             Your small act of kindness today can become a lifetime of difference tomorrow. Join us in our mission to build a better Bharat.
           </p>
+          <div className="flex justify-center py-8">
+            <img
+              src="/images/real/boys-group-photo.jpg"
+              alt="Community Children"
+              className="w-full max-w-2xl h-64 object-cover rounded-[2rem] shadow-2xl opacity-60 hover:opacity-80 transition-opacity"
+            />
+          </div>
           <div className="flex flex-col sm:flex-row justify-center gap-6 pt-8">
             <a
               href="https://pages.razorpay.com/pl_NCiTn7wnBOJFYG/view"
@@ -426,7 +422,7 @@ export default function Home() {
         </div>
       </section>
 
-    </div>
+    </div >
   );
 }
 

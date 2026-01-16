@@ -42,7 +42,10 @@ export default function InstitutionalDNA() {
               Institutional <br /> <span className="text-[#fb8500]">DNA</span>
             </h1>
             <p className="text-zinc-500 mt-12 text-2xl md:text-3xl font-medium leading-relaxed max-w-3xl mx-auto font-serif italic">
-              "संस्था का मूल वैचारिक ढाँचा — यह वह आधार है जिस पर हमारी सोच, निर्णय और सामाजिक उत्तरदायित्व निर्मित होता है।"
+              "The foundational framework of our organization — the base upon which our thoughts, decisions, and social responsibilities are built."
+            </p>
+            <p className="text-zinc-400 text-sm italic">
+              संस्था का मूल वैचारिक ढाँचा — यह वह आधार है जिस पर हमारी सोच, निर्णय और सामाजिक उत्तरदायित्व निर्मित होता है।
             </p>
           </motion.div>
         </div>
@@ -54,58 +57,58 @@ export default function InstitutionalDNA() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "अस्तित्व",
-                subtitle: "Identity",
-                desc: "संस्था समाज के लिए है, समाज से है और समाज के साथ है।",
+                title: "Identity",
+                subtitle: "अस्तित्व",
+                desc: "The organization is for society, by society, and with society.",
                 pillar: "01",
                 color: "from-[#fb8500] to-[#ff9e00]"
               },
               {
-                title: "मार्गदर्शन",
-                subtitle: "Guidance",
-                desc: "हमारा हर कदम स्पष्ट दृष्टि और नैतिक उद्देश्य से संचालित है।",
+                title: "Guidance",
+                subtitle: "मार्गदर्शन",
+                desc: "Every step is driven by a clear vision and ethical purpose.",
                 pillar: "02",
                 color: "from-[#002344] to-[#004d99]"
               },
               {
-                title: "नैतिकता",
-                subtitle: "Ethics",
-                desc: "ईमानदारी और पारदर्शिता हमारी कार्यसंस्कृति की नींव है।",
+                title: "Ethics",
+                subtitle: "नैतिकता",
+                desc: "Honesty and transparency are the pillars of our work culture.",
                 pillar: "03",
                 color: "from-[#d90429] to-[#ef233c]"
               },
               {
-                title: "राष्ट्र",
-                subtitle: "Nation",
-                desc: "हम राष्ट्र निर्माण में सामाजिक भागीदारी को अपना कर्तव्य मानते हैं।",
+                title: "Nation",
+                subtitle: "राष्ट्र",
+                desc: "We consider social participation in nation-building as our duty.",
                 pillar: "04",
                 color: "from-[#2d6a4f] to-[#40916c]"
               },
               {
-                title: "कार्यशैली",
-                subtitle: "Workflow",
-                desc: "सहयोग, संवेदनशीलता और परिणाम-उन्मुख दृष्टिकोण।",
+                title: "Workflow",
+                subtitle: "कार्यशैली",
+                desc: "A collaborative, sensitive, and results-oriented approach.",
                 pillar: "05",
                 color: "from-[#fb8500] to-[#ff9e00]"
               },
               {
-                title: "लक्षित समाज",
-                subtitle: "Focus",
-                desc: "वंचित और अवसर से दूर समुदाय हमारे केंद्र में हैं।",
+                title: "Focus",
+                subtitle: "लक्षित समाज",
+                desc: "Deprived and underserved communities are at our core.",
                 pillar: "06",
                 color: "from-[#002344] to-[#004d99]"
               },
               {
-                title: "प्रकृति",
-                subtitle: "Nature",
-                desc: "पर्यावरण, पशु और मानव जीवन का संतुलन आवश्यक है।",
+                title: "Nature",
+                subtitle: "प्रकृति",
+                desc: "Balance between environment, animals, and human life is essential.",
                 pillar: "07",
                 color: "from-[#2d6a4f] to-[#40916c]"
               },
               {
-                title: "स्थिरता",
-                subtitle: "Stability",
-                desc: "संस्था सभी कानूनी एवं संस्थागत ढाँचों के अंतर्गत कार्य करती है।",
+                title: "Stability",
+                subtitle: "स्थिरता",
+                desc: "The organization operates within all legal and institutional frameworks.",
                 pillar: "08",
                 color: "from-[#d90429] to-[#ef233c]"
               }
@@ -158,9 +161,11 @@ export default function InstitutionalDNA() {
               <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
               <p className="text-[#fb8500] font-bold uppercase tracking-[0.3em] text-xs mb-10">The Vision</p>
               <h4 className="text-4xl md:text-5xl font-serif font-bold leading-tight italic">
-                "एक ऐसा समावेशी समाज जहाँ प्रत्येक व्यक्ति को
-                शिक्षा, स्वास्थ्य, सम्मान और आत्मनिर्भरता का अवसर प्राप्त हो।"
+                "To build an inclusive society where every individual has access to education, health, dignity, and opportunities for self-reliance."
               </h4>
+              <p className="text-[#fb8500]/60 text-sm mt-8 italic">
+                "एक ऐसा समावेशी समाज जहाँ प्रत्येक व्यक्ति को शिक्षा, स्वास्थ्य, सम्मान और आत्मनिर्भरता का अवसर प्राप्त हो।"
+              </p>
             </motion.div>
 
             {/* Mission Half */}
@@ -173,18 +178,29 @@ export default function InstitutionalDNA() {
               <p className="text-[#d90429] font-bold uppercase tracking-[0.3em] text-xs mb-10">Our Mission</p>
               <ul className="space-y-8">
                 {[
-                  "गुणवत्तापूर्ण शिक्षा एवं कौशल विकास",
-                  "महिला एवं बाल सशक्तिकरण",
-                  "स्वास्थ्य, पोषण एवं जागरूकता",
-                  "पर्यावरण एवं पशु संरक्षण"
-                ].map((li, idx) => (
-                  <li key={idx} className="flex items-center gap-6 group">
-                    <div className="w-12 h-12 rounded-2xl bg-[#f8f9fa] flex items-center justify-center text-[#fb8500] font-bold group-hover:bg-[#fb8500] group-hover:text-white transition-all shadow-sm">
-                      {idx + 1}
-                    </div>
-                    <span className="text-2xl font-serif font-bold opacity-80 group-hover:opacity-100 transition-opacity">{li}</span>
-                  </li>
-                ))}
+                  "Quality Education & Skill Development",
+                  "Women & Child Empowerment",
+                  "Health, Nutrition & Awareness",
+                  "Environment & Animal Protection"
+                ].map((li, idx) => {
+                  const hindiLIs = [
+                    "गुणवत्तापूर्ण शिक्षा एवं कौशल विकास",
+                    "महिला एवं बाल सशक्तिकरण",
+                    "स्वास्थ्य, पोषण एवं जागरूकता",
+                    "पर्यावरण एवं पशु संरक्षण"
+                  ];
+                  return (
+                    <li key={idx} className="flex items-center gap-6 group">
+                      <div className="w-12 h-12 rounded-2xl bg-[#f8f9fa] flex items-center justify-center text-[#fb8500] font-bold group-hover:bg-[#fb8500] group-hover:text-white transition-all shadow-sm">
+                        {idx + 1}
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-2xl font-serif font-bold opacity-80 group-hover:opacity-100 transition-opacity">{li}</span>
+                        <span className="text-sm opacity-50 italic">{hindiLIs[idx]}</span>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </motion.div>
           </div>
@@ -203,6 +219,9 @@ export default function InstitutionalDNA() {
             Sowing Seeds <br /> of <span className="text-[#fb8500]">Change.</span>
           </motion.h2>
           <p className="text-xl md:text-2xl text-zinc-500 font-medium max-w-2xl mx-auto leading-relaxed">
+            "Your support is our strength. Together, we are taking steps towards a better and stronger India."
+          </p>
+          <p className="text-zinc-400 text-sm italic">
             हमारी शक्ति, आपका सहयोग। इसी मूल मंत्र के साथ हम एक बेहतर भारत की ओर कदम बढ़ा रहे हैं।
           </p>
           <div className="flex flex-wrap justify-center gap-8 pt-10">

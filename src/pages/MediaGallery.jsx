@@ -6,6 +6,70 @@ import { FaEye, FaTimes, FaFilter, FaCamera } from "react-icons/fa";
 
 const ALL_IMAGES = [
   {
+    id: "new_upload_01",
+    src: "/images/classroom-session.png",
+    category: "Education",
+    year: "2024",
+    alt: "Classroom interactive session with students",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_02",
+    src: "/images/village-outreach.png",
+    category: "Events",
+    year: "2024",
+    alt: "Village outreach and community engagement",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_03_poster",
+    src: "/images/sthaniya-yojana-portal.png",
+    category: "Events",
+    year: "2024",
+    alt: "Poster campaign for Local Planning Portal awareness",
+    aspect: "vertical"
+  },
+  {
+    id: "new_upload_04",
+    src: "/images/women-learning-session.png",
+    category: "Women Empowerment",
+    year: "2024",
+    alt: "Women's interactive learning and discussion session",
+    aspect: "horizontal"
+  },
+  {
+    id: "new_upload_05",
+    src: "/images/community-meeting.jpg",
+    category: "Women Empowerment",
+    year: "2024",
+    alt: "Village community meeting and SHG discussion",
+    aspect: "horizontal"
+  },
+  {
+    id: "riya_edu",
+    src: "/images/riya-education.png",
+    category: "Education",
+    year: "2024",
+    alt: "Riya and other children participating in education session",
+    aspect: "horizontal"
+  },
+  {
+    id: "prot_eco",
+    src: "/images/protection-ecosystem.png",
+    category: "Events",
+    year: "2024",
+    alt: "Children awareness and protection program",
+    aspect: "horizontal"
+  },
+  {
+    id: "dis_relief",
+    src: "/images/disaster-relief.jpg",
+    category: "Health",
+    year: "2024",
+    alt: "Crisis intervention and community support",
+    aspect: "horizontal"
+  },
+  {
     id: "new_upload_20",
     src: "/images/real/children-mat-session.jpg",
     category: "Education",
@@ -274,6 +338,75 @@ const ALL_IMAGES = [
 const CATEGORIES = ["All", "Education", "Health", "Women Empowerment", "Events", "Distribution"];
 const YEARS = ["All", "2024", "2023", "2022"];
 
+const YOUTUBE_VIDEOS = [
+  {
+    id: "yoBh0mb9GZE",
+    title: "Ground Impact & Community Stories",
+    desc: "A glimpse into our daily activities and the lives we touch across India.",
+    category: "Impact"
+  },
+  {
+    id: "Zv-vUjPSbAc",
+    title: "Empowering Rural Education",
+    desc: "See how we are bringing quality education to the most remote corners.",
+    category: "Education"
+  },
+  {
+    id: "iah7kGfGUF8",
+    title: "National Academy Highlights",
+    desc: "Key moments from our flagship educational initiative.",
+    category: "Academy"
+  },
+  {
+    id: "uT9U_ld-fEE",
+    title: "Women's Empowerment Drive",
+    desc: "Success stories of local leaders and self-reliant women.",
+    category: "Empowerment"
+  },
+  {
+    id: "gHRx9wbIZPU",
+    title: "Health and Wellness Camps",
+    desc: "Bringing essential healthcare services to underserved communities.",
+    category: "Health"
+  },
+  {
+    id: "mPt7CTLFmPU",
+    title: "Community Awareness Programs",
+    desc: "Engaging with locals to create meaningful social change.",
+    category: "Awareness"
+  },
+  {
+    id: "IXLbvE6qL6Q",
+    title: "Growth and Development Milestones",
+    desc: "Chronicling our journey and the milestones achieved over the years.",
+    category: "Journey"
+  },
+  {
+    id: "_02EXsLLs50",
+    title: "Sustainable Living Initiatives",
+    desc: "Promoting environment-friendly practices and green living.",
+    category: "Sustainability"
+  },
+  {
+    id: "qrH-HK1ZbcA",
+    title: "Voices of Change",
+    desc: "Direct testimonials from our beneficiaries and volunteers.",
+    category: "Impact"
+  },
+  {
+    id: "vDLLP-45GJE",
+    title: "Future of Digital Learning",
+    desc: "How we are bridging the digital divide in rural India.",
+    category: "Education"
+  },
+  {
+    id: "Xl2oPiQHVQo",
+    title: "Transformative Power of Support",
+    desc: "A thank you to our partners and the difference they help us make.",
+    category: "Partnership"
+  }
+];
+
 export default function MediaGallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeYear, setActiveYear] = useState("All");
@@ -431,43 +564,56 @@ export default function MediaGallery() {
             <FaEye className="inline-block mr-2" /> Watch Our Impact
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-[#002344]">Video <span className="text-[#fb8500]">Highlights</span></h2>
+          <p className="text-zinc-500 max-w-2xl mx-auto mt-4 text-lg">A collection of stories, events, and initiatives captured in motion.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Facebook Video Card */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+          {/* Facebook Video Card (Kept for variety) */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-zinc-100 hover:shadow-2xl transition-all duration-300 group">
-            <div className="relative h-[500px] bg-black">
+            <div className="relative h-64 sm:h-72 lg:h-80 bg-black">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1089068852856795&show_text=false&t=0"
                 className="w-full h-full border-none overflow-hidden"
                 scrolling="no"
                 allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="Swastik Srijan Foundation Video"
+                title="SSF Legacy Video"
               ></iframe>
             </div>
             <div className="p-6">
-              <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2 block">Featured Story</span>
-              <h3 className="text-xl font-bold text-[#002344] mb-3 group-hover:text-[#fb8500] transition-colors">
-                Empowering Voices, Transforming Lives
+              <span className="text-xs font-bold text-[#fb8500] uppercase tracking-wider mb-2 block">Featured Facebook</span>
+              <h3 className="text-xl font-bold text-[#002344] mb-3 group-hover:text-[#fb8500] transition-colors font-serif">
+                Transformation Stories
               </h3>
               <p className="text-zinc-500 text-sm leading-relaxed">
-                Witness the moments of change and the stories that define our mission.
+                Witness the moments of change and the stories that define our mission on the ground.
               </p>
             </div>
           </div>
 
-          {/* Placeholder for future videos (Optional, but looks better in grid) */}
-          <div className="bg-zinc-50 rounded-2xl overflow-hidden border border-zinc-100 flex items-center justify-center min-h-[300px] text-center p-8">
-            <div className="space-y-4">
-              <div className="w-16 h-16 bg-zinc-200 rounded-full flex items-center justify-center mx-auto text-zinc-400">
-                <FaCamera size={24} />
+          {/* YouTube Video Cards */}
+          {YOUTUBE_VIDEOS.map((video, idx) => (
+            <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-zinc-100 hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative h-64 sm:h-72 lg:h-80 bg-black">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
-              <h3 className="text-lg font-bold text-zinc-400">More Stories Coming Soon</h3>
-              <p className="text-zinc-400 text-sm">Stay tuned for more updates from the field.</p>
+              <div className="p-6">
+                <span className="text-xs font-bold text-[#fb8500] uppercase tracking-wider mb-2 block">{video.category}</span>
+                <h3 className="text-xl font-bold text-[#002344] mb-3 group-hover:text-[#fb8500] transition-colors font-serif">
+                  {video.title}
+                </h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">
+                  {video.desc}
+                </p>
+              </div>
             </div>
-          </div>
-
+          ))}
         </div>
       </section>
 

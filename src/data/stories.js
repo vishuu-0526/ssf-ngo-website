@@ -35,7 +35,7 @@ export const stories = [
         }
     },
     {
-        img: "/images/real/ssf_event_members.jpg",
+        img: "/images/disaster-relief.jpg",
         category: "DISASTER RELIEF",
         title: {
             en: "Hope in Crisis",
@@ -64,7 +64,7 @@ export const stories = [
         }
     },
     {
-        img: "/images/real/scholarship_distribution.jpg",
+        img: "/images/riya-education.png",
         category: "EDUCATION",
         title: {
             en: "Dreams Taking Flight",
@@ -184,7 +184,7 @@ For us, humanity, compassion, and the protection of life are above every circums
         }
     },
     {
-        img: "/images/real/women_community_meeting.jpg",
+        img: "/images/real/coaching_center_1.jpg",
         category: "LABOR RIGHTS",
         title: {
             en: "Standing Up for the Invisible Workers",
@@ -234,7 +234,7 @@ A simple bank account was not just a paper formality for him, but the first step
         }
     },
     {
-        img: "/images/real/nutrition_program.jpg",
+        img: "/images/real/midday-meal-gathering.jpg",
         category: "COVID RELIEF",
         title: {
             en: "Service in a Time of Distance",
@@ -263,7 +263,7 @@ This initiative shows that when circumstances close paths, intention and compass
         }
     },
     {
-        img: "/images/people_help.png",
+        img: "/images/real/tree_plantation.jpg",
         category: "HUMANITY",
         title: {
             en: "Helping a Stranger When No One Could Come Close",
@@ -325,7 +325,7 @@ Because Swastik Srijan Foundation believes that when it comes to children, even 
         }
     },
     {
-        img: "/images/health.png",
+        img: "/images/real/raju_success.png",
         category: "MEDICAL SUPPORT",
         title: {
             en: "When Effort Continued Even Without a Happy Ending",

@@ -13,9 +13,11 @@ import { Route as InstitutionalDnaRouteImport } from './routes/institutional-dna
 import { Route as VolunteerRouteImport } from './routes/Volunteer'
 import { Route as VisionRouteImport } from './routes/Vision'
 import { Route as UpcomingProjectsRouteImport } from './routes/UpcomingProjects'
+import { Route as TransparencyRouteImport } from './routes/Transparency'
 import { Route as TermsAndConditionsRouteImport } from './routes/TermsAndConditions'
 import { Route as TeamRouteImport } from './routes/Team'
 import { Route as SkillProgramsRouteImport } from './routes/SkillPrograms'
+import { Route as SSFNationalAcademyRouteImport } from './routes/SSFNationalAcademy'
 import { Route as RegistrationDetailsRouteImport } from './routes/RegistrationDetails'
 import { Route as PrivacyPolicyRouteImport } from './routes/PrivacyPolicy'
 import { Route as PartnerWithUsRouteImport } from './routes/PartnerWithUs'
@@ -32,6 +34,7 @@ import { Route as DonateAndSupportRouteImport } from './routes/DonateAndSupport'
 import { Route as DonateRouteImport } from './routes/Donate'
 import { Route as CookiePolicyRouteImport } from './routes/CookiePolicy'
 import { Route as ContactRouteImport } from './routes/Contact'
+import { Route as CampaignsRouteImport } from './routes/Campaigns'
 import { Route as CampaignRouteImport } from './routes/Campaign'
 import { Route as CSRPartnershipRouteImport } from './routes/CSRPartnership'
 import { Route as BlogRouteImport } from './routes/Blog'
@@ -58,6 +61,11 @@ const UpcomingProjectsRoute = UpcomingProjectsRouteImport.update({
   path: '/UpcomingProjects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TransparencyRoute = TransparencyRouteImport.update({
+  id: '/Transparency',
+  path: '/Transparency',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   id: '/TermsAndConditions',
   path: '/TermsAndConditions',
@@ -71,6 +79,11 @@ const TeamRoute = TeamRouteImport.update({
 const SkillProgramsRoute = SkillProgramsRouteImport.update({
   id: '/SkillPrograms',
   path: '/SkillPrograms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SSFNationalAcademyRoute = SSFNationalAcademyRouteImport.update({
+  id: '/SSFNationalAcademy',
+  path: '/SSFNationalAcademy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RegistrationDetailsRoute = RegistrationDetailsRouteImport.update({
@@ -153,6 +166,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/Contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CampaignsRoute = CampaignsRouteImport.update({
+  id: '/Campaigns',
+  path: '/Campaigns',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CampaignRoute = CampaignRouteImport.update({
   id: '/Campaign',
   path: '/Campaign',
@@ -185,6 +203,7 @@ export interface FileRoutesByFullPath {
   '/Blog': typeof BlogRoute
   '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
+  '/Campaigns': typeof CampaignsRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
   '/Donate': typeof DonateRoute
@@ -201,9 +220,11 @@ export interface FileRoutesByFullPath {
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
+  '/SSFNationalAcademy': typeof SSFNationalAcademyRoute
   '/SkillPrograms': typeof SkillProgramsRoute
   '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
+  '/Transparency': typeof TransparencyRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
   '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
@@ -215,6 +236,7 @@ export interface FileRoutesByTo {
   '/Blog': typeof BlogRoute
   '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
+  '/Campaigns': typeof CampaignsRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
   '/Donate': typeof DonateRoute
@@ -231,9 +253,11 @@ export interface FileRoutesByTo {
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
+  '/SSFNationalAcademy': typeof SSFNationalAcademyRoute
   '/SkillPrograms': typeof SkillProgramsRoute
   '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
+  '/Transparency': typeof TransparencyRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
   '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
@@ -246,6 +270,7 @@ export interface FileRoutesById {
   '/Blog': typeof BlogRoute
   '/CSRPartnership': typeof CSRPartnershipRoute
   '/Campaign': typeof CampaignRoute
+  '/Campaigns': typeof CampaignsRoute
   '/Contact': typeof ContactRoute
   '/CookiePolicy': typeof CookiePolicyRoute
   '/Donate': typeof DonateRoute
@@ -262,9 +287,11 @@ export interface FileRoutesById {
   '/PartnerWithUs': typeof PartnerWithUsRoute
   '/PrivacyPolicy': typeof PrivacyPolicyRoute
   '/RegistrationDetails': typeof RegistrationDetailsRoute
+  '/SSFNationalAcademy': typeof SSFNationalAcademyRoute
   '/SkillPrograms': typeof SkillProgramsRoute
   '/Team': typeof TeamRoute
   '/TermsAndConditions': typeof TermsAndConditionsRoute
+  '/Transparency': typeof TransparencyRoute
   '/UpcomingProjects': typeof UpcomingProjectsRoute
   '/Vision': typeof VisionRoute
   '/Volunteer': typeof VolunteerRoute
@@ -278,6 +305,7 @@ export interface FileRouteTypes {
     | '/Blog'
     | '/CSRPartnership'
     | '/Campaign'
+    | '/Campaigns'
     | '/Contact'
     | '/CookiePolicy'
     | '/Donate'
@@ -294,9 +322,11 @@ export interface FileRouteTypes {
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
+    | '/SSFNationalAcademy'
     | '/SkillPrograms'
     | '/Team'
     | '/TermsAndConditions'
+    | '/Transparency'
     | '/UpcomingProjects'
     | '/Vision'
     | '/Volunteer'
@@ -308,6 +338,7 @@ export interface FileRouteTypes {
     | '/Blog'
     | '/CSRPartnership'
     | '/Campaign'
+    | '/Campaigns'
     | '/Contact'
     | '/CookiePolicy'
     | '/Donate'
@@ -324,9 +355,11 @@ export interface FileRouteTypes {
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
+    | '/SSFNationalAcademy'
     | '/SkillPrograms'
     | '/Team'
     | '/TermsAndConditions'
+    | '/Transparency'
     | '/UpcomingProjects'
     | '/Vision'
     | '/Volunteer'
@@ -338,6 +371,7 @@ export interface FileRouteTypes {
     | '/Blog'
     | '/CSRPartnership'
     | '/Campaign'
+    | '/Campaigns'
     | '/Contact'
     | '/CookiePolicy'
     | '/Donate'
@@ -354,9 +388,11 @@ export interface FileRouteTypes {
     | '/PartnerWithUs'
     | '/PrivacyPolicy'
     | '/RegistrationDetails'
+    | '/SSFNationalAcademy'
     | '/SkillPrograms'
     | '/Team'
     | '/TermsAndConditions'
+    | '/Transparency'
     | '/UpcomingProjects'
     | '/Vision'
     | '/Volunteer'
@@ -369,6 +405,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CSRPartnershipRoute: typeof CSRPartnershipRoute
   CampaignRoute: typeof CampaignRoute
+  CampaignsRoute: typeof CampaignsRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   DonateRoute: typeof DonateRoute
@@ -385,9 +422,11 @@ export interface RootRouteChildren {
   PartnerWithUsRoute: typeof PartnerWithUsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistrationDetailsRoute: typeof RegistrationDetailsRoute
+  SSFNationalAcademyRoute: typeof SSFNationalAcademyRoute
   SkillProgramsRoute: typeof SkillProgramsRoute
   TeamRoute: typeof TeamRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  TransparencyRoute: typeof TransparencyRoute
   UpcomingProjectsRoute: typeof UpcomingProjectsRoute
   VisionRoute: typeof VisionRoute
   VolunteerRoute: typeof VolunteerRoute
@@ -424,6 +463,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UpcomingProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Transparency': {
+      id: '/Transparency'
+      path: '/Transparency'
+      fullPath: '/Transparency'
+      preLoaderRoute: typeof TransparencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/TermsAndConditions': {
       id: '/TermsAndConditions'
       path: '/TermsAndConditions'
@@ -443,6 +489,13 @@ declare module '@tanstack/react-router' {
       path: '/SkillPrograms'
       fullPath: '/SkillPrograms'
       preLoaderRoute: typeof SkillProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/SSFNationalAcademy': {
+      id: '/SSFNationalAcademy'
+      path: '/SSFNationalAcademy'
+      fullPath: '/SSFNationalAcademy'
+      preLoaderRoute: typeof SSFNationalAcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/RegistrationDetails': {
@@ -557,6 +610,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Campaigns': {
+      id: '/Campaigns'
+      path: '/Campaigns'
+      fullPath: '/Campaigns'
+      preLoaderRoute: typeof CampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/Campaign': {
       id: '/Campaign'
       path: '/Campaign'
@@ -601,6 +661,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CSRPartnershipRoute: CSRPartnershipRoute,
   CampaignRoute: CampaignRoute,
+  CampaignsRoute: CampaignsRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   DonateRoute: DonateRoute,
@@ -617,9 +678,11 @@ const rootRouteChildren: RootRouteChildren = {
   PartnerWithUsRoute: PartnerWithUsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistrationDetailsRoute: RegistrationDetailsRoute,
+  SSFNationalAcademyRoute: SSFNationalAcademyRoute,
   SkillProgramsRoute: SkillProgramsRoute,
   TeamRoute: TeamRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
+  TransparencyRoute: TransparencyRoute,
   UpcomingProjectsRoute: UpcomingProjectsRoute,
   VisionRoute: VisionRoute,
   VolunteerRoute: VolunteerRoute,

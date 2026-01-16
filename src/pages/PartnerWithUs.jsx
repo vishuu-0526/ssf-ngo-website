@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { FaBuilding, FaHandshake, FaUniversity, FaChalkboardTeacher, FaGlobeAsia, FaArrowRight } from "react-icons/fa";
+import { FaBuilding, FaHandshake, FaUniversity, FaChalkboardTeacher, FaGlobeAsia } from "react-icons/fa";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
 export default function PartnerWithUs() {
     return (
-        <main className="w-full bg-white min-h-screen">
+        <main className="w-full bg-white min-h-screen font-inria">
 
             {/* ================= HERO SECTION (Premium Heritage Blue) ================= */}
             <section className="bg-[#002344] text-white pt-48 pb-32 relative overflow-hidden px-6">
@@ -20,11 +20,14 @@ export default function PartnerWithUs() {
                         className="space-y-8"
                     >
                         <span className="text-[#fb8500] font-bold uppercase tracking-[0.3em] text-xs">
-                            Strategic Collaboration
+                            Strategic Collaboration • रणनीतिक सहयोग
                         </span>
                         <h1 className="text-5xl md:text-8xl font-serif font-bold leading-tight">
                             Partner <span className="text-[#fb8500]">With Us</span>
                         </h1>
+                        <h2 className="text-xl md:text-2xl text-zinc-400 italic">
+                            Strategic Collaboration for Social Impact
+                        </h2>
                         <p className="text-zinc-400 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
                             "Alone we can do so little; together we can do so much." Join forces with SSF to amplify social impact and reach the last mile.
                         </p>
@@ -51,6 +54,9 @@ export default function PartnerWithUs() {
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#002344] leading-tight">
                             Transforming Corporate <br /> Vision into Social Reality.
                         </h2>
+                        <p className="text-lg text-zinc-500 italic">
+                            Transforming Corporate Vision into Social Reality
+                        </p>
 
                         <p className="text-lg text-zinc-600 font-medium leading-relaxed">
                             We help corporates fulfill their CSR goals with transparent, scalable, and measurable impact projects that align with UN Sustainable Development Goals.
@@ -94,6 +100,7 @@ export default function PartnerWithUs() {
                     <div className="text-center mb-24 space-y-6">
                         <h2 className="text-[#fb8500] font-bold tracking-[0.3em] uppercase text-xs">The SSF Ecosystem</h2>
                         <h3 className="text-4xl md:text-6xl font-serif font-bold">Collaboration Models</h3>
+                        <p className="text-xl text-zinc-400 font-medium">Partnership Models</p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-10">
@@ -101,6 +108,7 @@ export default function PartnerWithUs() {
                             {
                                 icon: <FaUniversity />,
                                 title: "Institutions",
+                                hindiTitle: "संस्थान",
                                 color: "border-[#fb8500]",
                                 desc: "Schools, colleges, and training institutes can partner for student exchange, internships, and research projects.",
                                 points: ["Campus Chapters", "Resource Sharing"],
@@ -109,6 +117,7 @@ export default function PartnerWithUs() {
                             {
                                 icon: <FaChalkboardTeacher />,
                                 title: "Expert Mentors",
+                                hindiTitle: "विशेषज्ञ परामर्शदाता",
                                 color: "border-[#d90429]",
                                 desc: "Subject matter experts can join as guest faculty or curriculum advisors for our National Academy projects.",
                                 points: ["Guest Lectures", "Curriculum Design"],
@@ -117,6 +126,7 @@ export default function PartnerWithUs() {
                             {
                                 icon: <FaGlobeAsia />,
                                 title: "NGO Partners",
+                                hindiTitle: "गैर सरकारी संगठन",
                                 color: "border-[#2d6a4f]",
                                 desc: "Grassroot organizations can collaborate to implement our models in new geographies. Let's scale together.",
                                 points: ["Joint Implementation", "Scaling Impact"],
@@ -135,7 +145,8 @@ export default function PartnerWithUs() {
                                 <div className={`w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl mb-8 group-hover:bg-[#fb8500] group-hover:text-white transition-all`}>
                                     {item.icon}
                                 </div>
-                                <h4 className="text-2xl font-serif font-bold mb-4">{item.title}</h4>
+                                <h4 className="text-2xl font-serif font-bold mb-1">{item.title}</h4>
+                                <h5 className="text-sm text-zinc-400 mb-4 italic">{item.hindiTitle}</h5>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-8">{item.desc}</p>
                                 <ul className="space-y-3 mb-8">
                                     {item.points.map((p, idx) => (
@@ -168,6 +179,7 @@ export default function PartnerWithUs() {
                         >
                             Become a <span className="text-[#fb8500]">Partner.</span>
                         </motion.h2>
+                        <p className="text-lg text-zinc-400 italic">Building Partnerships for Change</p>
 
                         <p className="text-xl md:text-2xl text-zinc-500 font-medium max-w-2xl mx-auto leading-relaxed">
                             Join our roadmap to social transformation. Reach out to our partnership team to explore collaboration opportunities.
@@ -175,7 +187,7 @@ export default function PartnerWithUs() {
 
                         <div className="pt-8">
                             <Link to="/Contact">
-                                <button className="btn-primary px-16 py-6 text-xl">
+                                <button className="btn-primary px-16 py-6 text-xl bg-[#003366] text-white rounded-full font-bold hover:bg-[#002244] transition-colors shadow-lg shadow-blue-900/20">
                                     Contact Partnership Team
                                 </button>
                             </Link>

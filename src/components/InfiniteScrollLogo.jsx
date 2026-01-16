@@ -108,7 +108,7 @@ export default function InfiniteLogoScroll() {
       <div className="w-full overflow-hidden">
         <motion.div
           ref={rowRef}
-          className="flex items-center gap-16 py-6"
+          className="flex items-center gap-8 md:gap-16 py-6"
           animate={{
             x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
           }}

@@ -2,79 +2,135 @@ import { motion } from "framer-motion";
 
 const ProgressTimeline = () => {
   const timelineData = [
-    { year: 2013, title: "Why We Started", description: "Witnessing the lack of basic resources in rural communities, a group of friends came together to form Swastik Srijan Foundation." },
-    { year: 2015, title: "First Steps", description: "We launched our first community health camp and expanded our team to 50 active volunteers." },
-    { year: 2017, title: "Scaling Up Education", description: "Opened 5 learning centers, impacting over 1,000 children in remote villages." },
-    { year: 2019, title: "Empowering Women", description: "Launched 'Saksham' - a livelihood program training 500+ women in tailoring and handicrafts." },
-    { year: 2020, title: "Resilience in Crisis", description: "During COVID-19, we distributed 10,000+ ration kits and ensured no family went hungry." },
-    { year: 2022, title: "Digital Integration", description: " Introduced smart classes and digital literacy programs to bridge the urban-rural divide." },
-    { year: 2023, title: "The Learning Hub", description: "Established a dedicated center for career counseling and advanced skill development." },
-    { year: 2024, title: "National Footprint", description: "Expanded operations to 5 states, planting our roots firmly across key regions in India." },
+    {
+      year: "2013",
+      title: "Why We Started",
+      desc: "Witnessing the lack of basic resources in rural communities, a group of friends came together to form Swastik Srijan Foundation.",
+    },
+    {
+      year: "2014",
+      title: "Nurturing Community Well-being",
+      desc: "Promoting mental health with community support, strengthening community support systems.",
+    },
+    {
+      year: "2015",
+      title: "Expanding Early Initiatives",
+      desc: "Strengthened nutrition and preventive support services for vulnerable populations.",
+    },
+    {
+      year: "2016",
+      title: "A Year of Rural Empowerment",
+      desc: "Introduced technology-driven solutions, hosting workshops, and community-led rural development initiatives.",
+    },
+    {
+      year: "2017",
+      title: "Empowering Through Education",
+      desc: "Started education-focused interventions, fostering learning access to quality resources for underprivileged children.",
+    },
+    {
+      year: "2018",
+      title: "Promoting Health and Hygiene",
+      desc: "Conducted large-scale health camps, hygiene awareness drives, and sanitation programs.",
+    },
+    {
+      year: "2019",
+      title: "Women's Empowerment in Focus",
+      desc: "Rolled out women-centered initiatives, including skill training, self-help groups and livelihood programs.",
+    },
+    {
+      year: "2020",
+      title: "Navigating Challenges with Resilience",
+      desc: "Provided support amid global crisis, distributed essentials, offering support during pandemic-driven hardships.",
+    },
+    {
+      year: "2021",
+      title: "Sustaining Momentum",
+      desc: "Strengthened digital learning, digital platforms and changing conditions.",
+    },
+    {
+      year: "2022",
+      title: "Strengthening Communities",
+      desc: "Reinforced efforts with disaster relief, implemented long-term resilience-building initiatives recovering from challenges.",
+    },
+    {
+      year: "2023",
+      title: "SEP Learning Hub",
+      desc: "Established the SEP Learning Hub, offering structured learning, mentorship, and career guidance.",
+    },
+    {
+      year: "2024",
+      title: "Integrating Learning & Environment",
+      desc: "Launched holistic programs combining environmental education, sustainability practices, and nutrition awareness.",
+    },
+    {
+      year: "2025",
+      title: "Expanding Grassroots Impact",
+      desc: "Scaling community projects across regions with innovative tech solutions, empowering local leaders.",
+    }
   ];
 
   return (
-    <section className="w-full bg-zinc-50 py-24 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 bg-white overflow-hidden relative border-t border-zinc-100">
+      {/* Subtle Background Decoration */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-50/50 rounded-full blur-[120px] -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px] -z-10"></div>
 
-        {/* HEADER */}
-        <div className="text-center mb-20 space-y-4">
-          <h2 className="text-[#003366] font-bold tracking-widest uppercase text-sm">Milestones</h2>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-24 space-y-4">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs"
+          >
+            Our Roadmap
+          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="cry-title"
+            className="text-4xl md:text-6xl font-serif font-bold text-[#002344]"
           >
-            Our <span className="text-[#003366]">Journey</span>
+            Milestones of Our <span className="text-[#fb8500]">Journey</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-zinc-600 max-w-2xl mx-auto text-lg"
+            className="text-zinc-500 max-w-2xl mx-auto text-lg md:text-xl font-medium"
           >
-            From a small spark of an idea to a nationwide movement. Here is how we grew, year by year.
+            A decade of commitment, resilience, and transforming lives across India.
           </motion.p>
         </div>
 
-        {/* TIMELINE */}
-        <div className="relative">
-          {/* Central Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-zinc-200 transform md:-translate-x-1/2"></div>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Vertical Line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-zinc-100 md:-translate-x-1/2"></div>
 
-          <div className="space-y-12">
-            {timelineData.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
-                  }`}
-              >
+          <div className="space-y-16">
+            {timelineData.map((item, i) => (
+              <div key={i} className={`relative flex items-center justify-between md:justify-normal even:md:flex-row-reverse group`}>
+                {/* Dot */}
+                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-white border-2 border-[#fb8500] rounded-full md:-translate-x-1/2 z-20 group-hover:scale-150 transition-transform"></div>
 
-                {/* Content Side */}
-                <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-16 text-left md:text-right" : "md:pl-16 text-left"}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#003366] hover:shadow-md transition-shadow">
-                    <span className="block text-4xl font-black text-zinc-200 mb-2">{item.year}</span>
-                    <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
-                    <p className="text-zinc-600 leading-relaxed">{item.description}</p>
-                  </div>
+                {/* Content */}
+                <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${i % 2 === 0 ? "md:pr-12 text-left md:text-right" : "md:pl-12 text-left"}`}>
+                  <motion.div
+                    initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] border border-zinc-50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <span className="text-4xl font-black text-[#fb8500]/10 block mb-2">{item.year}</span>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-[#fb8500] font-bold text-xs uppercase tracking-widest">{item.year}</span>
+                      <h3 className="text-xl md:text-2xl font-serif font-bold text-[#002344] mb-3 leading-tight">{item.title}</h3>
+                    </div>
+                    <p className="text-zinc-600 leading-relaxed font-medium">{item.desc}</p>
+                  </motion.div>
                 </div>
-
-                {/* Marker */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[#003366] rounded-full border-4 border-white shadow-md transform -translate-x-1/2 z-10"></div>
-
-                {/* Empty Side (for balancing flex) */}
-                <div className="hidden md:block w-1/2"></div>
-
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

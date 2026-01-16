@@ -30,7 +30,7 @@ export default function MissionPage() {
                             Our <span className="text-[#fb8500]">Mission</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-zinc-300 font-medium max-w-3xl mx-auto leading-relaxed">
-                            🧭 ध्येय कथन | Mission Statement
+                            Mission Statement
                         </p>
                     </motion.div>
                 </div>
@@ -66,7 +66,7 @@ export default function MissionPage() {
                             </div>
                         </motion.div>
 
-                        {/* Hindi Mission Points */}
+                        {/* Mission Points */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -74,52 +74,14 @@ export default function MissionPage() {
                             className="mb-16"
                         >
                             <h3 className="text-3xl font-serif font-bold text-[#002344] mb-8 text-center">
-                                स्वस्तिक सृजन फाउंडेशन का ध्येय है —
+                                Our Mission
                             </h3>
                             <div className="grid md:grid-cols-2 gap-6">
                                 {[
-                                    "शिक्षा, स्वास्थ्य और आजीविका के माध्यम से वंचित व उपेक्षित वर्गों को सशक्त बनाना।",
-                                    "महिलाओं, बच्चों, दिव्यांगों और वरिष्ठ नागरिकों की सुरक्षा, विकास और सम्मान सुनिश्चित करना।",
-                                    "ग्रामीण एवं शहरी क्षेत्रों में सतत विकास, पर्यावरण संरक्षण और नैतिक जागरूकता को बढ़ावा देना।",
-                                    "सरकार, समाज और अन्य संस्थाओं के साथ सहयोगात्मक एवं पारदर्शी ढंग से जनकल्याणकारी कार्यक्रमों का संचालन करना।"
-                                ].map((point, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:border-[#002344] hover:shadow-xl transition-all duration-300"
-                                    >
-                                        <div className="flex items-start gap-4">
-                                            <div className="w-8 h-8 rounded-full bg-[#002344] flex items-center justify-center shrink-0 mt-1">
-                                                <FaCheckCircle className="text-white text-sm" />
-                                            </div>
-                                            <p className="text-lg text-zinc-700 leading-relaxed font-medium">
-                                                {point}
-                                            </p>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* English Mission Points */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="mb-16"
-                        >
-                            <h3 className="text-3xl font-serif font-bold text-[#002344] mb-8 text-center">
-                                The Mission of Swastik Srijan Foundation is to —
-                            </h3>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                {[
-                                    "Empower marginalized and underprivileged communities through education, healthcare, and livelihood initiatives.",
-                                    "Ensure the protection, development, and dignity of women, children, differently-abled, and senior citizens.",
-                                    "Promote sustainable development, environmental awareness, and ethical consciousness in rural and urban areas.",
-                                    "Collaborate transparently with government, society, and other organizations to implement welfare programs effectively."
+                                    { en: "Empower marginalized communities through education, health, and livelihood initiatives.", hi: "शिक्षा, स्वास्थ्य और आजीविका के माध्यम से वंचित व उपेक्षित वर्गों को सशक्त बनाना।" },
+                                    { en: "Ensure the protection, development, and dignity of women, children, and senior citizens.", hi: "महिलाओं, बच्चों और वरिष्ठ नागरिकों की सुरक्षा, विकास और सम्मान सुनिश्चित करना।" },
+                                    { en: "Promote sustainable development and environmental awareness in rural and urban areas.", hi: "ग्रामीण एवं शहरी क्षेत्रों में सतत विकास और पर्यावरण संरक्षण को बढ़ावा देना।" },
+                                    { en: "Collaborate transparently with stakeholders to implement welfare programs effectively.", hi: "जनकल्याणकारी कार्यक्रमों के प्रभावी संचालन हेतु हितधारकों के साथ पारदर्शी सहयोग।" }
                                 ].map((point, index) => (
                                     <motion.div
                                         key={index}
@@ -133,9 +95,14 @@ export default function MissionPage() {
                                             <div className="w-8 h-8 rounded-full bg-[#fb8500] flex items-center justify-center shrink-0 mt-1">
                                                 <FaCheckCircle className="text-white text-sm" />
                                             </div>
-                                            <p className="text-lg text-zinc-700 leading-relaxed font-medium">
-                                                {point}
-                                            </p>
+                                            <div className="flex flex-col">
+                                                <p className="text-lg text-zinc-800 leading-relaxed font-bold">
+                                                    {point.en}
+                                                </p>
+                                                <p className="text-sm text-zinc-500 italic mt-2">
+                                                    {point.hi}
+                                                </p>
+                                            </div>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -150,7 +117,7 @@ export default function MissionPage() {
                             className="bg-gradient-to-br from-emerald-50 to-white rounded-[2.5rem] p-12 border border-emerald-100"
                         >
                             <h3 className="text-3xl font-serif font-bold text-[#002344] mb-6 text-center">
-                                Mission in Perspective | ध्येय का परिप्रेक्ष्य
+                                Mission in Perspective
                             </h3>
                             <p className="text-xl text-zinc-600 leading-relaxed text-center font-medium mb-8">
                                 Our Mission is guided by our Vision and implemented through our Core Values.
@@ -181,13 +148,13 @@ export default function MissionPage() {
                         className="max-w-4xl mx-auto text-center space-y-8"
                     >
                         <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
-                            यदि आपके विचार, सिद्धांत या उद्देश्य हमारी संस्था से कहीं भी मेल खाते हैं
+                            Join Our Mission for Change
                         </h2>
-                        <p className="text-xl text-zinc-300 font-medium">
-                            या आप समाज के लिए कुछ सार्थक करना चाहते हैं, तो हमसे जुड़ने में कोई संकोच न करें।
+                        <p className="text-xl text-zinc-300 font-medium max-w-2xl mx-auto">
+                            If your principles or goals align with our mission, feel free to join us in making a difference.
                         </p>
                         <p className="text-2xl text-[#fb8500] font-bold">
-                            आज ही हमसे संपर्क करें — क्योंकि बदलाव संवाद से शुरू होता है।
+                            Connect with us today — because change starts with a conversation.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
                             <Link to="/Contact" className="btn-cta px-12 py-5 text-lg">

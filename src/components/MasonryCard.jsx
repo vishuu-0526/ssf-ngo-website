@@ -6,48 +6,43 @@ export default function MasonryCards() {
   const cards = [
     {
       title: "Education",
-      desc: "Empowering children with the gift of education to build a brighter future.",
-      img: "/images/real/academy_banner_wide.jpg",
-      span: "md:col-span-8",
+      desc: "Empowering children with quality learning for a brighter future.",
+      img: "/images/real/scholarship_distribution.jpg",
       color: "border-l-4 border-[#003366]",
       link: "/LearningHub"
     },
     {
       title: "Protection",
-      desc: "Ensuring safety and dignity for every child, shielding them from abuse and neglect.",
-      img: "/images/real/scholarship_distribution.jpg",
-      span: "md:col-span-4",
+      desc: "Ensuring safety and dignity, shielding children from abuse.",
+      img: "/images/protection-ecosystem.png",
       color: "border-l-4 border-black",
       link: "/Campaign#legal"
     },
     {
       title: "Health",
-      desc: "Providing essential healthcare and nutrition to combat malnutrition and disease.",
+      desc: "Providing essential healthcare and nutrition to combat disease.",
       img: "/images/real/nutrition_program.jpg",
-      span: "md:col-span-4",
       color: "border-l-4 border-[#003366]",
       link: "/Campaign#health"
     },
     {
       title: "Livelihood",
-      desc: "Creating sustainable opportunities for families to break the cycle of poverty.",
-      img: "/images/real/women_community_meeting.jpg",
-      span: "md:col-span-4",
+      desc: "Creating sustainable opportunities for families to thrive.",
+      img: "/images/community-meeting.jpg",
       color: "border-l-4 border-black",
       link: "/Campaign#skills"
     },
     {
       title: "Participation",
-      desc: "Giving children a voice in the decisions that affect their lives.",
-      img: "/images/real/ssf_event_members.jpg",
-      span: "md:col-span-4",
+      desc: "Giving children a voice in decisions affecting their lives.",
+      img: "/images/real/community-rally-children.jpg",
       color: "border-l-4 border-zinc-400",
       link: "/Volunteer"
     }
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {cards.map((card, i) => (
         <motion.div
           key={i}
@@ -55,25 +50,25 @@ export default function MasonryCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: i * 0.1, duration: 0.5 }}
-          className={`bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 ${card.span} ${card.color} group overflow-hidden`}
+          className={`bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ${card.color} group overflow-hidden flex flex-col`}
         >
-          <Link to={card.link} className="flex flex-col justify-between h-full p-8 relative z-10 block">
-            <div>
-              <h3 className="text-2xl font-bold text-zinc-900 mb-3 group-hover:text-[#003366] transition-colors">{card.title}</h3>
-              <p className="text-zinc-600 leading-relaxed mb-6 font-medium">
+          <Link to={card.link} className="flex flex-col h-full p-6 relative z-10">
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-zinc-900 mb-2 group-hover:text-[#003366] transition-colors">{card.title}</h3>
+              <p className="text-sm text-zinc-600 leading-relaxed font-medium">
                 {card.desc}
               </p>
             </div>
 
             <div className="mt-auto">
               {card.img && (
-                <div className="rounded-lg overflow-hidden h-48 w-full bg-zinc-100 mb-6 relative">
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <div className="rounded-xl overflow-hidden h-40 w-full bg-zinc-100 mb-4 relative">
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10"></div>
                   <img src={card.img} alt={card.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                 </div>
               )}
-              <div className="inline-flex items-center gap-2 font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
-                Learn More <FaArrowRight size={12} className="text-[#003366]" />
+              <div className="inline-flex items-center gap-2 font-bold text-[10px] uppercase tracking-wider text-[#003366]">
+                Explore Impact <FaArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           </Link>

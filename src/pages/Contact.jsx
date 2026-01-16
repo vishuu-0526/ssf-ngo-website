@@ -121,13 +121,16 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block">
-              Get in Touch
+              Contact Us
             </span>
-            <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight">
-              Let's <span className="text-[#fb8500]">Connect.</span>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight">
+              Connect for <span className="text-[#fb8500]">Change</span>
             </h1>
-            <p className="text-zinc-400 mt-8 text-xl md:text-2xl font-medium leading-relaxed max-w-2xl mx-auto">
-              We’re here to support you. Whether you want to partner with us, volunteer, or contribute to a cause.
+            <p className="text-xl md:text-2xl font-serif mt-2">
+              Reach Out to Swastik Srijan Foundation
+            </p>
+            <p className="text-zinc-400 mt-8 text-lg leading-relaxed max-w-3xl mx-auto">
+              We welcome your inquiries, collaborations, and feedback. Feel free to reach out to us for any information or to explore potential partnerships. Swastik Srijan Foundation values open communication and believes in the power of collective efforts to bring about positive change.
             </p>
           </motion.div>
         </div>
@@ -144,19 +147,19 @@ export default function Contact() {
             className="space-y-12"
           >
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">
-                Reach out to our team.
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#002344]">
+                Get in Touch
               </h2>
-              <p className="text-xl text-zinc-500 font-medium leading-relaxed">
-                Choose the most convenient way to reach us. Our team responds to all inquiries within 24-48 hours.
+              <p className="text-lg text-zinc-500 font-medium leading-relaxed">
+                Whether you're an individual, organization, or a supporter interested in joining our mission, our team is here to connect with you. Contact us through the provided channels below.
               </p>
             </div>
 
             <div className="space-y-8">
               {[
-                { icon: <Mail />, label: "Email Us", value: CONTACT_INFO.primaryEmail, sub: CONTACT_INFO.secondaryEmail, color: "bg-blue-50 text-[#002344]" },
-                { icon: <Phone />, label: "Call Us", value: CONTACT_INFO.phones.primaryFormatted, sub: CONTACT_INFO.phones.secondaryFormatted, color: "bg-green-50 text-green-600" },
-                { icon: <MapPin />, label: "Our Location", value: CONTACT_INFO.address.operational, sub: `Registered: ${CONTACT_INFO.address.registered}`, color: "bg-red-50 text-[#d90429]" }
+                { icon: <Mail />, label: "Email Us", value: "swastiksrijanfoundation@gmail.com", sub: "Send us a message anytime!", color: "bg-blue-50 text-[#002344]" },
+                { icon: <Phone />, label: "Call Us", value: "+91 97183 46691", sub: "Mon-Sat, 9am - 6pm", color: "bg-green-50 text-green-600" },
+                { icon: <MapPin />, label: "Registered Office", value: "Rewa, Madhya Pradesh, India", sub: "Headquarters", color: "bg-red-50 text-[#d90429]" }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 group">
                   <div className={`w-16 h-16 ${item.color} rounded-[1.5rem] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-110`}>
@@ -164,11 +167,79 @@ export default function Contact() {
                   </div>
                   <div className="space-y-1">
                     <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest">{item.label}</p>
-                    <p className="text-2xl font-serif font-bold text-[#002344]">{item.value}</p>
+                    <p className="text-xl md:text-2xl font-serif font-bold text-[#002344]">{item.value}</p>
                     <p className="text-zinc-500 font-medium">{item.sub}</p>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* BSNL & WhatsApp Note */}
+            <div className="bg-orange-50 border border-orange-100 rounded-2xl p-6 space-y-4">
+              <div className="flex gap-4">
+                <span className="text-2xl">📞</span>
+                <div className="space-y-1">
+                  <p className="font-bold text-[#002344] text-sm md:text-base">Contact Note</p>
+                  <p className="text-sm text-zinc-600 leading-relaxed">
+                    Due to limited network availability on BSNL in some areas, calls may occasionally not connect.
+                    <br />
+                    <span className="font-serif italic text-zinc-500">BSNL नेटवर्क की सीमित उपलब्धता के कारण कभी-कभी कॉल कनेक्ट नहीं हो पाती।</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <span className="text-2xl">📲</span>
+                <div className="space-y-1">
+                  <p className="font-bold text-[#002344] text-sm md:text-base">WhatsApp Support</p>
+                  <p className="text-sm text-zinc-600 leading-relaxed">
+                    You are encouraged to send us a message on WhatsApp for faster response.
+                    <br />
+                    <span className="font-serif italic text-zinc-500">कृपया तेज़ और सुनिश्चित संपर्क के लिए WhatsApp पर संदेश भेजें।</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <span className="text-2xl">🇮🇳</span>
+                <div className="space-y-1">
+                  <p className="text-sm text-zinc-600 leading-relaxed">
+                    We proudly use BSNL services to support India’s public sector telecom, as a step towards self-reliance and national responsibility.
+                    <br />
+                    <span className="font-serif italic text-zinc-500">हम भारत की सार्वजनिक दूरसंचार सेवा BSNL को समर्थन देने के उद्देश्य से इसी नेटवर्क का उपयोग करते हैं।</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Inspirational Join Us Text */}
+            <div className="space-y-4 border-t border-zinc-100 pt-8">
+              <p className="text-lg text-[#002344] font-medium leading-relaxed">
+                If your thoughts, principles, or goals align with our organization in any way, or if you want to do something meaningful for society, do not hesitate to join us. Contact us today — because change begins with a conversation.
+              </p>
+              <p className="text-lg text-[#fb8500] font-serif italic leading-relaxed">
+                यदि आपके विचार, सिद्धांत या उद्देश्य हमारी संस्था से कहीं भी मेल खाते हैं, या आप समाज के लिए कुछ सार्थक करना चाहते हैं, तो हमसे जुड़ने में कोई संकोच न करें। आज ही हमसे संपर्क करें — क्योंकि बदलाव संवाद से शुरू होता है।
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a
+                href="https://forms.gle/fwKiuDNnjiYdzPTR9"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 py-4 px-6 bg-[#002344] text-white font-bold rounded-xl text-center hover:bg-[#003366] transition-colors shadow-lg shadow-[#002344]/20"
+              >
+                Become Our Volunteer
+              </a>
+              <a
+                href="https://forms.gle/jDUEBYPUXcocvn716"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 py-4 px-6 bg-white border-2 border-[#002344] text-[#002344] font-bold rounded-xl text-center hover:bg-[#f0f4f8] transition-colors"
+              >
+                Become Our Member
+              </a>
             </div>
           </motion.div>
 

@@ -147,7 +147,7 @@ export default function LearningHub() {
 
           <div className="grid md:grid-cols-2 gap-8 mt-16 items-center">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 order-2 md:order-1">
-              <img src="/images/real/children-mat-session.jpg" alt="Grassroots Education Session" className="w-full h-auto" />
+              <img src="/images/real/boys-group-photo.jpg" alt="Grassroots Education Session" className="w-full h-auto" />
             </div>
             <div className="space-y-4 order-1 md:order-2">
               <h3 className="text-2xl font-black text-black leading-tight italic">"Where there is a will, there is a way."</h3>

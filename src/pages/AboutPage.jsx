@@ -18,10 +18,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block">
-              Our Identity
+              Our Identity | हमारी पहचान
             </span>
             <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight">
-              About <span className="text-[#fb8500]">Swastik</span>
+              About <span className="text-[#fb8500]">Swastik</span> <br />
+              <span className="text-3xl md:text-5xl font-sans font-normal opacity-80">स्वास्तिक के बारे में</span>
             </h1>
             <p className="text-zinc-400 mt-8 text-xl md:text-2xl font-medium leading-relaxed max-w-2xl mx-auto">
               Building a future where every child has a voice, a choice, and a chance to thrive.
@@ -40,9 +41,12 @@ export default function AboutPage() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Who We Are</span>
+              <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Who We Are | हम कौन हैं</span>
               <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#002344] leading-tight">
                 A Decade of <br /> <span className="text-[#d90429]">Pan India</span> Initiative.
+                <div className="text-2xl md:text-3xl font-sans font-normal text-[#002344]/70 mt-4">
+                  एक दशक की <span className="text-[#d90429]">अखिल भारतीय</span> पहल।
+                </div>
               </h2>
             </div>
 
@@ -108,8 +112,9 @@ export default function AboutPage() {
             className="flex flex-col md:flex-row gap-12 items-center"
           >
             <div className="md:w-1/3">
-              <span className="block text-[#fb8500] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Vision</span>
+              <span className="block text-[#fb8500] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Vision | हमारा दृष्टिकोण</span>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">A Future of <br /> Dignity.</h3>
+              <p className="text-xl md:text-2xl font-sans text-[#002344]/60 mt-2">गरिमापूर्ण भविष्य।</p>
               <div className="w-20 h-1 bg-[#fb8500] mt-6"></div>
             </div>
             <div className="md:w-2/3">
@@ -131,8 +136,9 @@ export default function AboutPage() {
             className="flex flex-col md:flex-row gap-12 items-center"
           >
             <div className="md:w-1/3 md:order-2">
-              <span className="block text-[#d90429] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Mission</span>
+              <span className="block text-[#d90429] font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Mission | हमारा लक्ष्य</span>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">Empowerment <br /> in Action.</h3>
+              <p className="text-xl md:text-2xl font-sans text-[#002344]/60 mt-2">सशक्तिकरण क्रिया में।</p>
               <div className="w-20 h-1 bg-[#d90429] mt-6"></div>
             </div>
             <div className="md:w-2/3 md:order-1 text-right">
@@ -144,13 +150,37 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ================= UNITY IN ACTION ================= */}
+      <section className="py-20 bg-white px-6 border-t border-zinc-100">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src="/src/assets/community-unity.png"
+              alt="Community Unity"
+              className="w-64 h-auto mx-auto drop-shadow-lg"
+            />
+          </motion.div>
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#002344]">Unity in <span className="text-[#fb8500]">Action</span> | एकता ही शक्ति</h2>
+            <p className="text-zinc-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+              We believe that when people come together with a single purpose, impossible dreams become reality. Our foundation is built on the strength of our collective hands.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ================= INSTITUTIONAL DNA ================= */}
       <section id="values" className="py-32 bg-[#001529] text-white px-6 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#fb8500]/5 to-transparent"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 space-y-4">
-            <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Our Foundation</span>
-            <h2 className="text-4xl md:text-6xl font-serif font-bold">Institutional <span className="text-[#fb8500]">DNA</span></h2>
+            <span className="text-[#fb8500] font-bold uppercase tracking-[0.2em] text-xs">Our Foundation | हमारी नींव</span>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold">Institutional <span className="text-[#fb8500]">DNA</span> | संस्थागत मूल्य</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -183,7 +213,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto space-y-24">
           <div className="text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#002344]">
-              Trust & <span className="text-[#fb8500]">Compliance</span>
+              Trust & <span className="text-[#fb8500]">Compliance</span> | विश्वास और अनुपालन
             </h2>
             <p className="text-xl text-zinc-500 max-w-2xl mx-auto font-medium">
               Transparency is the foundation of our work. We are fully compliant with Indian regulations for NGOs.

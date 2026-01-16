@@ -20,6 +20,7 @@ export default function FooterSection() {
             </Link>
             <p className="text-zinc-400 leading-relaxed font-medium text-lg">
               Empowering communities and ensuring every child has access to quality education, health, and a creative childhood.
+              <span className="block text-sm text-zinc-500 mt-2 font-hindi">समुदायों को सशक्त बनाना और यह सुनिश्चित करना कि हर बच्चे की शिक्षा, स्वास्थ्य और रचनात्मक बचपन तक पहुँच हो।</span>
             </p>
 
             {/* Socials */}
@@ -49,7 +50,7 @@ export default function FooterSection() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">About SSF</h4>
+              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">About SSF | हमारे बारे में</h4>
               <ul className="space-y-4 text-zinc-400 font-medium">
                 <li><Link to="/#about" className="hover:text-white transition-colors">Our Mission</Link></li>
                 <li><Link to="/Journey" className="hover:text-white transition-colors">Our Story</Link></li>
@@ -59,7 +60,7 @@ export default function FooterSection() {
             </div>
 
             <div>
-              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Get Involved</h4>
+              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Get Involved | हमसे जुड़ें</h4>
               <ul className="space-y-4 text-zinc-400 font-medium">
                 <li><Link to="/DonateAndSupport" className="hover:text-white transition-colors">Ways to Give</Link></li>
                 <li><Link to="/Volunteer" className="hover:text-white transition-colors">Volunteer</Link></li>
@@ -69,7 +70,7 @@ export default function FooterSection() {
             </div>
 
             <div>
-              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Contact Help</h4>
+              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Contact Help | मदद डेस्क</h4>
               <ul className="space-y-4 text-zinc-400 font-medium">
                 <li className="break-all text-white">swastiksrijanfoundation@gmail.com</li>
                 <li className="text-white">+91 97183 46691</li>
@@ -80,7 +81,7 @@ export default function FooterSection() {
 
             {/* Newsletter */}
             <div className="sm:col-span-2 lg:col-span-1">
-              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Updates</h4>
+              <h4 className="font-serif font-bold text-[#fb8500] uppercase tracking-[0.15em] mb-8 text-xs">Updates | अपडेट्स</h4>
               <p className="text-zinc-500 text-xs mb-6 font-medium">Join our mailing list for quarterly impact reports.</p>
               <div className="space-y-3">
                 <div className="relative">
@@ -108,6 +109,7 @@ export default function FooterSection() {
             © {new Date().getFullYear()} Swastik Srijan Foundation. <br className="md:hidden" />
             <span className="hidden md:inline"> | </span>
             A Commitment to Grassroots Governance.
+            <span className="block text-xs mt-1 text-zinc-600">ग्रामीण शासन और जमीनी स्तर पर कार्य के प्रति हमारी प्रतिबद्धता।</span>
           </p>
           <div className="flex flex-wrap gap-8 justify-center group">
             <span className="flex items-center gap-3 text-[10px] font-bold text-zinc-400 uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5">
